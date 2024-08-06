@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   smallDescription: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#666',
   },
   moreButton: {
