@@ -1,26 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useState } from 'react';
 import AreaSubpage from './components/AreaSubpage';
-import Navbar from './components/Navbar'
-import BottomMenu from './components/BottomMenu'
-
-import React from 'react';
-
+import Navbar from './components/Navbar';
+import BottomMenu from './components/BottomMenu';
 
 function App(): React.JSX.Element {
+  const [activeColor, setActiveColor] = useState('#FFF');
 
   return (
-   <>
-   <Navbar/>
-   <AreaSubpage/>
-   <BottomMenu/>
-   </>
+    <>
+      <Navbar onColorChange={setActiveColor} />
+      <AreaSubpage activeColor={activeColor} />
+      <BottomMenu />
+    </>
   );
 }
-
 
 export default App;

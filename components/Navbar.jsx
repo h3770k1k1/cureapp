@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const Navbar = () => {
+const Navbar = ({ onColorChange }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const colors = ['#FFD3FA', '#FFE2CC', '#FFF7CC', '#D3F2D7', '#CDF6FF'];
+
+  const handleCirclePress = (index) => {
+    setActiveIndex(index);
+    onColorChange(colors[index]);
+  };
 
   return (
     <SafeAreaView style={styles.navbarContainer}>
@@ -17,7 +22,7 @@ const Navbar = () => {
       </View>
       <View style={styles.circleContainer}>
         {['c', 'u', 'r', 'e', 'd'].map((letter, index) => (
-          <TouchableOpacity key={index} onPress={() => setActiveIndex(index)}>
+          <TouchableOpacity key={index} onPress={() => handleCirclePress(index)}>
             <View style={[styles.circle, styles[`circle${index}`], activeIndex === index && styles.activeCircle]}>
               <Text style={[styles.circleText, activeIndex === index && styles.activeCircleText]}>{letter}</Text>
             </View>
@@ -32,12 +37,12 @@ const styles = StyleSheet.create({
   navbarContainer: {
     display: 'flex',
     alignItems: 'center',
+    backgroundColor:'white',
   },
   navbar: {
     height: 120,
     width: '100%',
     justifyContent: 'center',
-    backgroundColor: '#FFD3FA',
   },
   text: {
     fontSize: 20,
