@@ -49,19 +49,16 @@ const styles = StyleSheet.create({
         width: 140,
         display: 'flex',
         flexDirection: 'row',
+         lineHeight: 24,
     },
     lastWord: {
         fontSize: 18,
         fontWeight: 'medium',
     },
-    gradientText: {
-        borderRadius: 4,
-        padding: 2,
-    },
+
     gradientWord: {
         fontSize: 18,
         fontWeight: 'medium',
-        color: '#000',
     },
 });
 
