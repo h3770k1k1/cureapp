@@ -10,6 +10,13 @@ const ButtonColors = Object.freeze({
   Grey: "#8E8E8E",
 });
 
+const Views = Object.freeze({
+  Home: Symbol("Home"),
+  Mental: Symbol("Mental"),
+  Grow: Symbol("Grow"),
+  Settings: Symbol("Settings"),
+});
+
 const styles = StyleSheet.create({
   BottomMenuContainer: {
     display: "flex",
@@ -50,44 +57,85 @@ const styles = StyleSheet.create({
 });
 
 const BottomMenu = () => {
-  const [selectedButton, setSelectedButton] = useState(null);
+  const [selectedView, setSelectedView] = useState(Views.Home);
 
-  const handlePress = (buttonIndex) => {
-    setSelectedButton(buttonIndex);
+  const MenuButton = ({ icon, isSelected, view }) => (
+    <TouchableOpacity
+      style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
+      onPress={() => setSelectedView(view)}
+    >
+      {icon}
+    </TouchableOpacity>
+  );
+
+  const HomeButton = () => {
+    const isSelected = selectedView === Views.Home;
+    return (
+      <MenuButton
+        icon={
+          <HomeIcon
+            fill={isSelected ? ButtonColors.White : ButtonColors.Grey}
+          />
+        }
+        isSelected={isSelected}
+        view={Views.Home}
+      />
+    );
   };
 
-  const renderIcon = (buttonIndex, isSelected) => {
-    const fill = isSelected ? ButtonColors.White : ButtonColors.Grey;
-    switch (buttonIndex) {
-      case 0:
-        return <HomeIcon fill={fill} width={24} height={24} />;
-      case 1:
-        return <MentalIcon fill={fill} width={24} height={24} />;
-      case 2:
-        return <GrowIcon fill={fill} width={24} height={24} />;
-      case 3:
-        return <SettingsIcon fill={fill} width={24} height={24} />;
-      default:
-        return null;
-    }
+  const MentalButton = () => {
+    const isSelected = selectedView === Views.Mental;
+    return (
+      <MenuButton
+        icon={
+          <MentalIcon
+            fill={isSelected ? ButtonColors.White : ButtonColors.Grey}
+          />
+        }
+        isSelected={isSelected}
+        view={Views.Mental}
+      />
+    );
+  };
+
+  const GrowButton = () => {
+    const isSelected = selectedView === Views.Grow;
+    return (
+      <MenuButton
+        icon={
+          <GrowIcon
+            fill={isSelected ? ButtonColors.White : ButtonColors.Grey}
+          />
+        }
+        isSelected={isSelected}
+        view={Views.Grow}
+      />
+    );
+  };
+
+  const SettingsButton = () => {
+    const isSelected = selectedView === Views.Settings;
+    return (
+      <MenuButton
+        icon={
+          <SettingsIcon
+            fill={isSelected ? ButtonColors.White : ButtonColors.Grey}
+          />
+        }
+        isSelected={isSelected}
+        view={Views.Settings}
+      />
+    );
   };
 
   return (
     <SafeAreaView style={styles.BottomMenuContainer}>
       <View style={styles.menuBar}>
         <View style={styles.buttonsContainer}>
-          {[0, 1, 2, 3].map((buttonIndex) => (
-            <TouchableOpacity
-              key={buttonIndex}
-              style={[
-                styles.circleButton,
-                selectedButton === buttonIndex && styles.selectedCircleButton,
-              ]}
-              onPress={() => handlePress(buttonIndex)}
-            >
-              {renderIcon(buttonIndex, selectedButton === buttonIndex)}
-            </TouchableOpacity>
-          ))}
+          <HomeButton />
+          <MentalButton />
+          <GrowButton />
+          <SettingsButton />
         </View>
       </View>
     </SafeAreaView>
