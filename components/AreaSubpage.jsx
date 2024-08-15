@@ -1,4 +1,3 @@
-// AreaSubpage.js
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import SmallSection from './SmallSection';

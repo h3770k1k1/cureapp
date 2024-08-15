@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Arrow from './Arrow';
+import ArrowOption from './ArrowOption';
 
 const colors = ['#FFD3FA', '#FFE2CC', '#FFF7CC', '#D3F2D7', '#CDF6FF'];
 
