@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native';
-import HomeIcon from './Home';
-import MentalIcon from './Mental';
-import GrowIcon from './Grow';
-import SettingsIcon from './Settings';
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
+import HomeIcon from "./Home";
+import MentalIcon from "./Mental";
+import GrowIcon from "./Grow";
+import SettingsIcon from "./Settings";
 
 const BottomMenu = () => {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -13,7 +13,7 @@ const BottomMenu = () => {
   };
 
   const renderIcon = (buttonIndex, isSelected) => {
-    const fill = isSelected ? 'white' : '#8E8E8E';
+    const fill = isSelected ? "white" : "#8E8E8E";
     switch (buttonIndex) {
       case 0:
         return <HomeIcon fill={fill} width={24} height={24} />;
@@ -52,40 +52,40 @@ const BottomMenu = () => {
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    position: 'absolute',
+    display: "flex",
+    alignItems: "center",
+    position: "absolute",
     bottom: 0,
-    width: '100%',
+    width: "100%",
   },
   menuBar: {
     height: 70,
-    width: '100%',
-    justifyContent: 'center',
-    backgroundColor: '#F0F0F0',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    width: "100%",
+    justifyContent: "center",
+    backgroundColor: "#F0F0F0",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
   circleButton: {
     width: 50,
     height: 50,
     borderRadius: 25,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    color:'#8E8E8E',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    color: "#8E8E8E",
   },
   selectedCircleButton: {
-    backgroundColor: '#8E8E8E',
+    backgroundColor: "#8E8E8E",
   },
   buttonsContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    width: '90%',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    width: "90%",
   },
 });
 
