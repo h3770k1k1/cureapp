@@ -10,7 +10,8 @@ function App(): React.JSX.Element {
 
   return (
     <>
-<ExitView/>
+<Navbar onColorChange={setActiveColor} />
+<AreaSubpage activeColor={activeColor}/>
       <BottomMenu />
     </>
   );

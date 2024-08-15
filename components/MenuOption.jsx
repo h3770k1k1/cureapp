@@ -26,7 +26,7 @@ const Option = ({ text, index }) => {
                     <Text style={[styles.lastWord, lastWordStyle]}>{lastWord}</Text>
                 )}
             </Text>
-            <Arrow />
+            <ArrowOption/>
         </TouchableOpacity>
     );
 };
