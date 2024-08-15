@@ -5,6 +5,45 @@ import MentalIcon from "./Mental";
 import GrowIcon from "./Grow";
 import SettingsIcon from "./Settings";
 
+const styles = StyleSheet.create({
+  BottomMenuContainer: {
+    display: "flex",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+  },
+  menuBar: {
+    height: 70,
+    width: "100%",
+    justifyContent: "center",
+    backgroundColor: "#F0F0F0",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+  },
+  circleButton: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    color: "#8E8E8E",
+  },
+  selectedCircleButton: {
+    backgroundColor: "#8E8E8E",
+  },
+  buttonsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    width: "90%",
+  },
+});
+
 const BottomMenu = () => {
   const [selectedButton, setSelectedButton] = useState(null);
 
@@ -49,44 +88,5 @@ const BottomMenu = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  BottomMenuContainer: {
-    display: "flex",
-    alignItems: "center",
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
-  },
-  menuBar: {
-    height: 70,
-    width: "100%",
-    justifyContent: "center",
-    backgroundColor: "#F0F0F0",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
-  },
-  circleButton: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-    color: "#8E8E8E",
-  },
-  selectedCircleButton: {
-    backgroundColor: "#8E8E8E",
-  },
-  buttonsContainer: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
-    width: "90%",
-  },
-});
 
 export default BottomMenu;
