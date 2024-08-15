@@ -1,6 +1,6 @@
-import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
-import SmallSection from './SmallSection';
+import React from "react";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import SmallSection from "./SmallSection";
 
 const Section = ({ header, text }) => (
   <View style={styles.section}>
@@ -17,8 +17,14 @@ const AreaSubpage = ({ activeColor }) => {
           header="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed "
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"
         />
-        <Section header="Header 2" text="This is some text for the second section." />
-        <Section header="Header 3" text="This is some text for the third section." />
+        <Section
+          header="Header 2"
+          text="This is some text for the second section."
+        />
+        <Section
+          header="Header 3"
+          text="This is some text for the third section."
+        />
 
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -47,28 +53,28 @@ const AreaSubpage = ({ activeColor }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   scrollContainer: {
     paddingLeft: 16,
     paddingRight: 16,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     paddingTop: 5,
   },
   section: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     padding: 16,
   },
   header: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 8,
   },
   text: {
     fontSize: 16,
-    color: '#333',
+    color: "#333",
     lineHeight: 24,
   },
   smallSectionsContainer: {
