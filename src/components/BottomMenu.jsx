@@ -5,6 +5,11 @@ import MentalIcon from "./Mental";
 import GrowIcon from "./Grow";
 import SettingsIcon from "./Settings";
 
+const ButtonColors = Object.freeze({
+  White: "#fff",
+  Grey: "#8E8E8E",
+});
+
 const styles = StyleSheet.create({
   BottomMenuContainer: {
     display: "flex",
@@ -52,7 +57,7 @@ const BottomMenu = () => {
   };
 
   const renderIcon = (buttonIndex, isSelected) => {
-    const fill = isSelected ? "white" : "#8E8E8E";
+    const fill = isSelected ? ButtonColors.White : ButtonColors.Grey;
     switch (buttonIndex) {
       case 0:
         return <HomeIcon fill={fill} width={24} height={24} />;
