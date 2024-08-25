@@ -1,7 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import ArticleHeader from "./ArticleHeader"; // Import the ArticleHeader component
-import ForwardingButton from "./ForwardingButton"; // Import the ForwardingButton component
+import ArticleHeader from "./ArticleHeader";
+import ForwardingButton from "./ForwardingButton";
+import DropDown from "./DropDown";
+import SmallText from './SmallText';
+import SectionHeaderText from './SectionHeaderText';
+import TextWithDots from './DotLineHeader';
+import Carousel from './Carousel';
 
 const Article = () => {
   return (
@@ -10,6 +15,11 @@ const Article = () => {
       <Text style={styles.sectionHeader}>
         Lorem ipsum dolor sit amet, consectetur
       </Text>
+      <DropDown/>
+       <SmallText/>
+       <SectionHeaderText/>
+      <TextWithDots text="Lorem ipsum" />
+      <Carousel/>
       <ForwardingButton />
     </View>
   );
@@ -25,6 +35,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     lineHeight: 40,
     width: 300,
+    marginBottom: 20,
   },
 });
 
