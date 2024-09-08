@@ -8,23 +8,6 @@ import SectionHeaderText from './SectionHeaderText';
 import TextWithDots from './DotLineHeader';
 import Carousel from './Carousel';
 
-const Article = () => {
-  return (
-    <View style={styles.mainContainer}>
-      <ArticleHeader />
-      <Text style={styles.sectionHeader}>
-        Lorem ipsum dolor sit amet, consectetur
-      </Text>
-      <DropDown/>
-       <SmallText/>
-       <SectionHeaderText/>
-      <TextWithDots text="Lorem ipsum" />
-      <Carousel/>
-      <ForwardingButton />
-    </View>
-  );
-};
-
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -38,5 +21,22 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
+
+const Article = () => {
+  return (
+    <View style={styles.mainContainer}>
+      <ArticleHeader />
+      <Text style={styles.sectionHeader}>
+        Lorem ipsum dolor sit amet, consectetur
+      </Text>
+      <DropDown />
+      <SmallText />
+      <SectionHeaderText />
+      <TextWithDots text="Lorem ipsum" />
+      <Carousel />
+      <ForwardingButton />
+    </View>
+  );
+};
 
 export default Article;

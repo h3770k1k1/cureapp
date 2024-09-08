@@ -2,21 +2,6 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import ArticleArrow from "./ArticleArrow";
 
-const ArticleHeader = () => {
-  return (
-    <View style={styles.topContainer}>
-      <Text>
-        <ArticleArrow />
-      </Text>
-      <View style={styles.dotsContainer}>
-        <View style={styles.dot}></View>
-        <View style={styles.dot}></View>
-        <View style={styles.dot}></View>
-      </View>
-    </View>
-  );
-};
-
 const styles = StyleSheet.create({
   topContainer: {
     width: "100%",
@@ -40,5 +25,20 @@ const styles = StyleSheet.create({
     width: "fitContent",
   },
 });
+
+const ArticleHeader = () => {
+  return (
+    <View style={styles.topContainer}>
+      <Text>
+        <ArticleArrow />
+      </Text>
+      <View style={styles.dotsContainer}>
+        <View style={styles.dot}></View>
+        <View style={styles.dot}></View>
+        <View style={styles.dot}></View>
+      </View>
+    </View>
+  );
+};
 
 export default ArticleHeader;
