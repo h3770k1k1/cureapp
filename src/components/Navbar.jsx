@@ -8,10 +8,18 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+const Color = {
+  PINK: "#FFD3FA",
+  ORANGE: "#FFE2CC",
+  YELLOW: "#FFF7CC",
+  GREEN: "#D3F2D7",
+  BLUE: "#CDF6FF",
+};
+
 const Navbar = ({ onColorChange }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const colors = ["#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF"];
+  const colors = [Color.PINK, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE];
 
   const handleCirclePress = (index) => {
     setActiveIndex(index);
@@ -107,19 +115,19 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   circle0: {
-    backgroundColor: "#FFD3FA",
+    backgroundColor: Color.PINK,
   },
   circle1: {
-    backgroundColor: "#FFE2CC",
+    backgroundColor: Color.ORANGE,
   },
   circle2: {
-    backgroundColor: "#FFF7CC",
+    backgroundColor: Color.YELLOW,
   },
   circle3: {
-    backgroundColor: "#D3F2D7",
+    backgroundColor: Color.GREEN,
   },
   circle4: {
-    backgroundColor: "#CDF6FF",
+    backgroundColor: Color.BLUE,
   },
   activeCircle: {
     borderWidth: 3,
