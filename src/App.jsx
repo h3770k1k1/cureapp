@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import BottomMenu from "./components/BottomMenu";
+import AreaSubpage from "./components/AreaSubpage";
+import Navbar from "./components/Navbar";
+//import BottomMenu from "./components/BottomMenu";
 
 function App(): React.JSX.Element {
+  const [activeColor, setActiveColor] = useState("#FFF");
+
   return (
     <>
-      <BottomMenu />
+      <Navbar onColorChange={setActiveColor} />
+      <AreaSubpage activeColor={activeColor} />
+       {/* <BottomMenu /> */}
     </>
   );
 }
