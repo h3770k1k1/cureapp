@@ -3,6 +3,7 @@ import AreaSubpage from "./components/AreaSubpage";
 import Navbar from "./components/Navbar";
 import BottomMenu from "./components/BottomMenu";
 
+
 function App(): React.JSX.Element {
   const [activeColor, setActiveColor] = useState("#FFF");
 
@@ -16,3 +17,4 @@ function App(): React.JSX.Element {
 }
 
 export default App;
+
