@@ -1,11 +1,17 @@
-import React, { useState } from "react";
-import ExitView from "./components/ExitView";
+
+import AreaSubpage from "./components/AreaSubpage";
+import Navbar from "./components/Navbar";
+import BottomMenu from "./components/BottomMenu";
+
 
 function App(): React.JSX.Element {
+  const [activeColor, setActiveColor] = useState("#FFF");
 
   return (
     <>
-      <ExitView />
+      <Navbar onColorChange={setActiveColor} />
+      <AreaSubpage activeColor={activeColor} />
+       <BottomMenu />
     </>
   );
 }
