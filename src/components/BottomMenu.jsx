@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
 import HomeIcon from "./Home";
 import MentalIcon from "./Mental";
 import GrowIcon from "./Grow";
 import SettingsIcon from "./Settings";
 
-const ButtonColors = Object.freeze({
+const ButtonColors = {
   White: "#fff",
   Grey: "#8E8E8E",
-});
+};
 
-const Views = Object.freeze({
-  Home: Symbol("Home"),
-  Mental: Symbol("Mental"),
-  Grow: Symbol("Grow"),
-  Settings: Symbol("Settings"),
-});
+const Views = {
+  Home: 'Home',
+  Mental: 'Mental',
+  Grow: 'Grow',
+  Settings: 'Settings',
+};
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
@@ -56,13 +56,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const BottomMenu = () => {
-  const [selectedView, setSelectedView] = useState(Views.Home);
+const BottomMenu = ({ selectedView }) => {
 
   const MenuButton = ({ icon, isSelected, view }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
-      onPress={() => setSelectedView(view)}
+      onPress={() => {}}
     >
       {icon}
     </TouchableOpacity>
@@ -142,4 +141,4 @@ const BottomMenu = () => {
   );
 };
 
-export default BottomMenu;
+export {Views, BottomMenu};
