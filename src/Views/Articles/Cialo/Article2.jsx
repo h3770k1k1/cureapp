@@ -21,26 +21,20 @@ const styles = StyleSheet.create({
 
 });
 
-const Article1 = () => {
- const article = articleTexts[0];
+const Article2 = () => {
+ const article = articleTexts[1];
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText}/>
-        <MediumText text={article.MediumText[0]} />
-        <DotLineHeader text={article.DotLineHeader[0]} />
-        <MediumText text={article.MediumText[1]} />
-        <DotLineHeader text={article.DotLineHeader[1]} />
-        <MediumText text={article.MediumText[2]}/>
-        <DotLineHeader text={article.DotLineHeader[2]} />
-        <MediumText text={article.MediumText[3]}/>
-        <DotLineHeader text={article.DotLineHeader[3]} />
+        <MediumText text={article.MediumText} />
+        <DotLineHeader text={article.DotLineHeader} />
       </ScrollView>
         <ForwardingButton text={article.ForwardingButton} backgroundColor="#FFD3FA" />
     </View>
   );
 };
 
-export default Article1;
+export default Article2;

@@ -7,4 +7,12 @@ export const articleTexts = [
     DotLineHeader: ["GŁÓD","STRES","NAPIĘCIE W KLATCE","BÓL GŁOWY"],
 ForwardingButton:"Zabierz się na spacer",
   },
+    {
+      ArticleIndex: 1,
+      ArticleTitle: "Zabierz się na spacer",
+      SmallText: "Ruch to bardzo ważna część bycia człowiekiem. Jesteśmy do ruchu stworzeni! A taki spacer może być świetną chwilą w ciągu dnia na zadbanie o ciało jak i zresetowanie głowy. Spróbuj nie brać ze sobą telefonu, by jak najwięcej uwagi poświęcić na czerpanie przyjemności z ruchu oraz na bycie blisko siebie. Dodaj do tego jeszcze intencję, by podczas spaceru skupiać się na tym, za co jesteś w życiu wdzięczny, a efekt #cured gwarantowany!",
+      MediumText: "https://www.youtube.com/watch?v=X462W9yc7fI",
+      DotLineHeader: "FILMIK-INSPIRACJA",
+  ForwardingButton:"Znajdź nową ruchową zajawkę",
+    },
 ];
