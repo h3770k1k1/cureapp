@@ -2,10 +2,10 @@ import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import ForwardingButtonArrow from "./ForwardingButtonArrow";
 
-const ForwardingButton = () => {
+const ForwardingButton = ({ text, backgroundColor }) => {
   return (
-    <TouchableOpacity style={styles.forwardingButton}>
-      <Text style={styles.buttonText}>Forward</Text>
+    <TouchableOpacity style={[styles.forwardingButton, { backgroundColor }]}>
+      <Text style={styles.buttonText}>{text}</Text>
       <Text>
         <ForwardingButtonArrow />
       </Text>
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     position: "absolute",
-    borderWidth: 1.5,
+    borderWidth: 1,
     bottom: 0,
   },
   buttonText: {
     color: "#535353",
     fontSize: 18,
-    fontWeight: "medium",
+    fontWeight: "500",  // Changed from "medium" to "500" since fontWeight expects numeric values.
   },
 });
 
