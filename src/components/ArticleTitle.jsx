@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     lineHeight: 40,
     width: 300,
-    marginBottom: 20,
+    marginBottom: 5,
   },
 });
 

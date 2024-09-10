@@ -4,9 +4,9 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native';
 const DotLineHeader = ({ text }) => {
   const { width: screenWidth } = Dimensions.get('window');
   const textWidth = 16 * text.length;
-  const dotsWidth = screenWidth - textWidth - 60;
+  const dotsWidth = screenWidth - textWidth - 100;
   const dotSize = 10;
-  const dotCount = Math.floor(dotsWidth / dotSize);
+  const dotCount = 4;
 
   const dots = '.'.repeat(dotCount);
 

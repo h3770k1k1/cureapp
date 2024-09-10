@@ -3,7 +3,7 @@ import { Text, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   text: {
     fontSize: 18,
-    textAlign: 'justify',
+    textAlign: 'match-parent',
     marginTop:15,
     fontWeight: 'medium',
     lineHeight: 25,

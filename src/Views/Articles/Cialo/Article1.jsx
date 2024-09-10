@@ -6,6 +6,7 @@ import MediumText from '../../../components/MediumText';
 import DotLineHeader from '../../../components/DotLineHeader';
 import ArticleTitle from '../../../components/ArticleTitle';
 import ForwardingButton from "../../../components/ForwardingButton";
+import { articleTexts } from "./BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -26,23 +27,24 @@ const styles = StyleSheet.create({
 });
 
 const Article1 = () => {
+ const article = articleTexts[0];
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={6} filledDotIndex={0} />
-        <ArticleTitle text="Lorem ipsum dolor sit amet, consectetur" />
-        <SmallText text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga." />
-        <MediumText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-        <DotLineHeader text="Lorem ipsum" />
-        <MediumText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-        <DotLineHeader text="Lorem ipsum" />
-        <MediumText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-        <DotLineHeader text="Lorem ipsum" />
-        <MediumText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-        <DotLineHeader text="Lorem ipsum" />
+        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleTitle text={article.ArticleTitle} />
+        <SmallText text={article.SmallText}/>
+        <MediumText text={article.MediumText[0]} />
+        <DotLineHeader text={article.DotLineHeader[0]} />
+        <MediumText text={article.MediumText[1]} />
+        <DotLineHeader text={article.DotLineHeader[1]} />
+        <MediumText text={article.MediumText[2]}/>
+        <DotLineHeader text={article.DotLineHeader[2]} />
+        <MediumText text={article.MediumText[3]}/>
+        <DotLineHeader text={article.DotLineHeader[3]} />
       </ScrollView>
       <View style={styles.buttonContainer}>
-        <ForwardingButton text="forward123" backgroundColor="#FFD3FA" />
+        <ForwardingButton text={article.ForwardingButton} backgroundColor="#FFD3FA" />
       </View>
     </View>
   );
