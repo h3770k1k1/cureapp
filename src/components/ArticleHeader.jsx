@@ -19,23 +19,34 @@ const styles = StyleSheet.create({
     borderColor: "#535353",
     margin: 1.5,
   },
+  filledDot: {
+    backgroundColor: "#535353", // Fill the dot with a color
+  },
   dotsContainer: {
     display: "flex",
     flexDirection: "row",
-    width: "fitContent",
   },
 });
 
-const ArticleHeader = () => {
+const ArticleHeader = ({ dotCount, filledDotIndex }) => {
+  // Generate an array of dots based on the dotCount prop
+  const dots = Array(dotCount).fill(0);
+
   return (
     <View style={styles.topContainer}>
       <Text>
         <ArticleArrow />
       </Text>
       <View style={styles.dotsContainer}>
-        <View style={styles.dot}></View>
-        <View style={styles.dot}></View>
-        <View style={styles.dot}></View>
+        {dots.map((_, index) => (
+          <View
+            key={index}
+            style={[
+              styles.dot,
+              index === filledDotIndex ? styles.filledDot : null, // Apply the filled style to the selected dot
+            ]}
+          ></View>
+        ))}
       </View>
     </View>
   );

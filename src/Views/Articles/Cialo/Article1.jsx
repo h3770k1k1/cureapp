@@ -29,7 +29,7 @@ const Article1 = () => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader />
+        <ArticleHeader dotCount={6} filledDotIndex={0} />
         <ArticleTitle text="Lorem ipsum dolor sit amet, consectetur" />
         <SmallText text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga." />
         <MediumText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
