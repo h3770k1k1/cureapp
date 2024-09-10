@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const BoldText = () => {
-  return <Text style={[styles.text]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text>;
+const MediumText = ({text}) => {
+  return <Text style={[styles.text]}>{text} </Text>;
 };
 
 
-export default BoldText;
+export default MediumText;
