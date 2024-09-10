@@ -2,17 +2,17 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'match-parent',
     marginTop:15,
-    fontWeight: 'medium',
+    fontWeight: 'bold',
     lineHeight: 25,
   },
 });
 
-const MediumText = ({text}) => {
+const BoldText = ({text}) => {
   return <Text style={[styles.text]}>{text} </Text>;
 };
 
 
-export default MediumText;
+export default BoldText;

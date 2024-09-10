@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Mental from "./Views/Mental"
 import Home from "./Views/Home"
-import Article2 from "./Views/Articles/Cialo/Article2"
+import Article3 from "./Views/Articles/Cialo/Article3"
 function App(): JSX.Element {
 
 
   return (
     <>
-     <Article2/>
+     <Article3/>
     </>
   );
 }

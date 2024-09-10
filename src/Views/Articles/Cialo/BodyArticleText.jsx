@@ -15,4 +15,11 @@ ForwardingButton:"Zabierz się na spacer",
       DotLineHeader: "FILMIK-INSPIRACJA",
   ForwardingButton:"Znajdź nową ruchową zajawkę",
     },
+     {
+          ArticleIndex: 2,
+          ArticleTitle: "Znajdź nową ruchową zajawkę",
+          SmallText: ["Nie jest ważne, jaki rodzaj ruchu przeważa w Twoim życiu – ważne, by było go dużo! By cieszyć się sprawnym ciałem na starość specjaliści podają, by zadbać chociaż o 30 minut lekkiego ruchu 5 x w tygodniu lub 20 minut bardzo intensywnego ruchu (wzmacniającego siłę lub wytrzymałość) 3 x w tygodniu. Pamiętaj, że Twój tryb życia zależy tylko od Ciebie!","lub znajdź nową ruchową zajawkę! Próbuj różnych rodzajów aktywności i wprowadzaj je w swoje codzienne życie. Jeśli brak Ci pomysłów, przejrzyj proponowane:"],
+BoldText:"Eksploruj możliwości ruchowe swojego ciała ",
+      ForwardingButton:"Jedz i pij",
+        },
 ];
