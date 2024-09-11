@@ -16,10 +16,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const LinkButton = ({ onPress, title }) => {
+const LinkButton = ({ onPress, text }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };

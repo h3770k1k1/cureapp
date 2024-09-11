@@ -4,8 +4,7 @@ import DropDownArrow from './DropDownArrow.svg';
 import LinkButton from './LinkButton';
 import SmallText from './SmallText';
 
-
-const Dropdown = () => {
+const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
   const [isOpen, setIsOpen] = useState(false);
   const rotateAnimation = useRef(new Animated.Value(0)).current;
 
@@ -28,17 +27,23 @@ const Dropdown = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={toggleDropdown} style={styles.dropdownContainer}>
+      <TouchableOpacity
+        onPress={toggleDropdown}
+        style={[
+          styles.dropdownContainer,
+          hasTopBorder && { borderTopWidth: 1 }, // Apply borderTopWidth conditionally
+        ]}
+      >
         <View style={styles.dropdownHeader}>
-          <Text style={styles.title}>Lorem ipsum dolor sit amet annubg jhrebhdu</Text>
+          <Text style={styles.title}>{titleText}</Text>
           <Animated.View style={[styles.iconContainer, { transform: [{ rotate: rotation }] }]}>
             <DropDownArrow style={styles.icon} />
           </Animated.View>
         </View>
         {isOpen && (
           <View style={styles.dropdownContent}>
-            <SmallText/>
-             <LinkButton title="Lorem ipsum" />
+            <SmallText text={smallText} />
+            <LinkButton text={linkText} />
           </View>
         )}
       </TouchableOpacity>
@@ -51,11 +56,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   dropdownContainer: {
+    marginTop: 15,
     flexDirection: 'column',
-    borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: '#535353',
-    padding: 7,
+    padding: 10,
   },
   title: {
     fontSize: 19,
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   dropdownContent: {
-    marginBottom:10,
+    marginBottom: 10,
     borderRadius: 5,
   },
   dropdownHeader: {
@@ -76,7 +81,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
-
   },
 });
 
