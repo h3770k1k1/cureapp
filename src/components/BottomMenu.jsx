@@ -11,10 +11,10 @@ const ButtonColors = {
 };
 
 const Views = {
-  Home: 'Home',
-  Mental: 'Mental',
-  Grow: 'Grow',
-  Settings: 'Settings',
+  Home: "Home",
+  Mental: "Mental",
+  Grow: "Grow",
+  Settings: "Settings",
 };
 
 const styles = StyleSheet.create({
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
 });
 
 const BottomMenu = ({ selectedView }) => {
-
   const MenuButton = ({ icon, isSelected, view }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
@@ -141,4 +140,4 @@ const BottomMenu = ({ selectedView }) => {
   );
 };
 
-export {Views, BottomMenu};
+export { Views, BottomMenu };

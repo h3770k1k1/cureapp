@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const DotLineHeader = ({ text }) => {
   const totalLength = 40; // Całkowita liczba znaków
@@ -8,8 +8,8 @@ const DotLineHeader = ({ text }) => {
 
   // Obliczamy, ile kropek potrzebujemy po tekście, aby łącznie było 40 znaków
   const dotsAfterCount = totalLength - textLength - dotsBefore;
-  const dotsBeforeText = '.'.repeat(dotsBefore);
-  const dotsAfterText = '.'.repeat(dotsAfterCount > 0 ? dotsAfterCount : 0);
+  const dotsBeforeText = ".".repeat(dotsBefore);
+  const dotsAfterText = ".".repeat(dotsAfterCount > 0 ? dotsAfterCount : 0);
 
   return (
     <View style={styles.container}>
@@ -22,23 +22,23 @@ const DotLineHeader = ({ text }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
     marginTop: 5,
   },
   dots: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
   },
   text: {
     fontSize: 16,
-    fontStyle: 'italic',
-    fontWeight: 'bold',
+    fontStyle: "italic",
+    fontWeight: "bold",
     marginHorizontal: 10,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
 });
 

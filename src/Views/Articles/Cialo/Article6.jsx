@@ -1,9 +1,9 @@
-import React from 'react';
-import { ScrollView, View, StyleSheet } from 'react-native';
+import React from "react";
+import { ScrollView, View, StyleSheet } from "react-native";
 import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from '../../../components/SmallText';
-import BoldText from '../../../components/BoldText';
-import ArticleTitle from '../../../components/ArticleTitle';
+import SmallText from "../../../components/SmallText";
+import BoldText from "../../../components/BoldText";
+import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import DropDown from "../../../components/DropDown";
 import { articleTexts } from "./BodyArticleText";
@@ -11,7 +11,7 @@ import { articleTexts } from "./BodyArticleText";
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#FFD3FA',
+    backgroundColor: "#FFD3FA",
   },
   scrollView: {
     flexGrow: 1,
@@ -53,9 +53,11 @@ const Article6 = () => {
           linkText={article.DropDownLink[2]}
           hasTopBorder={false}
         />
-
       </ScrollView>
-      <ForwardingButton text={article.ForwardingButton} backgroundColor="#FFE2CC" />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        backgroundColor="#FFE2CC"
+      />
     </View>
   );
 };

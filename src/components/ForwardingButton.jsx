@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#535353",
     fontSize: 18,
-    fontWeight: "500",  // Changed from "medium" to "500" since fontWeight expects numeric values.
+    fontWeight: "500", // Changed from "medium" to "500" since fontWeight expects numeric values.
   },
 });
 

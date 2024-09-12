@@ -1,10 +1,10 @@
-import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import React from "react";
+import { Text, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 14,
-    textAlign: 'justify',
+    textAlign: "justify",
     marginTop: 15,
     lineHeight: 20,
   },

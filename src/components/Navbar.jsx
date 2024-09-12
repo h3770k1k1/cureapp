@@ -19,7 +19,13 @@ const Color = {
 const Navbar = ({ onColorChange }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const colors = [Color.PINK, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE];
+  const colors = [
+    Color.PINK,
+    Color.ORANGE,
+    Color.YELLOW,
+    Color.GREEN,
+    Color.BLUE,
+  ];
 
   const handleCirclePress = (index) => {
     setActiveIndex(index);

@@ -1,8 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
-import DropDownArrow from './DropDownArrow.svg';
-import LinkButton from './LinkButton';
-import SmallText from './SmallText';
+import React, { useState, useRef, useEffect } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Animated,
+} from "react-native";
+import DropDownArrow from "./DropDownArrow.svg";
+import LinkButton from "./LinkButton";
+import SmallText from "./SmallText";
 
 const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +28,7 @@ const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
 
   const rotation = rotateAnimation.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0deg', '180deg'],
+    outputRange: ["0deg", "180deg"],
   });
 
   return (
@@ -36,7 +42,12 @@ const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
       >
         <View style={styles.dropdownHeader}>
           <Text style={styles.title}>{titleText}</Text>
-          <Animated.View style={[styles.iconContainer, { transform: [{ rotate: rotation }] }]}>
+          <Animated.View
+            style={[
+              styles.iconContainer,
+              { transform: [{ rotate: rotation }] },
+            ]}
+          >
             <DropDownArrow style={styles.icon} />
           </Animated.View>
         </View>
@@ -53,34 +64,34 @@ const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: "100%",
   },
   dropdownContainer: {
     marginTop: 15,
-    flexDirection: 'column',
+    flexDirection: "column",
     borderBottomWidth: 1,
-    borderColor: '#535353',
+    borderColor: "#535353",
     padding: 10,
   },
   title: {
     fontSize: 19,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     width: 200,
     lineHeight: 28.5,
   },
   iconContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   dropdownContent: {
     marginBottom: 10,
     borderRadius: 5,
   },
   dropdownHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '100%',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
   },
 });
 
