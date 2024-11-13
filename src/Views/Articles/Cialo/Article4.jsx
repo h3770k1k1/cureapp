@@ -31,8 +31,8 @@ const Article4 = () => {
         <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />
         <LetterDropdown titleText={ article.DropDownTitle[0]} smallText={article.DropDownSmallText[0]} linkText={article.DropDownLink[0]} sideLetter={article.SideLetter[0]} linkText2={article.DropDownLink[1]}/>
-        <LetterDropdown titleText={ article.DropDownTitle[1]} smallText={article.DropDownSmallText[0]} linkText={article.DropDownLink[0]} sideLetter={article.SideLetter[1]} linkText2={article.DropDownLink[1]}/>
-        <LetterDropdown titleText={ article.DropDownTitle[2]} smallText={article.DropDownSmallText[0]} linkText={article.DropDownLink[0]} sideLetter={article.SideLetter[2]} linkText2={article.DropDownLink[1]}/>
+        <LetterDropdown titleText={ article.DropDownTitle[1]} smallText={article.DropDownSmallText[1]} linkText={article.DropDownLink[0]} sideLetter={article.SideLetter[1]} linkText2={article.DropDownLink[1]}/>
+        <LetterDropdown titleText={ article.DropDownTitle[2]} sideLetter={article.SideLetter[2]}/>
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}

@@ -41,6 +41,7 @@ const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 
 const styles = StyleSheet.create({
 
 smallTextContainer: {
+marginTop: 5,
     marginLeft: 25,
     marginRight: 20,
     textAlign: 'justify',
