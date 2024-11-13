@@ -37,7 +37,7 @@ export const articleTexts = [
     ArticleTitle: "Jedz i pij",
     SmallText:
       "Jakość spożywanego jedzenia będzie odczuwalna w całym organiźmie. Podobnie z odwodnieniem, które może powodować m.in. napięcia w ciele czy bóle głowy.",
-    BoldText: "Jeśli chcesz czuć się lepiej w swoim ciele:",
+    BoldText: "Jeśli chcesz czuć się lepiej \nw swoim ciele:",
     ForwardingButton: "Śpij, śnij",
     DropDownLink: ["PRZECZYTAJ WIĘCEJ", "PRZECZYTAJ MNIEJ",""],
     SideLetter:["J","P","*"],

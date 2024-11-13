@@ -29,7 +29,7 @@ const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 
       </View>
       {isOpen && (
         <View style={styles.dropdownContent}>
-          <SmallText text={smallText} />
+          <Text style={styles.smallTextContainer}> <SmallText text={smallText} /></Text>
           <Text style={styles.link}>
           <LinkButton style={styles.link} text={linkText2} onPress={toggleDropdown} /></Text>
         </View>
@@ -39,6 +39,12 @@ const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 
 };
 
 const styles = StyleSheet.create({
+
+smallTextContainer: {
+    marginLeft: 25,
+    marginRight: 20,
+    textAlign: 'justify',
+},
   container: {
     width: "100%",
   },
@@ -48,11 +54,6 @@ const styles = StyleSheet.create({
   width:"100%",
   },
 
-  dropdownContainer: {
-    marginTop: 15,
-    flexDirection: "column",
-    padding: 10,
-  },
   title: {
     fontSize: 14,
     lineHeight: 28.5,
