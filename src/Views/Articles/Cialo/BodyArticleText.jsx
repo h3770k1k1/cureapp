@@ -53,6 +53,8 @@ export const articleTexts = [
     ],
     BoldText: "nasz kolejny dzień zaczyna się właśnie od pójścia spać!",
     MediumText: "https://open.spotify.com/episode/38EitNF4WKsNBbMCkiSd2X",
+     DropDownTitle: "Cztery zasady higieny snu",
+    DropDownSmallText: "1.  Nie korzystaj z urządzeń elektronicznych 90 minut przed położeniem się spać.\nŚwiatło zaburza produkcję melatoniny odpowiedzialnej za sen.\n\n2.  Zadbaj o wieczorny rytuał.\nKażdej nocy kładź się spać o tej samej porze, przygotuj przestrzeń (raczej niższa temperatura, zacienienie, przewietrzony pokój, miły zapach i wygląd) i zrelaksuj się (gorąca kąpiel, kojąca muzyka, rozciąganie, automasaż, spacer).\n\n3.  Chodź spać przed 23:00.\nNajlepsza regeneracja organizmu następuje w godzinach 22.00–02.00 oraz daj swojemu ciału 7,5–9 h na sen.\n\n4.  Nie jedz 3 godziny przed pójściem spać.\nWpływa to na zmiany temperatury ciała, przez co może powodować trudności w zaśnięciu lub wybudzanie, które obniży jakość snu.",
     ForwardingButton: "Oddychaj",
     DotLineHeader: "WIĘCEJ POSŁUCHAJ TU",
   },

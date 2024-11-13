@@ -8,6 +8,7 @@ import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import MediumText from "../../../components/MediumText";
 import { articleTexts } from "./BodyArticleText";
+import DropDown from "../../../components/DropDown";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -31,6 +32,11 @@ const Article5 = () => {
         <SmallText text={article.SmallText[0]} />
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText[1]} />
+          <DropDown
+                  titleText={article.DropDownTitle}
+                  smallText={article.DropDownSmallText}
+                  hasTopBorder={true}
+                />
         <MediumText text={article.MediumText} />
         <DotLineHeader text={article.DotLineHeader} />
       </ScrollView>
