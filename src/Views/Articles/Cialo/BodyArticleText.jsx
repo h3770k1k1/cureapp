@@ -72,7 +72,7 @@ export const articleTexts = [
       "Gdy nie chcesz czuć trudnych emocji, nieświadomie wstrzymujesz oddech i nie dajesz im ujścia – co odbija się w złej pracy układu nerwowego i mózgu. Oddech może być Twoim najlepszym przyjacielem, zawsze obecnym i chętnym pomóc. Sprawdzaj w ciągu dnia, jaki jest Twój oddech i czy jest. Jeśli nie – stosuj poniższe ćwiczenie:",
     ],
     DropDownSmallText: [
-      "Płuca z wiekiem się “zużywają”. Jeśli oddychasz tylko górną ich częścią, na starsze lata możesz nie być w stanie oddychać tak samo jakościowo. Dlatego ważne jest, by wykorzystywać całe płuca i oddychać torem przeponowym.",
+      "Płuca z wiekiem się “zużywają”. Jeśli oddychasz tylko górną ich częścią, na starsze lata możesz nie być w stanie oddychać tak samo jakościowo. Dlatego ważne jest, by wykorzystywać całe płuca i oddychać torem przeponowym.","Spróbuj w tym celu poniższego ćwiczenia:","Gdy nie chcesz czuć trudnych emocji, nieświadomie wstrzymujesz oddech i nie dajesz im ujścia – co odbija się w złej pracy układu nerwowego i mózgu. Oddech może być Twoim najlepszym przyjacielem, zawsze obecnym i chętnym pomóc. Sprawdzaj w ciągu dnia, jaki jest Twój oddech i czy jest. Jeśli nie – stosuj poniższe ćwiczenie:",
     ],
     DropDownLink: ["ZOBACZ TUTAJ", "TRENING JACOBSONA", "BOX BREATHING"],
   },
