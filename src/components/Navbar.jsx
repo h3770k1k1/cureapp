@@ -16,7 +16,7 @@ const Color = {
   BLUE: "#CDF6FF",
 };
 
-const Navbar = ({ onColorChange }) => {
+const Navbar = ({ onColorChange, activeArea }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const colors = [
@@ -43,7 +43,7 @@ const Navbar = ({ onColorChange }) => {
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>
-          <Text style={styles.highlight}>OBSZAR</Text>
+          <Text style={styles.highlight}>{activeArea || "DEFAULT"}</Text>
         </Text>
       </View>
       <View style={styles.circleContainer}>
