@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import SmallSection from "./SmallSection";
+import {MentalTexts} from "../Views/MentalTexts"
 
 const Section = ({ header, text }) => (
   <View style={styles.section}>
@@ -10,46 +11,50 @@ const Section = ({ header, text }) => (
 );
 
 const AreaSubpage = ({ activeColor }) => {
+  const index = MentalTexts.findIndex(item => item.Color === activeColor);
+
+  const text = index !== -1 ? MentalTexts[index] : null;
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Section
-          header="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed "
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"
-        />
-        <Section
-          header="Header 2"
-          text="This is some text for the second section."
-        />
-        <Section
-          header="Header 3"
-          text="This is some text for the third section."
-        />
+        {text ? (
+          <>
+            <Section
+              header={text.Header[0]}
+              text={text.Text[0]}
+            />
+            <Section
+              header={text.Header[1] || "Default Header"}
+              text={text.Text[1] || "Default Text"}
+            />
+            <Section
+              header={text.Header[2] || "Default Header"}
+              text={text.Text[2] || "Default Text"}
+            />
+          </>
+        ) : (
+          <Text style={styles.text}>No content available for this color.</Text>
+        )}
 
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <SmallSection
-              header="Section 1"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
-              backgroundColor={activeColor}
-            />
-            <SmallSection
-              header="Section 2"
-              description="Short description for section 2."
-              backgroundColor={activeColor}
-            />
-            <SmallSection
-              header="Section 3"
-              description="Short description for section 3."
-              backgroundColor={activeColor}
-            />
+
+            {text &&
+              text.SectionTitle.map((title, idx) => (
+                <SmallSection
+                  key={idx}
+                  header={title}
+                  description={text.SectionText[idx] || ""}
+                  backgroundColor={activeColor}
+                />
+              ))}
           </ScrollView>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -82,5 +87,4 @@ const styles = StyleSheet.create({
     height: 250,
   },
 });
-
 export default AreaSubpage;

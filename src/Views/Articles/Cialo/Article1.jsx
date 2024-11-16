@@ -6,7 +6,7 @@ import MediumText from "../../../components/MediumText";
 import DotLineHeader from "../../../components/DotLineHeader";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
-import { articleTexts } from "./BodyArticleText";
+import { BodyArticleTexts } from "./BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 });
 
 const Article1 = () => {
-  const article = articleTexts[0];
+  const article = BodyArticleTexts[0];
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>

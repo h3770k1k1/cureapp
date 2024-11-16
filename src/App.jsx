@@ -5,7 +5,7 @@ import Article5 from "./Views/Articles/Cialo/Article5";
 function App(): JSX.Element {
   return (
     <>
-      <Article5 />
+      <Mental />
     </>
   );
 }

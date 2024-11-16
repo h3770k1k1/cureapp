@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 });
 
 const Article2 = () => {
-  const article = articleTexts[1];
+  const article = BodyArticleTexts[1];
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>

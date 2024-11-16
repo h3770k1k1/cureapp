@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     margin: 1.5,
   },
   filledDot: {
-    backgroundColor: "#535353", // Fill the dot with a color
+    backgroundColor: "#535353",
   },
   dotsContainer: {
     display: "flex",
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 });
 
 const ArticleHeader = ({ dotCount, filledDotIndex }) => {
-  // Generate an array of dots based on the dotCount prop
   const dots = Array(dotCount).fill(0);
 
   return (
@@ -43,7 +42,7 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
             key={index}
             style={[
               styles.dot,
-              index === filledDotIndex ? styles.filledDot : null, // Apply the filled style to the selected dot
+              index === filledDotIndex ? styles.filledDot : null,
             ]}
           ></View>
         ))}

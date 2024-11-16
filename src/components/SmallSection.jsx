@@ -16,7 +16,7 @@ const SmallSection = ({ header, description, backgroundColor }) => (
       style={styles.moreButton}
       onPress={() => console.log("More pressed")}
     >
-      <Text style={styles.moreButtonText}>More</Text>
+      <Text style={styles.moreButtonText}>Więcej</Text>
     </TouchableOpacity>
   </View>
 );

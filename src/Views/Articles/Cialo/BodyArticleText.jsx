@@ -1,4 +1,4 @@
-export const articleTexts = [
+export const bodyArticleTexts = [
   {
     ArticleIndex: 0,
     ArticleTitle: "Zadbaj o swoją relację z ciałem (ze sobą)",
