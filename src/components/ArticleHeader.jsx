@@ -35,10 +35,27 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
   const handleArrowClick = () => {
     const currentRoute = navigation.getState().routes[navigation.getState().index].name;
 
-    if (currentRoute === "Article2") {
-      navigation.navigate("Article1"); // Jeśli jesteśmy w Article2, wracamy do Article1
-    } else if (currentRoute === "Article1") {
-      navigation.navigate("Mental"); // Jeśli jesteśmy w Article1, wracamy do Mental
+    switch (currentRoute) {
+      case "Article6":
+        navigation.navigate("Article5");
+        break;
+      case "Article5":
+        navigation.navigate("Article4");
+        break;
+      case "Article4":
+        navigation.navigate("Article3");
+        break;
+      case "Article3":
+        navigation.navigate("Article2");
+        break;
+      case "Article2":
+        navigation.navigate("Article1");
+        break;
+      case "Article1":
+        navigation.navigate("Mental");
+        break;
+      default:
+        navigation.navigate("Mental");
     }
   };
 
