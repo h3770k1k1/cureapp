@@ -2,7 +2,6 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-// Import artykułów
 import Article1 from "./Views/Articles/Cialo/Article1";
 import Article2 from "./Views/Articles/Cialo/Article2";
 import Article3 from "./Views/Articles/Cialo/Article3";

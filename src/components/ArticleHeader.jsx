@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import ArticleArrow from "./ArticleArrow";
+import ArticleArrow from "./ArticleArrow"; // Upewnij się, że masz odpowiedni komponent
+import { useNavigation } from '@react-navigation/native'; // Importuj useNavigation hook
 
 const styles = StyleSheet.create({
   topContainer: {
@@ -29,11 +30,17 @@ const styles = StyleSheet.create({
 });
 
 const ArticleHeader = ({ dotCount, filledDotIndex }) => {
+  const navigation = useNavigation(); // Uzyskaj dostęp do funkcji nawigacji
+
+  const handleArrowClick = () => {
+    navigation.goBack(); // Cofanie do poprzedniego ekranu
+  };
+
   const dots = Array(dotCount).fill(0);
 
   return (
     <View style={styles.topContainer}>
-      <Text>
+      <Text onPress={handleArrowClick}>
         <ArticleArrow />
       </Text>
       <View style={styles.dotsContainer}>
