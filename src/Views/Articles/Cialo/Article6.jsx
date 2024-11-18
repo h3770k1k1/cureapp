@@ -6,7 +6,7 @@ import BoldText from "../../../components/BoldText";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import DropDown from "../../../components/DropDown";
-import { articleTexts } from "./BodyArticleText";
+import { bodyArticleTexts } from "./BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -20,9 +20,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article6 = () => {
-  const article = articleTexts[5];
-
+const Article6 = ({ navigation }) => {
+  const article = bodyArticleTexts[5];
+ const handleForward = () => {
+            navigation.navigate("Article6");
+          };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
@@ -57,6 +59,7 @@ const Article6 = () => {
       <ForwardingButton
         text={article.ForwardingButton}
         backgroundColor="#FFE2CC"
+           onPress={handleForward}
       />
     </View>
   );

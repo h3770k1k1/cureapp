@@ -6,7 +6,7 @@ import MediumText from "../../../components/MediumText";
 import DotLineHeader from "../../../components/DotLineHeader";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
-import { articleTexts } from "./BodyArticleText";
+import { bodyArticleTexts } from "./BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -20,8 +20,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article2 = () => {
-  const article = BodyArticleTexts[1];
+const Article2 = ({ navigation }) => {
+  const article = bodyArticleTexts[1];
+  const handleForward = () => {
+      navigation.navigate("Article3");
+    };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
@@ -34,6 +37,7 @@ const Article2 = () => {
       <ForwardingButton
         text={article.ForwardingButton}
         backgroundColor="#FFD3FA"
+        onPress={handleForward}
       />
     </View>
   );
