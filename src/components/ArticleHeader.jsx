@@ -33,7 +33,13 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
   const navigation = useNavigation(); // Uzyskaj dostęp do funkcji nawigacji
 
   const handleArrowClick = () => {
-    navigation.goBack(); // Cofanie do poprzedniego ekranu
+    const currentRoute = navigation.getState().routes[navigation.getState().index].name;
+
+    if (currentRoute === "Article2") {
+      navigation.navigate("Article1"); // Jeśli jesteśmy w Article2, wracamy do Article1
+    } else if (currentRoute === "Article1") {
+      navigation.navigate("Mental"); // Jeśli jesteśmy w Article1, wracamy do Mental
+    }
   };
 
   const dots = Array(dotCount).fill(0);

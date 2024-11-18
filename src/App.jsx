@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import Mental from "./Views/Mental";
 import Article1 from "./Views/Articles/Cialo/Article1";
 import Article2 from "./Views/Articles/Cialo/Article2";
 import Article3 from "./Views/Articles/Cialo/Article3";
@@ -15,6 +15,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Mental" component={Mental} />
         <Stack.Screen name="Article1" component={Article1} />
         <Stack.Screen name="Article2" component={Article2} />
         <Stack.Screen name="Article3" component={Article3} />

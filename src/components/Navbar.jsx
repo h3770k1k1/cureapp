@@ -16,8 +16,8 @@ const Color = {
   BLUE: "#CDF6FF",
 };
 
-const Navbar = ({ onColorChange, activeArea }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const Navbar = ({ onColorChange, activeArea, activeColor }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const colors = [
     Color.PINK,
@@ -28,8 +28,8 @@ const Navbar = ({ onColorChange, activeArea }) => {
   ];
 
   const handleCirclePress = (index) => {
-    setActiveIndex(index);
-    onColorChange(colors[index]);
+    setActiveIndex(index); // Zmieniamy aktywny indeks po kliknięciu
+    onColorChange(colors[index]); // Zmieniamy kolor na podstawie wybranego indeksu
   };
 
   return (
@@ -38,31 +38,31 @@ const Navbar = ({ onColorChange, activeArea }) => {
       <View
         style={[
           styles.navbar,
-          activeIndex !== null && { backgroundColor: colors[activeIndex] },
+          activeColor && { backgroundColor: activeColor }, // Jeśli activeColor jest ustawiony, zmieniamy tło
         ]}
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>
-          <Text style={styles.highlight}>{activeArea || "DEFAULT"}</Text>
+          <Text style={styles.highlight}>{activeArea || "CIAŁO"}</Text> {/* Jeśli brak obszaru, wyświetl "Ciało" */}
         </Text>
       </View>
       <View style={styles.circleContainer}>
         {["c", "u", "r", "e", "d"].map((letter, index) => (
           <TouchableOpacity
             key={index}
-            onPress={() => handleCirclePress(index)}
+            onPress={() => handleCirclePress(index)} // Zmieniamy aktywny indeks przy kliknięciu
           >
             <View
               style={[
                 styles.circle,
                 styles[`circle${index}`],
-                activeIndex === index && styles.activeCircle,
+                activeIndex === index && styles.activeCircle, // Aktywny okrąg zmienia styl
               ]}
             >
               <Text
                 style={[
                   styles.circleText,
-                  activeIndex === index && styles.activeCircleText,
+                  activeIndex === index && styles.activeCircleText, // Aktywny okrąg zmienia tekst
                 ]}
               >
                 {letter}
@@ -137,10 +137,10 @@ const styles = StyleSheet.create({
   },
   activeCircle: {
     borderWidth: 3,
-    borderColor: "#fff",
+    borderColor: "#fff", // Zmieniamy obramowanie na białe, kiedy okrąg jest aktywny
   },
   activeCircleText: {
-    fontWeight: "bold",
+    fontWeight: "bold", // Zmieniamy tekst na pogrubiony dla aktywnego okręgu
   },
 });
 

@@ -1,7 +1,8 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Hook nawigacji
 import SmallSection from "./SmallSection";
-import {MentalTexts} from "../Views/MentalTexts"
+import { MentalTexts } from "../Views/MentalTexts"; // Zakładam, że `MentalTexts` jest poprawnie zaimportowane
 
 const Section = ({ header, text }) => (
   <View style={styles.section}>
@@ -11,8 +12,10 @@ const Section = ({ header, text }) => (
 );
 
 const AreaSubpage = ({ activeColor }) => {
-  const index = MentalTexts.findIndex(item => item.Color === activeColor);
+  const navigation = useNavigation(); // Hook nawigacji
 
+  // Znalezienie odpowiedniego tekstu na podstawie koloru
+  const index = MentalTexts.findIndex(item => item.Color === activeColor);
   const text = index !== -1 ? MentalTexts[index] : null;
 
   return (
@@ -20,26 +23,22 @@ const AreaSubpage = ({ activeColor }) => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {text ? (
           <>
-            <Section
-              header={text.Header[0]}
-              text={text.Text[0]}
-            />
-            <Section
-              header={text.Header[1] || "Default Header"}
-              text={text.Text[1] || "Default Text"}
-            />
-            <Section
-              header={text.Header[2] || "Default Header"}
-              text={text.Text[2] || "Default Text"}
-            />
+            {/* Główne sekcje */}
+            {text.Header.map((header, idx) => (
+              <Section
+                key={idx}
+                header={header || "Default Header"}
+                text={text.Text[idx] || "Default Text"}
+              />
+            ))}
           </>
         ) : (
           <Text style={styles.text}>No content available for this color.</Text>
         )}
 
+        {/* Małe sekcje */}
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-
             {text &&
               text.SectionTitle.map((title, idx) => (
                 <SmallSection
@@ -47,6 +46,8 @@ const AreaSubpage = ({ activeColor }) => {
                   header={title}
                   description={text.SectionText[idx] || ""}
                   backgroundColor={activeColor}
+                  navigation={navigation} // Przekazanie nawigacji
+                  articleIndex={idx} // Indeks artykułu
                 />
               ))}
           </ScrollView>
@@ -55,6 +56,7 @@ const AreaSubpage = ({ activeColor }) => {
     </SafeAreaView>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -87,4 +89,5 @@ const styles = StyleSheet.create({
     height: 250,
   },
 });
+
 export default AreaSubpage;

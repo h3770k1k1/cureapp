@@ -8,18 +8,29 @@ const truncateText = (text, maxLength) => {
   return text;
 };
 
-const SmallSection = ({ header, description, backgroundColor }) => (
-  <View style={[styles.smallSection, { backgroundColor }]}>
-    <Text style={styles.smallHeader}>{header}</Text>
-    <Text style={styles.smallDescription}>{truncateText(description, 80)}</Text>
-    <TouchableOpacity
-      style={styles.moreButton}
-      onPress={() => console.log("More pressed")}
-    >
-      <Text style={styles.moreButtonText}>Więcej</Text>
-    </TouchableOpacity>
-  </View>
-);
+const SmallSection = ({ header, description, backgroundColor, navigation, articleIndex }) => {
+  const handlePress = () => {
+    if (backgroundColor === "#FFD3FA") { // Kolor różowy
+      const articleName = `Article${articleIndex + 1}`;
+      navigation.navigate(articleName); // Przeniesienie na odpowiedni ekran
+    } else {
+      console.log("Przycisk działa, ale brak nawigacji dla tego koloru.");
+    }
+  };
+
+  return (
+    <View style={[styles.smallSection, { backgroundColor }]}>
+      <Text style={styles.smallHeader}>{header}</Text>
+      <Text style={styles.smallDescription}>{truncateText(description, 80)}</Text>
+      <TouchableOpacity
+        style={styles.moreButton}
+        onPress={handlePress} // Dodana funkcja obsługi przycisku
+      >
+        <Text style={styles.moreButtonText}>Więcej</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   smallSection: {
