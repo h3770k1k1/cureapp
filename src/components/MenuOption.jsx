@@ -60,7 +60,6 @@ const Option = ({ text, index }) => {
   const lastWordStyle =
     index < colors.length ? { backgroundColor: colors[index] } : {};
 
-  // Funkcja do obsługi kliknięcia przycisku
   const handlePress = () => {
     if (index === colors.length - 1) {
 
@@ -75,22 +74,11 @@ const Option = ({ text, index }) => {
     <TouchableOpacity
       style={[styles.option, index === colors.length && styles.inactive]} // Dodajemy klasę 'inactive' dla ostatniego przycisku
       onPress={handlePress}
-      disabled={index === colors.length} // Wyłączamy kliknięcie dla ostatniego przycisku
+      disabled={index === colors.length}
     >
       <Text style={styles.optionText}>
         {remainingText}
-        {index === colors.length ? (
-          <LinearGradient
-            colors={colors[0]}
-            style={styles.gradientText}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
-            <Text style={styles.gradientWord}>{lastWord}</Text>
-          </LinearGradient>
-        ) : (
           <Text style={[styles.lastWord, lastWordStyle]}>{lastWord}</Text>
-        )}
       </Text>
       <ArrowOption />
     </TouchableOpacity>
