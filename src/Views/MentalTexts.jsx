@@ -4,7 +4,7 @@ export const MentalTexts = [
 Header:['Twoje ciało jest dobre','Twoje ciało to Twój dom','Twoje ciało to... Ty'],
 Text:['Ciało to miejsce, w którym przeżywasz emocje (zawsze! – jeśli nie wiesz, zerknij do zakładki EMOCJE) oraz w którym mieszka Twój UMYSŁ (dusza) i Twój DUCH.','To dzięki niemu możesz odkrywać świat, w którym żyjesz (poprzez zmysły) oraz nawiązywać kontakt: doświadczać bliskości innych ludzi oraz okazywać miłość.','To, co robisz ciału – robisz sobie. Traktuj siebie z życzliwością. Twoje ciało jest mądre. Nie jest Twoim wrogiem, lecz sprzymierzeńcem. Każde odczucie, które dopuszcza do czucia, jest dla Ciebie ważną wiadomością wprost od niego, a tym samym zaproszeniem, by poznać bardziej siebie.'],
 SectionCount:6,
-SectionTitle:['Zadbaj o swoją relacjęz ciałem (ze sobą)','Zabierz się na spacer','Znajdź nową ruchową zajawkę','Śpij, śnij','Oddychaj'],
+SectionTitle:['Zadbaj o swoją relacjęz ciałem (ze sobą)','Zabierz się na spacer','Znajdź nową ruchową zajawkę','Jedz i pij', 'Śpij, śnij','Oddychaj'],
 SectionText:['Bądź dla/na siebie uważn_ i czuł_. Zapisuj swoje odczucia z ciała oraz spróbuj zrozumieć...','Ruch to bardzo ważna część bycia człowiekiem. Jesteśmy do ruchu stworzeni! A taki spacer może...','Nie jest ważne, jaki rodzaj ruchu przeważa w Twoim życiu – ważne, by było go dużo! By cieszyć się...','Jakość spożywanego jedzenia będzie odczuwalna. Jeśli chcesz czuć się lepiej w swoim ciele...','Często bagatelizujemy potrzebę wysypiania się, kiedy tak naprawdę nasz kolejny dzień...','Gdy oddychasz, to tak jakbyś wprowadzał_ na nowo życie do swojego ciała. Oddech pomaga...']
   },
   {

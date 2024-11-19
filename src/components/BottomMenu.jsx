@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const BottomMenu = ({ selectedView }) => {
-  const MenuButton = ({ icon, isSelected, view }) => (
+const BottomMenu = ({ selectedView, navigation }) => {
+  const MenuButton = ({ icon, isSelected, view, onPress }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
-      onPress={() => {}}
+      onPress={onPress}
     >
       {icon}
     </TouchableOpacity>
@@ -77,6 +77,7 @@ const BottomMenu = ({ selectedView }) => {
         }
         isSelected={isSelected}
         view={Views.Home}
+        onPress={() => navigation.navigate(Views.Home)}
       />
     );
   };
@@ -92,6 +93,7 @@ const BottomMenu = ({ selectedView }) => {
         }
         isSelected={isSelected}
         view={Views.Mental}
+        onPress={() => navigation.navigate(Views.Mental)}
       />
     );
   };
@@ -107,6 +109,7 @@ const BottomMenu = ({ selectedView }) => {
         }
         isSelected={isSelected}
         view={Views.Grow}
+        onPress={() => navigation.navigate(Views.Grow)}
       />
     );
   };
@@ -122,6 +125,7 @@ const BottomMenu = ({ selectedView }) => {
         }
         isSelected={isSelected}
         view={Views.Settings}
+        onPress={() => navigation.navigate(Views.Settings)}
       />
     );
   };

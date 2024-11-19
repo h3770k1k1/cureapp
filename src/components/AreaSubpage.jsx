@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native"; // Hook nawigacji
 import SmallSection from "./SmallSection";
-import { MentalTexts } from "../Views/MentalTexts"; // Zakładam, że `MentalTexts` jest poprawnie zaimportowane
+import { MentalTexts } from "../Views/MentalTexts";
 
 const Section = ({ header, text }) => (
   <View style={styles.section}>
@@ -14,7 +14,6 @@ const Section = ({ header, text }) => (
 const AreaSubpage = ({ activeColor }) => {
   const navigation = useNavigation(); // Hook nawigacji
 
-  // Znalezienie odpowiedniego tekstu na podstawie koloru
   const index = MentalTexts.findIndex(item => item.Color === activeColor);
   const text = index !== -1 ? MentalTexts[index] : null;
 
@@ -23,7 +22,6 @@ const AreaSubpage = ({ activeColor }) => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {text ? (
           <>
-            {/* Główne sekcje */}
             {text.Header.map((header, idx) => (
               <Section
                 key={idx}
@@ -33,10 +31,9 @@ const AreaSubpage = ({ activeColor }) => {
             ))}
           </>
         ) : (
-          <Text style={styles.text}>No content available for this color.</Text>
+          <Text style={styles.text}>Brak treści dla tego koloru.</Text>
         )}
 
-        {/* Małe sekcje */}
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {text &&
@@ -46,8 +43,8 @@ const AreaSubpage = ({ activeColor }) => {
                   header={title}
                   description={text.SectionText[idx] || ""}
                   backgroundColor={activeColor}
-                  navigation={navigation} // Przekazanie nawigacji
-                  articleIndex={idx} // Indeks artykułu
+                  navigation={navigation}
+                  articleIndex={idx}
                 />
               ))}
           </ScrollView>
