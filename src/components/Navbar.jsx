@@ -1,35 +1,29 @@
-import React, { useState } from "react";
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-} from "react-native";
-
-const Color = {
-  PINK: "#FFD3FA",
-  ORANGE: "#FFE2CC",
-  YELLOW: "#FFF7CC",
-  GREEN: "#D3F2D7",
-  BLUE: "#CDF6FF",
-};
+import React, { useState, useEffect } from "react";
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const route = useRoute(); // Nasłuchujemy zmiany w route
+  const navigation = useNavigation();
 
   const colors = [
-    Color.PINK,
-    Color.ORANGE,
-    Color.YELLOW,
-    Color.GREEN,
-    Color.BLUE,
+    "#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF",
   ];
 
+  useEffect(() => {
+    // Zaktualizuj kolor i obszar na podstawie parametrów w route
+    if (route.params?.activeColor) {
+      const color = route.params.activeColor;
+      const area = route.params.activeArea || "CIAŁO"; // Domyślny obszar, jeśli nie jest przekazany
+      onColorChange(color); // Zaktualizuj kolor
+      setActiveIndex(colors.indexOf(color)); // Zaktualizuj indeks aktywnego koloru
+    }
+  }, [route.params]);
+
   const handleCirclePress = (index) => {
-    setActiveIndex(index); // Zmieniamy aktywny indeks po kliknięciu
-    onColorChange(colors[index]); // Zmieniamy kolor na podstawie wybranego indeksu
+    setActiveIndex(index);
+    onColorChange(colors[index]);
   };
 
   return (
@@ -38,34 +32,34 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
       <View
         style={[
           styles.navbar,
-          activeColor && { backgroundColor: activeColor }, // Jeśli activeColor jest ustawiony, zmieniamy tło
+          activeColor && { backgroundColor: activeColor },
         ]}
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>
-          <Text style={styles.highlight}>{activeArea || "CIAŁO"}</Text> {/* Jeśli brak obszaru, wyświetl "Ciało" */}
+          <Text style={styles.highlight}>{activeArea || "CIAŁO"}</Text>
         </Text>
       </View>
       <View style={styles.circleContainer}>
-        {["c", "u", "r", "e", "d"].map((letter, index) => (
+        {colors.map((color, index) => (
           <TouchableOpacity
             key={index}
-            onPress={() => handleCirclePress(index)} // Zmieniamy aktywny indeks przy kliknięciu
+            onPress={() => handleCirclePress(index)}
           >
             <View
               style={[
                 styles.circle,
-                styles[`circle${index}`],
-                activeIndex === index && styles.activeCircle, // Aktywny okrąg zmienia styl
+                { backgroundColor: color },
+                activeIndex === index && styles.activeCircle,
               ]}
             >
               <Text
                 style={[
                   styles.circleText,
-                  activeIndex === index && styles.activeCircleText, // Aktywny okrąg zmienia tekst
+                  activeIndex === index && styles.activeCircleText,
                 ]}
               >
-                {letter}
+                {["c", "u", "r", "e", "d"][index]}
               </Text>
             </View>
           </TouchableOpacity>
@@ -120,27 +114,12 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     color: "#000",
   },
-  circle0: {
-    backgroundColor: Color.PINK,
-  },
-  circle1: {
-    backgroundColor: Color.ORANGE,
-  },
-  circle2: {
-    backgroundColor: Color.YELLOW,
-  },
-  circle3: {
-    backgroundColor: Color.GREEN,
-  },
-  circle4: {
-    backgroundColor: Color.BLUE,
-  },
   activeCircle: {
     borderWidth: 3,
-    borderColor: "#fff", // Zmieniamy obramowanie na białe, kiedy okrąg jest aktywny
+    borderColor: "#fff",
   },
   activeCircleText: {
-    fontWeight: "bold", // Zmieniamy tekst na pogrubiony dla aktywnego okręgu
+    fontWeight: "bold",
   },
 });
 

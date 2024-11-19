@@ -2,6 +2,9 @@ import React from "react";
 import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import ArrowOption from "./ArrowOption";
+import { useNavigation } from "@react-navigation/native";
+import { MentalTexts } from "../Views/MentalTexts";
+
 const styles = StyleSheet.create({
   option: {
     display: "flex",
@@ -34,18 +37,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
   },
+  inactive: {
+    opacity: 0.5,
+  },
 });
 
 const colors = [
-  ["#FFD3FA", "#FFE2CC"],
   "#FFD3FA",
   "#FFE2CC",
   "#FFF7CC",
   "#D3F2D7",
   "#CDF6FF",
+  "#FFFFFF",
 ];
 
 const Option = ({ text, index }) => {
+  const navigation = useNavigation();
   const words = text.split(" ");
   const lastWord = words.pop();
   const remainingText = words.join(" ") + " ";
@@ -53,8 +60,23 @@ const Option = ({ text, index }) => {
   const lastWordStyle =
     index < colors.length ? { backgroundColor: colors[index] } : {};
 
+  // Funkcja do obsługi kliknięcia przycisku
+  const handlePress = () => {
+    if (index === colors.length - 1) {
+
+      return;
+    }
+    const color = MentalTexts[index]?.Color || "#FFFFFF";
+    const area = MentalTexts[index]?.Area || "";
+    navigation.navigate("Mental", { activeColor: color, activeArea: area });
+  };
+
   return (
-    <TouchableOpacity style={styles.option}>
+    <TouchableOpacity
+      style={[styles.option, index === colors.length && styles.inactive]} // Dodajemy klasę 'inactive' dla ostatniego przycisku
+      onPress={handlePress}
+      disabled={index === colors.length} // Wyłączamy kliknięcie dla ostatniego przycisku
+    >
       <Text style={styles.optionText}>
         {remainingText}
         {index === colors.length ? (
