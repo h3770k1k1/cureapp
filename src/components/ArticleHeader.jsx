@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import ArticleArrow from "./ArticleArrow"; // Upewnij się, że masz odpowiedni komponent
-import { useNavigation } from '@react-navigation/native'; // Importuj useNavigation hook
+import { useNavigation } from "@react-navigation/native";
+import ArticleArrow from "./ArticleArrow";
 
 const styles = StyleSheet.create({
   topContainer: {
@@ -30,12 +30,18 @@ const styles = StyleSheet.create({
 });
 
 const ArticleHeader = ({ dotCount, filledDotIndex }) => {
-  const navigation = useNavigation(); // Uzyskaj dostęp do funkcji nawigacji
+  const navigation = useNavigation();
 
   const handleArrowClick = () => {
     const currentRoute = navigation.getState().routes[navigation.getState().index].name;
 
     switch (currentRoute) {
+      case "SoulArticle1":
+        navigation.navigate("Mental", {
+          activeColor: "#CDF6FF",
+          activeArea: "DUSZA",
+        });
+        break;
       case "Article6":
         navigation.navigate("Article5");
         break;
@@ -52,10 +58,16 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
         navigation.navigate("Article1");
         break;
       case "Article1":
-        navigation.navigate("Mental");
+        navigation.navigate("Mental", {
+          activeColor: "#FFD3FA",
+          activeArea: "",
+        });
         break;
       default:
-        navigation.navigate("Mental");
+        navigation.navigate("Mental", {
+          activeColor: "#FFD3FA",
+          activeArea: "",
+        });
     }
   };
 

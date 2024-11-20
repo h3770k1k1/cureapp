@@ -12,7 +12,6 @@ const Mental = () => {
   const [activeColor, setActiveColor] = useState("#FFD3FA");
   const [activeArea, setActiveArea] = useState("");
 
-  // Synchronizowanie parametrów z nawigacji z stanem
   useEffect(() => {
     if (route.params?.activeColor) {
       setActiveColor(route.params.activeColor);

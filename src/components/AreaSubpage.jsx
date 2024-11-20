@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
-import { useNavigation } from "@react-navigation/native"; // Hook nawigacji
+import { useNavigation } from "@react-navigation/native";
 import SmallSection from "./SmallSection";
 import { MentalTexts } from "../Views/MentalTexts";
 
@@ -12,7 +12,7 @@ const Section = ({ header, text }) => (
 );
 
 const AreaSubpage = ({ activeColor }) => {
-  const navigation = useNavigation(); // Hook nawigacji
+  const navigation = useNavigation();
 
   const index = MentalTexts.findIndex(item => item.Color === activeColor);
   const text = index !== -1 ? MentalTexts[index] : null;

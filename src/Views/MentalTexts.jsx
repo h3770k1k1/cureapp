@@ -39,8 +39,8 @@ SectionText:['Każda z emocji jest dobra! Może być przyjemna lub nieprzyjemna,
  Color:'#CDF6FF',
  Header:['Twój duch... jest','Twój duch a sens życia','Twój duch... Twój rdzeń'],
  Text:['Potrzeba duchowej refleksji jest dla natury ludzkiej uniwersalna. Jest obecna w każdej kulturze i epoce historycznej. Oprócz materii – ciała, umysłu, należysz do świata ducha, a wyraża się to przede wszystkim przez zdolność do miłości i wrażliwość na piękno. Odkryj swoją głębię!','Duchowość to nie religijność! Badacze definiują ją jako zawsze indywidualny proces poszukiwania sensu życia, będący skutkiem regularnej autoekspresji, refleksji i własnych doświadczeń (poznaj logoterapię!).','Dbanie o swojego ducha (regularny czas na refleksje nad swoimi wartościami, celami, sensem, medytacja czy modlitwa) to klucz dla utrzymania dobrostanu (ta sfera wpływa zarówno na zdrowie psychiczne i fizyczne).'],
- SectionCount:2,
- SectionTitle:['Zadbaj o ...','Karm umysł tym, co Ci służy'],
- SectionText:['Bądź dla/na siebie uważn_ i czuł_. Zapisuj swoje odczucia z ciała oraz spróbuj zrozumieć...','Bądź dla/na siebie uważn_ i czuł_. Zapisuj swoje odczucia z ciała oraz spróbuj zrozumieć...'],
+ SectionCount:6,
+ SectionTitle:['Odkrywaj swój sens','Pielęgnuj swojepoczucie sensu','Zadbaj o swój dobrostan','Przyjrzyj się religiom','Bądź wdzięczn_','Poznaj logoterapię'],
+ SectionText:['Sens życia charakteryzuje się tym, że stale podlega przemianom, ale nigdy nie przestaje istnieć...','Jeśli już odkrył_ś, co ma dla Ciebie sens, żyj tak, by pielęgnować z tym kontakt! Bycie człowiekiem...','Dobrostan obejmuje wszystkie wymiary życia człowieka. Do jego osiągniecią kluczowe jest...','Prawdziwe cele każdej religii są transcendentne (wykraczające poza świat materii)...','Wdzięczność to jeden z istotnych aspektów wpływających na dobrostan: uświadomienie...','Nazwa logoterapia dosłownie odzwierciedla ideę leczenia przez pomoc w odnajdywaniu sensu...'],
   }
  ];

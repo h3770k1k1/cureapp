@@ -15,7 +15,12 @@ const SmallSection = ({ header, description, backgroundColor, navigation, articl
     if (backgroundColor === "#FFD3FA") {
       const articleName = `Article${articleIndex + 1}`;
       navigation.navigate(articleName);
-    } else {
+    }
+    if (backgroundColor === "#CDF6FF") {
+          const articleName = `SoulArticle${articleIndex + 1}`;
+          navigation.navigate(articleName);
+        }
+    else {
       console.log("Przycisk działa, ale brak nawigacji dla tego koloru.");
     }
   };
