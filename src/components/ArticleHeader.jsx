@@ -42,6 +42,9 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
           activeArea: "DUSZA",
         });
         break;
+     case "SoulArticle2":
+     navigation.navigate("SoulArticle1");
+     break;
       case "Article6":
         navigation.navigate("Article5");
         break;
