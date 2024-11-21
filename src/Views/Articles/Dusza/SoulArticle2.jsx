@@ -54,6 +54,7 @@ const SoulArticle2 = () => {
       <ForwardingButton
         text={article.ForwardingButton}
         backgroundColor="#CDF6FF"
+
       />
     </View>
   );

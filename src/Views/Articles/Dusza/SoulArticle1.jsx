@@ -6,7 +6,7 @@ import ArticleTitle from "../../../components/ArticleTitle";
 import SmallText from "../../../components/SmallText";
 import DropDown from "../../../components/DropDown";
 import { ScrollView, View, StyleSheet } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -20,8 +20,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const SoulArticle1 = () => {
+
+const SoulArticle1 = ({ navigation }) => {
  const article = soulArticleTexts[0];
+ const handleForward = () => {
+     navigation.navigate("SoulArticle2");
+   };
 return (
 <View style={styles.mainContainer}>
 <ScrollView contentContainerStyle={styles.scrollView}>
@@ -46,7 +50,7 @@ return (
          <SmallText text={article.SmallText[1]} />
 </ScrollView>
 <ForwardingButton
-text={article.ForwardingButton} backgroundColor="#CDF6FF"
+text={article.ForwardingButton} backgroundColor="#CDF6FF" onPress={handleForward}
 /></View>
 )}
 export default SoulArticle1;
