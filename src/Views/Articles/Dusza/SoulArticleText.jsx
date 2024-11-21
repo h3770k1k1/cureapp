@@ -16,6 +16,16 @@ ForwardingButton: "Pielęgnuj poczucie sensu",
    LinkButton:['DARMOWA POMOC \nPSYCHOLOGICZNA','LOGOTERAPIA'],
    SideLetter:'*',
    ForwardingButton: "Zadbaj o swój dobrostan",
-   QuoteText:'“Bycie człowiekiem to bycie świadomym \ni odpowiedzialnym” – Viktor Frankl',
-  }
+   BoldText:'“Bycie człowiekiem to bycie świadomym \ni odpowiedzialnym” – Viktor Frankl',
+  },
+   {
+     ArticleIndex: 2,
+     ArticleTitle: "Zadbaj o swój dobrostan",
+  SmallText:["Dobrostan obejmuje wszystkie wymiary życia człowieka. Do jego osiągniecią kluczowe jest dbanie o swoją sferę duchową (regularny czas na refleksje nad swoimi wartościami, celami, sensem). Według Frankla (psychiatry, psychoterapeuty, neurologa i filozofa):","Ponadto według badaczy regularne podejmowanie praktyk duchowych [szczególnie medytacji, praktyki uważności (kontemplacji) czy modlitwy] realnie wpływa na mózg i ciało, przez co zapewnia lepsze zdrowie zarówno psychiczne jak i fizyczne. Narzędzia te mogą pomagać w radzeniu sobie z codziennym stresem i presją, a także zwiększają odporność na trudności życiowe."],
+  ForwardingButton: "Przyjrzyj się religiom",
+  BoldText:"poczucie sensu życia jest istotą życia psychicznego każdego człowieka i jest niezbędne dla jego zdrowia",
+  MediumText:"Przykładowe polecane praktyki",
+  DropDownTitle:["Autorefleksja","Praktyka uważności \n(kontemplacja)","Praktyki religijne","Pisanie dziennika"],
+  DropDownSmallText:['Zaplanuj pod koniec dnia czas na refleksję:\n Co było dla mnie ważne? \n Jakie dobro mnie dzisiaj spotkało? \n Co wywołało radość, wdzięczność? \n Czy był_m dziś autentyczn_? \n Czy wśród moich działań było coś, co teraz mi się nie podoba (nie kierował_m się wartościami, którymi chcę żyć)? \n –> Spróbuj dostrzec, do czego czujesz, że dzisiejszy dzień Cię zaprasza, czego Cię dziś uczy, jaką lekcję Ci daje. Jeśli czujesz zaproszenie do zmiany, podejmij decyzję, by ją wprowadzić w życie.','Ćwicz w ciągu dnia uważność na chwilę obecną. Pomoże Ci w tym świadomy oddech (więcej w zakładce CIAŁO) oraz skupienie na tym, co odbierasz ze swoich zmysłów. Pozwól myślom przelatywać przez umysł. Ilekroć poczujesz, że myśli zabierają większość twojej uwagi, wracaj do skupienia się na odczuciach płynących z ciała.','Najpopularniejsze to: modlitwa, medytacja i czytanie tekstów uznanych za święte. Mogą mieć charakter indywidualny lub wspólnotowy – zazwyczaj w formie otwartych spotkań (nie tylko w kościołach czy świątyniach). Jeśli chcesz poznać dane praktyki, najlepiej jest posłuchać o ich sposobie przeżywania od osoby je praktykującej, np. od lidera takiego spotkania.','Regularne pisanie o swoich myślach, uczuciach i wewnętrznych doświadczeniach może pomóc w głębszym przeżywaniu codzienności oraz poszerzy Twoją świadomość siebie.']
+    },
   ]

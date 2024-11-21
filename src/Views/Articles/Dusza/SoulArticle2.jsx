@@ -8,6 +8,7 @@ import DropDown from "../../../components/DropDown";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
 import LinkButton from "../../../components/LinkButton";
 import LetterDropDown from "../../../components/LetterDropDown";
+import BoldText from "../../../components/BoldText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -33,15 +34,18 @@ const styles = StyleSheet.create({
     },
 });
 
-const SoulArticle2 = () => {
+const SoulArticle2 = ({ navigation }) => {
   const article = soulArticleTexts[1];
+  const handleForward = () => {
+       navigation.navigate("SoulArticle3");
+     };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText[0]} />
-        <Text style={styles.quote}>{article.QuoteText}</Text>
+        <BoldText text={article.BoldText}></BoldText>
         <SmallText text={article.SmallText[1]} />
         <DropDown
           titleText={article.DropDownTitle[0]}
@@ -54,7 +58,7 @@ const SoulArticle2 = () => {
       <ForwardingButton
         text={article.ForwardingButton}
         backgroundColor="#CDF6FF"
-
+onPress={handleForward}
       />
     </View>
   );
