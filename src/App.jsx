@@ -3,13 +3,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Mental from "./Views/Mental";
 import Home from "./Views/Home";
-import Article1 from "./Views/Articles/Cialo/Article1";
-import Article2 from "./Views/Articles/Cialo/Article2";
-import Article3 from "./Views/Articles/Cialo/Article3";
-import Article4 from "./Views/Articles/Cialo/Article4";
-import Article5 from "./Views/Articles/Cialo/Article5";
-import Article6 from "./Views/Articles/Cialo/Article6";
+import Article1 from "./Views/Articles/Cialo/BodyArticle1";
+import Article2 from "./Views/Articles/Cialo/BodyArticle2";
+import Article3 from "./Views/Articles/Cialo/BodyArticle3";
+import Article4 from "./Views/Articles/Cialo/BodyArticle4";
+import Article5 from "./Views/Articles/Cialo/BodyArticle5";
+import Article6 from "./Views/Articles/Cialo/BodyArticle6";
 import SoulArticle1 from "./Views/Articles/Dusza/SoulArticle1";
+import SoulArticle2 from "./Views/Articles/Dusza/SoulArticle2";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ const App = () => {
         <Stack.Screen name="Article5" component={Article5} />
         <Stack.Screen name="Article6" component={Article6} />
         <Stack.Screen name="SoulArticle1" component={SoulArticle1} />
+        <Stack.Screen name="SoulArticle2" component={SoulArticle2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
