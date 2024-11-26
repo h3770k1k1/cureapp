@@ -12,6 +12,7 @@ import Article6 from "./Views/Articles/Cialo/BodyArticle6";
 import SoulArticle1 from "./Views/Articles/Dusza/SoulArticle1";
 import SoulArticle2 from "./Views/Articles/Dusza/SoulArticle2";
 import SoulArticle3 from "./Views/Articles/Dusza/SoulArticle3";
+import SoulArticle4 from "./Views/Articles/Dusza/SoulArticle4";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const App = () => {
         <Stack.Screen name="SoulArticle1" component={SoulArticle1} />
         <Stack.Screen name="SoulArticle2" component={SoulArticle2} />
         <Stack.Screen name="SoulArticle3" component={SoulArticle3} />
+        <Stack.Screen name="SoulArticle4" component={SoulArticle4} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -48,6 +48,9 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
      case "SoulArticle3":
           navigation.navigate("SoulArticle2");
           break;
+          case "SoulArticle4":
+                    navigation.navigate("SoulArticle3");
+                    break;
       case "Article6":
         navigation.navigate("Article5");
         break;

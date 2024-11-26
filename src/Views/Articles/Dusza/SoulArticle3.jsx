@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
   },
 });
 
-
 const SoulArticle3 = ({ navigation }) => {
  const article = soulArticleTexts[2];
-
+ const handleForward = () => {
+       navigation.navigate("SoulArticle4");
+     };
 return (
 <View style={styles.mainContainer}>
 <ScrollView contentContainerStyle={styles.scrollView}>
@@ -57,7 +58,7 @@ return (
                                                                                 />
 </ScrollView>
 <ForwardingButton
-text={article.ForwardingButton} backgroundColor="#CDF6FF"
+text={article.ForwardingButton} backgroundColor="#CDF6FF" onPress={handleForward}
 /></View>
 )}
 export default SoulArticle3;
