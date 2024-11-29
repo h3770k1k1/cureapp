@@ -29,14 +29,13 @@ const SmallSection = ({
       navigation.navigate(articleName);
     }
     if (backgroundColor === "#FFE2CC") {
-          const articleName = `MindArticle${articleIndex + 1}`;
-          navigation.navigate(articleName);
-        }
-         if (backgroundColor === "#D3F2D7") {
-                  const articleName = `EmotionsArticle${articleIndex + 1}`;
-                  navigation.navigate(articleName);
-                }
- else {
+      const articleName = `MindArticle${articleIndex + 1}`;
+      navigation.navigate(articleName);
+    }
+    if (backgroundColor === "#D3F2D7") {
+      const articleName = `EmotionsArticle${articleIndex + 1}`;
+      navigation.navigate(articleName);
+    } else {
       console.log("Przycisk działa, ale brak nawigacji dla tego koloru.");
     }
   };

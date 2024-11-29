@@ -3,6 +3,7 @@ import { ScrollView, View, StyleSheet } from "react-native";
 import ArticleHeader from "../../../components/ArticleHeader";
 import SmallText from "../../../components/SmallText";
 import BoldText from "../../../components/BoldText";
+import MediumText from "../../../components/MediumText";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import DropDown from "../../../components/DropDown";
@@ -20,11 +21,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const EmotionsArticle1 = ({ navigation }) => {
-  const article = emotionsArticleTexts[0];
+const EmotionsArticle2 = ({ navigation }) => {
+  const article = emotionsArticleTexts[1];
 
   const handleForward = () => {
-    navigation.navigate("EmotionsArticle2");
+    navigation.navigate("EmotionsArticle3");
   };
 
   return (
@@ -32,21 +33,29 @@ const EmotionsArticle1 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <BoldText text={article.BoldText[0]} />
-        <SmallText text={article.SmallText[1]} />
-        <DropDown
+<BoldText text={article.BoldText}/>
+<MediumText text={article.MediumText[0]}/>
+<SmallText text={article.SmallText[0]}/>
+<MediumText text={article.MediumText[1]}/>
+<SmallText text={article.SmallText[1]}/>
+<MediumText text={article.MediumText[2]}/>
+<SmallText text={article.SmallText[2]}/>
+<MediumText text={article.MediumText[3]}/>
+<SmallText text={article.SmallText[3]}/>
+<MediumText text={article.MediumText[4]}/>
+<SmallText text={article.SmallText[4]}/>
+<MediumText text={article.MediumText[5]}/>
+<SmallText text={article.SmallText[5]}/>
+   <DropDown
           titleText={article.DropDownTitle[0]}
           smallText={article.DropDownSmallText[0]}
           hasTopBorder={true}
         />
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          hasTopBorder={false}
-        />
-        <BoldText text={article.BoldText[1]} />
-        <SmallText text={article.SmallText[2]} />
+           <DropDown
+                  titleText={article.DropDownTitle[1]}
+                  smallText={article.DropDownSmallText[1]}
+                  hasTopBorder={false}
+                />
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
@@ -57,4 +66,4 @@ const EmotionsArticle1 = ({ navigation }) => {
   );
 };
 
-export default EmotionsArticle1;
+export default EmotionsArticle2;
