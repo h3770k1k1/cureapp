@@ -49,6 +49,9 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
                 case "EmotionsArticle3":
                                 navigation.navigate("EmotionsArticle2");
                                 break;
+                                 case "EmotionsArticle4":
+                                                                navigation.navigate("EmotionsArticle3");
+                                                                break;
       case "SoulArticle1":
         navigation.navigate("Mental", {
           activeColor: "#CDF6FF",

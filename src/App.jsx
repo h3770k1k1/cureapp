@@ -18,6 +18,7 @@ import SoulArticle6 from "./Views/Articles/Dusza/SoulArticle6";
 import EmotionsArticle1 from "./Views/Articles/Emocje/EmotionsArticle1";
 import EmotionsArticle2 from "./Views/Articles/Emocje/EmotionsArticle2";
 import EmotionsArticle3 from "./Views/Articles/Emocje/EmotionsArticle3";
+import EmotionsArticle4 from "./Views/Articles/Emocje/EmotionsArticle4";
 
 const Stack = createStackNavigator();
 
@@ -42,7 +43,7 @@ const App = () => {
         <Stack.Screen name="EmotionsArticle1" component={EmotionsArticle1} />
         <Stack.Screen name="EmotionsArticle2" component={EmotionsArticle2} />
            <Stack.Screen name="EmotionsArticle3" component={EmotionsArticle3} />
-
+<Stack.Screen name="EmotionsArticle4" component={EmotionsArticle4} />
       </Stack.Navigator>
     </NavigationContainer>
   );
