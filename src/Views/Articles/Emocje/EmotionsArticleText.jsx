@@ -31,4 +31,15 @@ export const emotionsArticleTexts = [
    DropDownTitle:["Wyrażaj (przeżywaj)swoje emocje","Naucz się samoregulacji emocji"],
    DropDownSmallText:["Każda emocja jest jak posłaniec z informacją o Twoim wnętrzu. Jeśli go wysłuchasz (pozwolisz ciału – sobie – przeżyć daną reakcję emocjonalną), uświadomisz sobie swoje uczucia i stojące za nimi potrzeb (zaspokojone bądź nie) – masz na nie wpływ (również na to z jakim natężeniem je odczuwasz).\n\nZalanie nimi nigdy nie jest dobrą opcją: emocje są w życiu świetnymi towarzyszami, ale nie przewodnikami). Możesz również je stłumić lub się od nich odciąć (np. najczęstszy sposób to nie-czucie przez zażywanie używek). Jest to jednak najgorsza opcja: każda nieprzeżyta emocja zostaje “zamrożona” w ciele oraz może skutkować chorobą (np. notoryczne tłumienie złości może przejawiać się chorobami o podłożu autoimmunologicznym czy po prostu bólami głowy). Ponadto tłumienie emocji wpływa na całą sferę emocjonalą, np. jeśli przestaniesz być zdolny do czucia smutku, nie będziesz potrafił_ odczuwać też w pełni radości.","Samoregulacja emocji polega na umiejętnym zarządzaniu własnymi emocjami.\n\nSytuacja –> Uwaga –> Myśli –> Emocje\n\nMożesz regulować emocje poprzez skupienie uwagi na czymś innym: innej myśli, innym (dobrym) aspekcie sytuacji lub innym bodźcu. Jeśli czujesz kilka emocji lub uczuć – możesz skupić się na wybranej i do niej zastosować samoregulacje.\n\nMożesz również dostosowywać swoje działania do swoich celów:\nby wykorzystać stan aktualnie przeżywany – mam daną emocję –> dobieram zadanie, np. umiarkowany smutek sprzyja analitycznemu myśleniu, a radość twórczości\nby wzbudzić w sobie określoną emocję– mam zadanie –> dobieram emocje, np. potrzebuję skupienia, analitycznego myślenia, więc puszczam spokojoną czy nostalgiczną muzykę, by wzbudzić umiarkowanie smutny nastrój (słuchając muzyki można wywołać konkretny stan)"],
   },
-];
+  {
+      ArticleIndex: 2,
+      ArticleTitle: "Zadbaj o swoje potrzeby",
+      ForwardingButton:"Obierz dobrą strategię",
+      SmallText: [
+          "Emocje mówią Ci również o Twoich zaspokojonych lub niezaspokojonych potrzebach. Wniosek z tego jest jeden:",
+          "To zdanie może wywołać w Tobie różne emocje, ale na pewno powinno Ci ukazać jaką sprawczość i siłę do zmiany jakości swojego życia masz w sobie! Do dzieła!\n\nEmocja –> Potrzeba —> “Strategia” (działanie)\n\nSchemat działania jest prosty: rozpoznając emocję, którą czujesz, pomoże Ci ona w nazwaniu potrzeby, która się za nią kryje. A wtedy wchodzi już Twoje działanie (by np. znaleźć dobry sposób, by zaspokoić coś, czego potrzebujesz). Jeśli potrzebujesz pomocy, skorzystaj z LISTY EMOCJI I POTRZEB (do pobrania)."
+      ],
+      BoldText: "To Ty jesteś odpowiedzialn_ za zaspokojenie swoich potrzeb",
+      DropDownTitle: "Poznaj sferę potrzeb",
+      DropDownSmallText: "Poniżej kilka faktów o potrzebach wg NVC:\n\n1. **Potrzeby są uniwersalne**\nWszyscy ludzie mają te same potrzeby, ale zaspokajają je innymi “strategiami”.\n\n2. **Nie są stałe**\nZmieniają się w czasie.\n\n3. **Ludzie działają dla zaspokojenia swoich potrzeb**\nKażde działanie, każda wypowiedź, jest próbą zaspokojenia jakiejś potrzeby.\n\n4. **Gdy ktoś mówi “nie” – mówi “tak” swojej potrzebie**\nOdmowa nie wynika ze złych intencji, a z podjętej odpowiedzialności za swój komfort."
+  }]
