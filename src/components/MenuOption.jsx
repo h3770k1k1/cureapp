@@ -62,7 +62,6 @@ const Option = ({ text, index }) => {
 
   const handlePress = () => {
     if (index === colors.length - 1) {
-
       return;
     }
     const color = MentalTexts[index]?.Color || "#FFFFFF";
@@ -78,7 +77,7 @@ const Option = ({ text, index }) => {
     >
       <Text style={styles.optionText}>
         {remainingText}
-          <Text style={[styles.lastWord, lastWordStyle]}>{lastWord}</Text>
+        <Text style={[styles.lastWord, lastWordStyle]}>{lastWord}</Text>
       </Text>
       <ArrowOption />
     </TouchableOpacity>

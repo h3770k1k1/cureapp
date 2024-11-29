@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
 const Article2 = ({ navigation }) => {
   const article = bodyArticleTexts[1];
   const handleForward = () => {
-      navigation.navigate("Article3");
-    };
+    navigation.navigate("Article3");
+  };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>

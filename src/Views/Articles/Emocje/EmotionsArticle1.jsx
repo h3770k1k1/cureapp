@@ -6,12 +6,12 @@ import BoldText from "../../../components/BoldText";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import DropDown from "../../../components/DropDown";
-import { bodyArticleTexts } from "./BodyArticleText";
+import { emotionsArticleTexts } from "./EmotionsArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: "#FFD3FA",
+    backgroundColor: "#D3F2D7",
   },
   scrollView: {
     flexGrow: 1,
@@ -20,49 +20,41 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article6 = ({ navigation }) => {
-  const article = bodyArticleTexts[5];
+const EmotionsArticle1 = ({ navigation }) => {
+  const article = emotionsArticleTexts[0];
+
   const handleForward = () => {
-    navigation.navigate("Article6");
+    navigation.navigate("EmotionsArticle2");
   };
+
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <BoldText text={article.BoldText} />
-        <SmallText text={article.SmallText[1]} />
-
-        {/* First Dropdown with borderTopWidth */}
-        <DropDown
+<SmallText text={article.SmallText[0]}/>
+<BoldText text={article.BoldText[0]}/>
+<SmallText text={article.SmallText[1]}/>
+    <DropDown
           titleText={article.DropDownTitle[0]}
           smallText={article.DropDownSmallText[0]}
-          linkText={article.DropDownLink[0]}
           hasTopBorder={true}
         />
-
-        {/* Other Dropdowns without borderTopWidth */}
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          linkText={article.DropDownLink[1]}
-          hasTopBorder={false}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[2]}
-          smallText={article.DropDownSmallText[2]}
-          linkText={article.DropDownLink[2]}
-          hasTopBorder={false}
-        />
+            <DropDown
+                  titleText={article.DropDownTitle[1]}
+                  smallText={article.DropDownSmallText[1]}
+                  hasTopBorder={false}
+                />
+<BoldText text={article.BoldText[1]}/>
+<SmallText text={article.SmallText[2]}/>
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
-        backgroundColor="#FFE2CC"
+        backgroundColor="#D3F2D7"
         onPress={handleForward}
       />
     </View>
   );
 };
 
-export default Article6;
+export default EmotionsArticle1;

@@ -15,6 +15,7 @@ import SoulArticle3 from "./Views/Articles/Dusza/SoulArticle3";
 import SoulArticle4 from "./Views/Articles/Dusza/SoulArticle4";
 import SoulArticle5 from "./Views/Articles/Dusza/SoulArticle5";
 import SoulArticle6 from "./Views/Articles/Dusza/SoulArticle6";
+import EmotionsArticle1 from "./Views/Articles/Emocje/EmotionsArticle1";
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,7 @@ const App = () => {
         <Stack.Screen name="SoulArticle4" component={SoulArticle4} />
         <Stack.Screen name="SoulArticle5" component={SoulArticle5} />
         <Stack.Screen name="SoulArticle6" component={SoulArticle6} />
+         <Stack.Screen name="EmotionsArticle1" component={EmotionsArticle1} />
       </Stack.Navigator>
     </NavigationContainer>
   );

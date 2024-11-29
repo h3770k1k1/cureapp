@@ -3,7 +3,13 @@ import { View, Text, StyleSheet, Animated } from "react-native";
 import LinkButton from "./LinkButton";
 import SmallText from "./SmallText";
 
-const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 }) => {
+const LetterDropdown = ({
+  titleText,
+  smallText,
+  linkText,
+  sideLetter,
+  linkText2,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const rotateAnimation = useRef(new Animated.Value(0)).current;
 
@@ -22,16 +28,33 @@ const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 
   return (
     <View style={styles.container}>
       <View style={styles.dropdownHeader}>
-      <View style={styles.headerTextContainer}>
-        <Text style={styles.sideLetter}>{sideLetter}</Text>
-        <Text style={styles.title}>{titleText}</Text></View>
-        {!isOpen &&   <Text style={styles.link}><LinkButton style={styles.link}text={linkText} onPress={toggleDropdown} /></Text>}
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.sideLetter}>{sideLetter}</Text>
+          <Text style={styles.title}>{titleText}</Text>
+        </View>
+        {!isOpen && (
+          <Text style={styles.link}>
+            <LinkButton
+              style={styles.link}
+              text={linkText}
+              onPress={toggleDropdown}
+            />
+          </Text>
+        )}
       </View>
       {isOpen && (
         <View style={styles.dropdownContent}>
-          <Text style={styles.smallTextContainer}> <SmallText text={smallText} /></Text>
+          <Text style={styles.smallTextContainer}>
+            {" "}
+            <SmallText text={smallText} />
+          </Text>
           <Text style={styles.link}>
-          <LinkButton style={styles.link} text={linkText2} onPress={toggleDropdown} /></Text>
+            <LinkButton
+              style={styles.link}
+              text={linkText2}
+              onPress={toggleDropdown}
+            />
+          </Text>
         </View>
       )}
     </View>
@@ -39,20 +62,19 @@ const LetterDropdown = ({ titleText, smallText, linkText, sideLetter, linkText2 
 };
 
 const styles = StyleSheet.create({
-
-smallTextContainer: {
-marginTop: 5,
+  smallTextContainer: {
+    marginTop: 5,
     marginLeft: 25,
     marginRight: 20,
-    textAlign: 'justify',
-},
+    textAlign: "justify",
+  },
   container: {
     width: "100%",
   },
-  headerTextContainer:{
-  marginTop:15,
-  flexDirection: "row",
-  width:"100%",
+  headerTextContainer: {
+    marginTop: 15,
+    flexDirection: "row",
+    width: "100%",
   },
 
   title: {
@@ -72,14 +94,14 @@ marginTop: 5,
     alignItems: "center",
     width: "100%",
   },
-  sideLetter:{
-  fontSize: 25,
-  fontWeight: "bold",
-  width:30,
+  sideLetter: {
+    fontSize: 25,
+    fontWeight: "bold",
+    width: 30,
   },
- link: {
+  link: {
     alignSelf: "flex-end",
-    flexDirection:"row",
+    flexDirection: "row",
   },
 });
 

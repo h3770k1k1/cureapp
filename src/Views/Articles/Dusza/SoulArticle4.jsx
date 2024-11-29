@@ -21,38 +21,42 @@ const styles = StyleSheet.create({
     paddingBottom: 100,
   },
   quote: {
-     paddingTop: 10,
-     fontWeight: "bold",
-     fontSize: 18,
-     lineHeight: 25,
-   },
-   linkButtonsContainer: {
-      flexDirection: "row",
-      justifyContent: "space-between",
-      marginBottom: 20,
-       alignItems: "flex-start",
-    },
+    paddingTop: 10,
+    fontWeight: "bold",
+    fontSize: 18,
+    lineHeight: 25,
+  },
+  linkButtonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 20,
+    alignItems: "flex-start",
+  },
 });
 
 const SoulArticle4 = ({ navigation }) => {
   const article = soulArticleTexts[3];
   const handleForward = () => {
-       navigation.navigate("SoulArticle5");
-     };
+    navigation.navigate("SoulArticle5");
+  };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-<SmallText text={article.SmallText[0]}/>
-<DropDown titleText={article.DropDownTitle}smallText={article.DropDownSmallText}  hasTopBorder={true}/>
-     <BoldText text={article.BoldText}/>
-     <SmallText text={article.SmallText[1]}/>
+        <SmallText text={article.SmallText[0]} />
+        <DropDown
+          titleText={article.DropDownTitle}
+          smallText={article.DropDownSmallText}
+          hasTopBorder={true}
+        />
+        <BoldText text={article.BoldText} />
+        <SmallText text={article.SmallText[1]} />
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
         backgroundColor="#CDF6FF"
-onPress={handleForward}
+        onPress={handleForward}
       />
     </View>
   );

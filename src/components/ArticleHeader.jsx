@@ -33,30 +33,37 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
   const navigation = useNavigation();
 
   const handleArrowClick = () => {
-    const currentRoute = navigation.getState().routes[navigation.getState().index].name;
+    const currentRoute =
+      navigation.getState().routes[navigation.getState().index].name;
 
     switch (currentRoute) {
+     case "EmotionsArticle1":
+            navigation.navigate("Mental", {
+              activeColor: "#D3F2D7",
+              activeArea: "EMOCJE",
+            });
+            break;
       case "SoulArticle1":
         navigation.navigate("Mental", {
           activeColor: "#CDF6FF",
           activeArea: "DUSZA",
         });
         break;
-     case "SoulArticle2":
-     navigation.navigate("SoulArticle1");
-     break;
-     case "SoulArticle3":
-          navigation.navigate("SoulArticle2");
-          break;
-          case "SoulArticle4":
-                    navigation.navigate("SoulArticle3");
-                    break;
-                    case "SoulArticle5":
-                                        navigation.navigate("SoulArticle4");
-                                        break;
-       case "SoulArticle6":
-                                              navigation.navigate("SoulArticle5");
-                                              break;
+      case "SoulArticle2":
+        navigation.navigate("SoulArticle1");
+        break;
+      case "SoulArticle3":
+        navigation.navigate("SoulArticle2");
+        break;
+      case "SoulArticle4":
+        navigation.navigate("SoulArticle3");
+        break;
+      case "SoulArticle5":
+        navigation.navigate("SoulArticle4");
+        break;
+      case "SoulArticle6":
+        navigation.navigate("SoulArticle5");
+        break;
       case "Article6":
         navigation.navigate("Article5");
         break;

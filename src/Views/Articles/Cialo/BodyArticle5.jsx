@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
 
 const Article5 = ({ navigation }) => {
   const article = bodyArticleTexts[4];
-   const handleForward = () => {
-            navigation.navigate("Article6");
-          };
+  const handleForward = () => {
+    navigation.navigate("Article6");
+  };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
@@ -35,11 +35,11 @@ const Article5 = ({ navigation }) => {
         <SmallText text={article.SmallText[0]} />
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText[1]} />
-          <DropDown
-                  titleText={article.DropDownTitle}
-                  smallText={article.DropDownSmallText}
-                  hasTopBorder={true}
-                />
+        <DropDown
+          titleText={article.DropDownTitle}
+          smallText={article.DropDownSmallText}
+          hasTopBorder={true}
+        />
         <MediumText text={article.MediumText} />
         <DotLineHeader text={article.DotLineHeader} />
       </ScrollView>

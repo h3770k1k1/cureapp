@@ -8,19 +8,35 @@ const truncateText = (text, maxLength) => {
   return text;
 };
 
-const SmallSection = ({ header, description, backgroundColor, navigation, articleIndex }) => {
+const SmallSection = ({
+  header,
+  description,
+  backgroundColor,
+  navigation,
+  articleIndex,
+}) => {
   const handlePress = () => {
-    console.log(`Kliknięto SmallSection: Header="${header}", Index=${articleIndex}`);
+    console.log(
+      `Kliknięto SmallSection: Header="${header}", Index=${articleIndex}`
+    );
 
     if (backgroundColor === "#FFD3FA") {
       const articleName = `Article${articleIndex + 1}`;
       navigation.navigate(articleName);
     }
     if (backgroundColor === "#CDF6FF") {
-          const articleName = `SoulArticle${articleIndex + 1}`;
+      const articleName = `SoulArticle${articleIndex + 1}`;
+      navigation.navigate(articleName);
+    }
+    if (backgroundColor === "#FFE2CC") {
+          const articleName = `MindArticle${articleIndex + 1}`;
           navigation.navigate(articleName);
         }
-    else {
+         if (backgroundColor === "#D3F2D7") {
+                  const articleName = `EmotionsArticle${articleIndex + 1}`;
+                  navigation.navigate(articleName);
+                }
+ else {
       console.log("Przycisk działa, ale brak nawigacji dla tego koloru.");
     }
   };
@@ -28,11 +44,10 @@ const SmallSection = ({ header, description, backgroundColor, navigation, articl
   return (
     <View style={[styles.smallSection, { backgroundColor }]}>
       <Text style={styles.smallHeader}>{header}</Text>
-      <Text style={styles.smallDescription}>{truncateText(description, 80)}</Text>
-      <TouchableOpacity
-        style={styles.moreButton}
-        onPress={handlePress}
-      >
+      <Text style={styles.smallDescription}>
+        {truncateText(description, 80)}
+      </Text>
+      <TouchableOpacity style={styles.moreButton} onPress={handlePress}>
         <Text style={styles.moreButtonText}>Więcej</Text>
       </TouchableOpacity>
     </View>

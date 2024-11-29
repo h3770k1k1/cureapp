@@ -39,10 +39,17 @@ export const bodyArticleTexts = [
       "Jakość spożywanego jedzenia będzie odczuwalna w całym organiźmie. Podobnie z odwodnieniem, które może powodować m.in. napięcia w ciele czy bóle głowy.",
     BoldText: "Jeśli chcesz czuć się lepiej \nw swoim ciele:",
     ForwardingButton: "Śpij, śnij",
-    DropDownLink: ["PRZECZYTAJ WIĘCEJ", "PRZECZYTAJ MNIEJ",""],
-    SideLetter:["J","P","*"],
-    DropDownTitle: [" – Jedz większe ilości warzyw i produktów nieprzetworzonych \n– Suplementuj witaminę D","– Pij dziennie 1,5–3 litrów WODY często i małymi porcjami – Sprawdzaj swój poziom nawodnienia","Ogranicz spożycie alkoholu Z badań wynika, że pijąc nawet małe ilości alkoholu wzrasta ryzyko zachorowania na raka."],
-    DropDownSmallText: ["Jej niedobór dotyka aż 90% Polaków, wpływając negatywnie na stan zębów, kości, ale i regulację nastroju. Ponadto badania wykazują jej dużą skuteczność  w leczeniu depresji. O dawkowanie tego suplementu oraz innych pomocnych dla Twojego zdrowia zapytaj lekarza.","Ciało składa się z 65% wody, więc jej brak rzutuje na wiele zachodzących w nim procesów, m.in. na napięcia odczuwane w ciele i bóle głowy. Regularnie sprawdzaj poziom nawodnienia, obserwując kolor moczu. Im ciemniejszy – tym większe odwodnienie. Prawidłowy odcień to jasnożółty. Brak koloru będzie świadczył o zbyt dużej wypitej ilości płynu na raz.",],
+    DropDownLink: ["PRZECZYTAJ WIĘCEJ", "PRZECZYTAJ MNIEJ", ""],
+    SideLetter: ["J", "P", "*"],
+    DropDownTitle: [
+      " – Jedz większe ilości warzyw i produktów nieprzetworzonych \n– Suplementuj witaminę D",
+      "– Pij dziennie 1,5–3 litrów WODY często i małymi porcjami – Sprawdzaj swój poziom nawodnienia",
+      "Ogranicz spożycie alkoholu Z badań wynika, że pijąc nawet małe ilości alkoholu wzrasta ryzyko zachorowania na raka.",
+    ],
+    DropDownSmallText: [
+      "Jej niedobór dotyka aż 90% Polaków, wpływając negatywnie na stan zębów, kości, ale i regulację nastroju. Ponadto badania wykazują jej dużą skuteczność  w leczeniu depresji. O dawkowanie tego suplementu oraz innych pomocnych dla Twojego zdrowia zapytaj lekarza.",
+      "Ciało składa się z 65% wody, więc jej brak rzutuje na wiele zachodzących w nim procesów, m.in. na napięcia odczuwane w ciele i bóle głowy. Regularnie sprawdzaj poziom nawodnienia, obserwując kolor moczu. Im ciemniejszy – tym większe odwodnienie. Prawidłowy odcień to jasnożółty. Brak koloru będzie świadczył o zbyt dużej wypitej ilości płynu na raz.",
+    ],
   },
   {
     ArticleIndex: 4,
@@ -53,8 +60,9 @@ export const bodyArticleTexts = [
     ],
     BoldText: "nasz kolejny dzień zaczyna się właśnie od pójścia spać!",
     MediumText: "https://open.spotify.com/episode/38EitNF4WKsNBbMCkiSd2X",
-     DropDownTitle: "Cztery zasady higieny snu",
-    DropDownSmallText: "1.  Nie korzystaj z urządzeń elektronicznych 90 minut przed położeniem się spać.\nŚwiatło zaburza produkcję melatoniny odpowiedzialnej za sen.\n\n2.  Zadbaj o wieczorny rytuał.\nKażdej nocy kładź się spać o tej samej porze, przygotuj przestrzeń (raczej niższa temperatura, zacienienie, przewietrzony pokój, miły zapach i wygląd) i zrelaksuj się (gorąca kąpiel, kojąca muzyka, rozciąganie, automasaż, spacer).\n\n3.  Chodź spać przed 23:00.\nNajlepsza regeneracja organizmu następuje w godzinach 22.00–02.00 oraz daj swojemu ciału 7,5–9 h na sen.\n\n4.  Nie jedz 3 godziny przed pójściem spać.\nWpływa to na zmiany temperatury ciała, przez co może powodować trudności w zaśnięciu lub wybudzanie, które obniży jakość snu.",
+    DropDownTitle: "Cztery zasady higieny snu",
+    DropDownSmallText:
+      "1.  Nie korzystaj z urządzeń elektronicznych 90 minut przed położeniem się spać.\nŚwiatło zaburza produkcję melatoniny odpowiedzialnej za sen.\n\n2.  Zadbaj o wieczorny rytuał.\nKażdej nocy kładź się spać o tej samej porze, przygotuj przestrzeń (raczej niższa temperatura, zacienienie, przewietrzony pokój, miły zapach i wygląd) i zrelaksuj się (gorąca kąpiel, kojąca muzyka, rozciąganie, automasaż, spacer).\n\n3.  Chodź spać przed 23:00.\nNajlepsza regeneracja organizmu następuje w godzinach 22.00–02.00 oraz daj swojemu ciału 7,5–9 h na sen.\n\n4.  Nie jedz 3 godziny przed pójściem spać.\nWpływa to na zmiany temperatury ciała, przez co może powodować trudności w zaśnięciu lub wybudzanie, które obniży jakość snu.",
     ForwardingButton: "Oddychaj",
     DotLineHeader: "WIĘCEJ POSŁUCHAJ TU",
   },
@@ -74,7 +82,9 @@ export const bodyArticleTexts = [
       "Gdy nie chcesz czuć trudnych emocji, nieświadomie wstrzymujesz oddech i nie dajesz im ujścia – co odbija się w złej pracy układu nerwowego i mózgu. Oddech może być Twoim najlepszym przyjacielem, zawsze obecnym i chętnym pomóc. Sprawdzaj w ciągu dnia, jaki jest Twój oddech i czy jest. Jeśli nie – stosuj poniższe ćwiczenie:",
     ],
     DropDownSmallText: [
-      "Płuca z wiekiem się “zużywają”. Jeśli oddychasz tylko górną ich częścią, na starsze lata możesz nie być w stanie oddychać tak samo jakościowo. Dlatego ważne jest, by wykorzystywać całe płuca i oddychać torem przeponowym.","Spróbuj w tym celu poniższego ćwiczenia:","Gdy nie chcesz czuć trudnych emocji, nieświadomie wstrzymujesz oddech i nie dajesz im ujścia – co odbija się w złej pracy układu nerwowego i mózgu. Oddech może być Twoim najlepszym przyjacielem, zawsze obecnym i chętnym pomóc. Sprawdzaj w ciągu dnia, jaki jest Twój oddech i czy jest. Jeśli nie – stosuj poniższe ćwiczenie:",
+      "Płuca z wiekiem się “zużywają”. Jeśli oddychasz tylko górną ich częścią, na starsze lata możesz nie być w stanie oddychać tak samo jakościowo. Dlatego ważne jest, by wykorzystywać całe płuca i oddychać torem przeponowym.",
+      "Spróbuj w tym celu poniższego ćwiczenia:",
+      "Gdy nie chcesz czuć trudnych emocji, nieświadomie wstrzymujesz oddech i nie dajesz im ujścia – co odbija się w złej pracy układu nerwowego i mózgu. Oddech może być Twoim najlepszym przyjacielem, zawsze obecnym i chętnym pomóc. Sprawdzaj w ciągu dnia, jaki jest Twój oddech i czy jest. Jeśli nie – stosuj poniższe ćwiczenie:",
     ],
     DropDownLink: ["ZOBACZ TUTAJ", "TRENING JACOBSONA", "BOX BREATHING"],
   },

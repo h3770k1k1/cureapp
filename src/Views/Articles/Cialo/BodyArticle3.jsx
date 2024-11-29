@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
 const Article3 = ({ navigation }) => {
   const article = bodyArticleTexts[2];
   const handleForward = () => {
-        navigation.navigate("Article4");
-      };
+    navigation.navigate("Article4");
+  };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>

@@ -4,7 +4,10 @@ import ForwardingButtonArrow from "./ForwardingButtonArrow";
 
 const ForwardingButton = ({ text, backgroundColor, onPress }) => {
   return (
-    <TouchableOpacity style={[styles.forwardingButton, { backgroundColor }]} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.forwardingButton, { backgroundColor }]}
+      onPress={onPress}
+    >
       <Text style={styles.buttonText}>{text}</Text>
       <Text>
         <ForwardingButtonArrow />

@@ -20,24 +20,23 @@ const styles = StyleSheet.create({
   },
 });
 
-
 const SoulArticle1 = ({ navigation }) => {
- const article = soulArticleTexts[0];
- const handleForward = () => {
-     navigation.navigate("SoulArticle2");
-   };
-return (
-<View style={styles.mainContainer}>
-<ScrollView contentContainerStyle={styles.scrollView}>
- <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
- <ArticleTitle text={article.ArticleTitle} />
- <SmallText text={article.SmallText[0]} />
-   <DropDown
-           titleText={article.DropDownTitle[0]}
-           smallText={article.DropDownSmallText[0]}
-           hasTopBorder={true}
-         />
- <DropDown
+  const article = soulArticleTexts[0];
+  const handleForward = () => {
+    navigation.navigate("SoulArticle2");
+  };
+  return (
+    <View style={styles.mainContainer}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleTitle text={article.ArticleTitle} />
+        <SmallText text={article.SmallText[0]} />
+        <DropDown
+          titleText={article.DropDownTitle[0]}
+          smallText={article.DropDownSmallText[0]}
+          hasTopBorder={true}
+        />
+        <DropDown
           titleText={article.DropDownTitle[1]}
           smallText={article.DropDownSmallText[1]}
           hasTopBorder={false}
@@ -47,10 +46,14 @@ return (
           smallText={article.DropDownSmallText[2]}
           hasTopBorder={false}
         />
-         <SmallText text={article.SmallText[1]} />
-</ScrollView>
-<ForwardingButton
-text={article.ForwardingButton} backgroundColor="#CDF6FF" onPress={handleForward}
-/></View>
-)}
+        <SmallText text={article.SmallText[1]} />
+      </ScrollView>
+      <ForwardingButton
+        text={article.ForwardingButton}
+        backgroundColor="#CDF6FF"
+        onPress={handleForward}
+      />
+    </View>
+  );
+};
 export default SoulArticle1;

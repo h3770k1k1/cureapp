@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const Navbar = ({ onColorChange, activeArea, activeColor }) => {
@@ -7,9 +14,7 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   const route = useRoute(); // Nasłuchujemy zmiany w route
   const navigation = useNavigation();
 
-  const colors = [
-    "#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF",
-  ];
+  const colors = ["#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF"];
 
   useEffect(() => {
     // Zaktualizuj kolor i obszar na podstawie parametrów w route
@@ -30,10 +35,7 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
     <SafeAreaView style={styles.navbarContainer}>
       <StatusBar barStyle="dark-content" />
       <View
-        style={[
-          styles.navbar,
-          activeColor && { backgroundColor: activeColor },
-        ]}
+        style={[styles.navbar, activeColor && { backgroundColor: activeColor }]}
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>

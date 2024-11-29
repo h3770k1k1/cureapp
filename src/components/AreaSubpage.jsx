@@ -14,7 +14,7 @@ const Section = ({ header, text }) => (
 const AreaSubpage = ({ activeColor }) => {
   const navigation = useNavigation();
 
-  const index = MentalTexts.findIndex(item => item.Color === activeColor);
+  const index = MentalTexts.findIndex((item) => item.Color === activeColor);
   const text = index !== -1 ? MentalTexts[index] : null;
 
   return (
