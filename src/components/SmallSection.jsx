@@ -35,7 +35,12 @@ const SmallSection = ({
     if (backgroundColor === "#D3F2D7") {
       const articleName = `EmotionsArticle${articleIndex + 1}`;
       navigation.navigate(articleName);
-    } else {
+    }
+    if (backgroundColor === "#FFF7CC") {
+          const articleName = `DevelopmentArticle${articleIndex + 1}`;
+          navigation.navigate(articleName);
+        }
+    else {
       console.log("Przycisk działa, ale brak nawigacji dla tego koloru.");
     }
   };

@@ -37,6 +37,15 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
       navigation.getState().routes[navigation.getState().index].name;
 
     switch (currentRoute) {
+       case "DevelopmentArticle1":
+            navigation.navigate("Mental", {
+              activeColor: "#FFF7CC",
+              activeArea: "ROZWÓJ",
+            });
+            break;
+             case "DevelopmentArticle2":
+                            navigation.navigate("DevelopmentArticle1");
+                            break;
       case "EmotionsArticle1":
         navigation.navigate("Mental", {
           activeColor: "#D3F2D7",

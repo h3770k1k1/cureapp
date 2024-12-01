@@ -25,7 +25,7 @@ const EmotionsArticle1 = ({ navigation }) => {
 
   const handleForward = () => {
     navigation.navigate("EmotionsArticle2");
-  };
+  }
 
   return (
     <View style={styles.mainContainer}>
