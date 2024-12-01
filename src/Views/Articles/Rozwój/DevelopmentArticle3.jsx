@@ -48,13 +48,13 @@ const DevelopmentArticle3 = ({ navigation }) => {
           smallText={article.DropDownSmallText[2]}
           hasTopBorder={false}
         />
-        {/* Forwarding Button */}
+        </ScrollView>
         <ForwardingButton
           text={article.ForwardingButton}
           backgroundColor="#FFF7CC"
           onPress={handleForward}
         />
-      </ScrollView>
+
     </View>
   );
 };
