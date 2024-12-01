@@ -25,7 +25,7 @@ const DevelopmentArticle1 = ({ navigation }) => {
 
   const handleForward = () => {
     navigation.navigate("DevelopmentArticle2");
-  }
+  };
 
   return (
     <View style={styles.mainContainer}>
@@ -33,12 +33,12 @@ const DevelopmentArticle1 = ({ navigation }) => {
         <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText} />
-         {Array.from({ length: 13 }, (_, index) => (
-                  <React.Fragment key={index}>
-                    <MediumText text={article.MediumText[index]} />
-                    <SeparatingDots />
-                  </React.Fragment>
-                ))}
+        {Array.from({ length: 13 }, (_, index) => (
+          <React.Fragment key={index}>
+            <MediumText text={article.MediumText[index]} />
+            <SeparatingDots />
+          </React.Fragment>
+        ))}
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}

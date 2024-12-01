@@ -6,13 +6,13 @@ import BoldText from "../../../components/BoldText";
 import MediumText from "../../../components/MediumText";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
+import { developmentArticleTexts } from "./DevelopmentArticleText";
 import DropDown from "../../../components/DropDown";
-import { emotionsArticleTexts } from "./EmotionsArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: "#D3F2D7",
+    backgroundColor: "#FFF7CC",
   },
   scrollView: {
     flexGrow: 1,
@@ -21,43 +21,35 @@ const styles = StyleSheet.create({
   },
 });
 
-const EmotionsArticle4 = ({ navigation }) => {
-  const article = emotionsArticleTexts[3];
+const DevelopmentArticle6 = ({ navigation }) => {
+  const article = developmentArticleTexts[5];
 
   const handleForward = () => {
-    navigation.navigate("SoulArticle1");
+    navigation.navigate("EmotionsArticle1");
   };
 
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-        <BoldText text={article.BoldText} />
-        <SmallText text={article.SmallText} />
-        <DropDown
-          titleText={article.DropDownTitle[0]}
-          smallText={article.DropDownSmallText[0]}
+<BoldText text={article.BoldText[0]}/>
+<SmallText text={article.SmallText[0]}/>
+  <DropDown
+          titleText={article.DropDownTitle}
+          smallText={article.DropDownSmallText}
           hasTopBorder={true}
         />
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          hasTopBorder={false}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[2]}
-          smallText={article.DropDownSmallText[2]}
-          hasTopBorder={false}
-        />
+<BoldText text={article.BoldText[1]}/>
+<SmallText text={article.SmallText[1]}/>
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
-        backgroundColor="#CDF6FF"
+        backgroundColor="#D3F2D7"
         onPress={handleForward}
       />
     </View>
   );
 };
 
-export default EmotionsArticle4;
+export default DevelopmentArticle6;

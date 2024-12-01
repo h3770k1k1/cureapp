@@ -32,7 +32,7 @@ const DevelopmentArticle3 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-       <SmallText text={article.SmallText}/>
+        <SmallText text={article.SmallText} />
         <DropDown
           titleText={article.DropDownTitle[0]}
           smallText={article.DropDownSmallText[0]}
@@ -48,13 +48,12 @@ const DevelopmentArticle3 = ({ navigation }) => {
           smallText={article.DropDownSmallText[2]}
           hasTopBorder={false}
         />
-        </ScrollView>
-        <ForwardingButton
-          text={article.ForwardingButton}
-          backgroundColor="#FFF7CC"
-          onPress={handleForward}
-        />
-
+      </ScrollView>
+      <ForwardingButton
+        text={article.ForwardingButton}
+        backgroundColor="#FFF7CC"
+        onPress={handleForward}
+      />
     </View>
   );
 };

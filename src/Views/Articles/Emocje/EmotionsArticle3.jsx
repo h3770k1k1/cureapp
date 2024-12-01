@@ -33,10 +33,10 @@ const EmotionsArticle3 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-<SmallText text={article.SmallText[0]}/>
-<BoldText text={article.BoldText}/>
-<SmallText text={article.SmallText[1]}/>
-   <DropDown
+        <SmallText text={article.SmallText[0]} />
+        <BoldText text={article.BoldText} />
+        <SmallText text={article.SmallText[1]} />
+        <DropDown
           titleText={article.DropDownTitle}
           smallText={article.DropDownSmallText}
           hasTopBorder={true}

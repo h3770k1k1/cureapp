@@ -30,23 +30,23 @@ const DevelopmentArticle4 = ({ navigation }) => {
 
   return (
     <View style={styles.mainContainer}>
-         <ScrollView contentContainerStyle={styles.scrollView}>
-           <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
-           <ArticleTitle text={article.ArticleTitle} />
-<BoldText text={article.BoldText[0]}/>
-<SmallText text={article.SmallText[0]}/>
-<MediumText text={article.MediumText[0]}/>
-<SmallText text={article.SmallText[1]}/>
-<MediumText text={article.MediumText[1]}/>
-<SmallText text={article.SmallText[2]}/>
-<BoldText text={article.BoldText[1]}/>
-         </ScrollView>
-         <ForwardingButton
-           text={article.ForwardingButton}
-           backgroundColor="#FFF7CC"
-           onPress={handleForward}
-         />
-       </View>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleTitle text={article.ArticleTitle} />
+        <BoldText text={article.BoldText[0]} />
+        <SmallText text={article.SmallText[0]} />
+        <MediumText text={article.MediumText[0]} />
+        <SmallText text={article.SmallText[1]} />
+        <MediumText text={article.MediumText[1]} />
+        <SmallText text={article.SmallText[2]} />
+        <BoldText text={article.BoldText[1]} />
+      </ScrollView>
+      <ForwardingButton
+        text={article.ForwardingButton}
+        backgroundColor="#FFF7CC"
+        onPress={handleForward}
+      />
+    </View>
   );
 };
 

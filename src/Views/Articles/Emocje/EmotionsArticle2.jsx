@@ -33,29 +33,29 @@ const EmotionsArticle2 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-<BoldText text={article.BoldText}/>
-<MediumText text={article.MediumText[0]}/>
-<SmallText text={article.SmallText[0]}/>
-<MediumText text={article.MediumText[1]}/>
-<SmallText text={article.SmallText[1]}/>
-<MediumText text={article.MediumText[2]}/>
-<SmallText text={article.SmallText[2]}/>
-<MediumText text={article.MediumText[3]}/>
-<SmallText text={article.SmallText[3]}/>
-<MediumText text={article.MediumText[4]}/>
-<SmallText text={article.SmallText[4]}/>
-<MediumText text={article.MediumText[5]}/>
-<SmallText text={article.SmallText[5]}/>
-   <DropDown
+        <BoldText text={article.BoldText} />
+        <MediumText text={article.MediumText[0]} />
+        <SmallText text={article.SmallText[0]} />
+        <MediumText text={article.MediumText[1]} />
+        <SmallText text={article.SmallText[1]} />
+        <MediumText text={article.MediumText[2]} />
+        <SmallText text={article.SmallText[2]} />
+        <MediumText text={article.MediumText[3]} />
+        <SmallText text={article.SmallText[3]} />
+        <MediumText text={article.MediumText[4]} />
+        <SmallText text={article.SmallText[4]} />
+        <MediumText text={article.MediumText[5]} />
+        <SmallText text={article.SmallText[5]} />
+        <DropDown
           titleText={article.DropDownTitle[0]}
           smallText={article.DropDownSmallText[0]}
           hasTopBorder={true}
         />
-           <DropDown
-                  titleText={article.DropDownTitle[1]}
-                  smallText={article.DropDownSmallText[1]}
-                  hasTopBorder={false}
-                />
+        <DropDown
+          titleText={article.DropDownTitle[1]}
+          smallText={article.DropDownSmallText[1]}
+          hasTopBorder={false}
+        />
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}

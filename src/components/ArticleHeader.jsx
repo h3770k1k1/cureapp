@@ -37,36 +37,42 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
       navigation.getState().routes[navigation.getState().index].name;
 
     switch (currentRoute) {
-       case "DevelopmentArticle1":
-            navigation.navigate("Mental", {
-              activeColor: "#FFF7CC",
-              activeArea: "ROZWÓJ",
-            });
-            break;
-             case "DevelopmentArticle2":
-                            navigation.navigate("DevelopmentArticle1");
-                            break;
-                            case "DevelopmentArticle3":
-                                                        navigation.navigate("DevelopmentArticle2");
-                                                        break;
-                                                         case "DevelopmentArticle4":
-                                                                                                                navigation.navigate("DevelopmentArticle3");
-                                                                                                                break;
+      case "DevelopmentArticle1":
+        navigation.navigate("Mental", {
+          activeColor: "#FFF7CC",
+          activeArea: "ROZWÓJ",
+        });
+        break;
+      case "DevelopmentArticle2":
+        navigation.navigate("DevelopmentArticle1");
+        break;
+      case "DevelopmentArticle3":
+        navigation.navigate("DevelopmentArticle2");
+        break;
+      case "DevelopmentArticle4":
+        navigation.navigate("DevelopmentArticle3");
+        break;
+          case "DevelopmentArticle5":
+                navigation.navigate("DevelopmentArticle4");
+                break;
+                 case "DevelopmentArticle6":
+                                navigation.navigate("DevelopmentArticle5");
+                                break;
       case "EmotionsArticle1":
         navigation.navigate("Mental", {
           activeColor: "#D3F2D7",
           activeArea: "EMOCJE",
         });
         break;
-        case "EmotionsArticle2":
-                navigation.navigate("EmotionsArticle1");
-                break;
-                case "EmotionsArticle3":
-                                navigation.navigate("EmotionsArticle2");
-                                break;
-                                 case "EmotionsArticle4":
-                                                                navigation.navigate("EmotionsArticle3");
-                                                                break;
+      case "EmotionsArticle2":
+        navigation.navigate("EmotionsArticle1");
+        break;
+      case "EmotionsArticle3":
+        navigation.navigate("EmotionsArticle2");
+        break;
+      case "EmotionsArticle4":
+        navigation.navigate("EmotionsArticle3");
+        break;
       case "SoulArticle1":
         navigation.navigate("Mental", {
           activeColor: "#CDF6FF",

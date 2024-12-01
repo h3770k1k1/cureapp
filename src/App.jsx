@@ -23,6 +23,8 @@ import DevelopmentArticle1 from "./Views/Articles/Rozwój/DevelopmentArticle1";
 import DevelopmentArticle2 from "./Views/Articles/Rozwój/DevelopmentArticle2";
 import DevelopmentArticle3 from "./Views/Articles/Rozwój/DevelopmentArticle3";
 import DevelopmentArticle4 from "./Views/Articles/Rozwój/DevelopmentArticle4";
+import DevelopmentArticle5 from "./Views/Articles/Rozwój/DevelopmentArticle5";
+import DevelopmentArticle6 from "./Views/Articles/Rozwój/DevelopmentArticle6";
 
 const Stack = createStackNavigator();
 
@@ -46,13 +48,33 @@ const App = () => {
         <Stack.Screen name="SoulArticle6" component={SoulArticle6} />
         <Stack.Screen name="EmotionsArticle1" component={EmotionsArticle1} />
         <Stack.Screen name="EmotionsArticle2" component={EmotionsArticle2} />
-           <Stack.Screen name="EmotionsArticle3" component={EmotionsArticle3} />
-<Stack.Screen name="EmotionsArticle4" component={EmotionsArticle4} />
-<Stack.Screen name="DevelopmentArticle1" component={DevelopmentArticle1} />
-<Stack.Screen name="DevelopmentArticle2" component={DevelopmentArticle2} />
-<Stack.Screen name="DevelopmentArticle3" component={DevelopmentArticle3} />
-<Stack.Screen name="DevelopmentArticle4" component={DevelopmentArticle4} />
+        <Stack.Screen name="EmotionsArticle3" component={EmotionsArticle3} />
+        <Stack.Screen name="EmotionsArticle4" component={EmotionsArticle4} />
 
+        <Stack.Screen
+          name="DevelopmentArticle1"
+          component={DevelopmentArticle1}
+        />
+        <Stack.Screen
+          name="DevelopmentArticle2"
+          component={DevelopmentArticle2}
+        />
+        <Stack.Screen
+          name="DevelopmentArticle3"
+          component={DevelopmentArticle3}
+        />
+        <Stack.Screen
+          name="DevelopmentArticle4"
+          component={DevelopmentArticle4}
+        />
+            <Stack.Screen
+                  name="DevelopmentArticle5"
+                  component={DevelopmentArticle5}
+                />
+                  <Stack.Screen
+                                  name="DevelopmentArticle6"
+                                  component={DevelopmentArticle6}
+                                />
       </Stack.Navigator>
     </NavigationContainer>
   );
