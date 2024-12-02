@@ -63,6 +63,8 @@ export const developmentArticleTexts = [
       "– zadbaj o okazywanie, że go/jej słuchasz, np. przez kontakt wzrokowy– dopytuj, czy dobrze zrozumiał_ś, co czuje i jakie ma potrzeby (skorzystaj z LISTY EMOCJI I POTRZEB)",
       "– stań się go/jej ciekaw_\n– doceń jego/jej inność",
     ],
+    CarouselText:["„Wszyscy inni jakoś sobie radzą, tylko nie Ty…”","„Nie przesadzaj, za bardzo przeżywasz”","„Jak mogłeś zrobić coś tak głupiego”","„Teraz to powinnaś zrobić...”","„Nie martw się, wszystko będzie dobrze!”","„No coś ty, przecież to nic takiego...”","„A, noa mówiłam ci już o tym, że...”","„To jeszcze nic! Posłuchaj co mi się przydarzyło...”","„Na twoim miejscu ja bym...”",],
+    CarouselName:["PORÓWNYWANIE","ZAPRZECZANIE UCZUCIOM","OCENIANIE","POUCZANIE","POCIESZANIE","BAGATELIZOWANIE","PRZERYWANIE","LICYTOWANIE","NIEPROSZONE RADY",""],
   },
   {
   ArticleIndex: 4,

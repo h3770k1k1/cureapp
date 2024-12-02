@@ -8,7 +8,7 @@ import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import { developmentArticleTexts } from "./DevelopmentArticleText";
 import DropDown from "../../../components/DropDown";
-
+import Carousel from "../../../components/Carousel"
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -40,6 +40,10 @@ const DevelopmentArticle4 = ({ navigation }) => {
         <MediumText text={article.MediumText[1]} />
         <SmallText text={article.SmallText[2]} />
         <BoldText text={article.BoldText[1]} />
+       <Carousel
+         text={article.CarouselText}
+         name={article.CarouselName}
+       />
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}

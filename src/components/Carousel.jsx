@@ -1,6 +1,36 @@
-import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import CarouselArrow from "./CarouselArrow";
+
+const Carousel = ({ text = [], name = [] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const totalItems = text.length;
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? totalItems - 1 : prevIndex - 1
+    );
+  };
+
+  const currentText = text[currentIndex];
+  const currentName = name[currentIndex] || "—";
+
+  return (
+    <View style={styles.container}>
+      <CarouselArrow onPress={handlePrevious} />
+      <View style={styles.inner}>
+        <Text style={styles.text}>{currentText}</Text>
+        <Text style={styles.name}>{currentName}</Text>
+      </View>
+      <CarouselArrow onPress={handleNext} style={styles.rotatedArrow} />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -9,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     height: 130,
-    marginTop: 10,
+    marginTop: 20,
     borderWidth: 1,
     borderColor: "#535353",
   },
@@ -21,9 +51,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   name: {
-    width: "100%",
-    justifyContent: "center",
-    alignItems: "center",
     fontSize: 14,
     fontWeight: "600",
     fontStyle: "italic",
@@ -40,20 +67,5 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "180deg" }],
   },
 });
-
-const Carousel = () => {
-  return (
-    <View style={styles.container}>
-      <CarouselArrow />
-      <View style={styles.inner}>
-        <Text style={styles.text}>
-          Sed ut perspiciatis unde omnis iste natus error
-        </Text>
-        <Text style={styles.name}>Lorem Ipsum</Text>
-      </View>
-      <CarouselArrow style={styles.rotatedArrow} />
-    </View>
-  );
-};
 
 export default Carousel;
