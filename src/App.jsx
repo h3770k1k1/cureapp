@@ -25,6 +25,7 @@ import DevelopmentArticle3 from "./Views/Articles/Rozwój/DevelopmentArticle3";
 import DevelopmentArticle4 from "./Views/Articles/Rozwój/DevelopmentArticle4";
 import DevelopmentArticle5 from "./Views/Articles/Rozwój/DevelopmentArticle5";
 import DevelopmentArticle6 from "./Views/Articles/Rozwój/DevelopmentArticle6";
+import MindArticle1 from "./Views/Articles/Umysl/MindArticle1";
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,7 @@ const App = () => {
         <Stack.Screen name="EmotionsArticle2" component={EmotionsArticle2} />
         <Stack.Screen name="EmotionsArticle3" component={EmotionsArticle3} />
         <Stack.Screen name="EmotionsArticle4" component={EmotionsArticle4} />
+        <Stack.Screen name="MindArticle1" component={MindArticle1} />
 
         <Stack.Screen
           name="DevelopmentArticle1"
