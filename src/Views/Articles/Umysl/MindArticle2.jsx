@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const MindArticle1 = ({ navigation }) => {
-  const article = mindArticleTexts[0];
+const MindArticle2 = ({ navigation }) => {
+  const article = mindArticleTexts[1];
 
   const handleForward = () => {
-    navigation.navigate("MindArticle2");
+    navigation.navigate("MindArticle3");
   };
 
   return (
@@ -33,7 +33,7 @@ const MindArticle1 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-          <SmallText text={article.SmallText} />
+        <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />
         <DropDown
           titleText={article.DropDownTitle[0]}
@@ -60,4 +60,4 @@ const MindArticle1 = ({ navigation }) => {
   );
 };
 
-export default MindArticle1;
+export default MindArticle2;

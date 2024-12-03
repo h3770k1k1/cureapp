@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const MindArticle1 = ({ navigation }) => {
-  const article = mindArticleTexts[0];
+const MindArticle3 = ({ navigation }) => {
+  const article = mindArticleTexts[2];
 
   const handleForward = () => {
-    navigation.navigate("MindArticle2");
+    navigation.navigate("MindArticle4");
   };
 
   return (
@@ -33,23 +33,12 @@ const MindArticle1 = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
-          <SmallText text={article.SmallText} />
-        <BoldText text={article.BoldText} />
-        <DropDown
-          titleText={article.DropDownTitle[0]}
-          smallText={article.DropDownSmallText[0]}
-          hasTopBorder={true}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          hasTopBorder={false}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[2]}
-          smallText={article.DropDownSmallText[2]}
-          hasTopBorder={false}
-        />
+        <BoldText text={article.BoldText[0]} />
+         <SmallText text={article.SmallText[0]} />
+         <MediumText text={article.MediumText}/>
+         <SmallText text={article.SmallText[1]}/>
+          <BoldText text={article.BoldText[1]} />
+ <SmallText text={article.SmallText[2]}/>
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
@@ -60,4 +49,4 @@ const MindArticle1 = ({ navigation }) => {
   );
 };
 
-export default MindArticle1;
+export default MindArticle3;
