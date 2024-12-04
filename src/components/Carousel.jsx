@@ -18,7 +18,7 @@ const Carousel = ({ text = [], name = [] }) => {
   };
 
   const currentText = text[currentIndex];
-  const currentName = name[currentIndex] || "—";
+  const currentName = name[currentIndex] || "";
 
   return (
     <View style={styles.container}>

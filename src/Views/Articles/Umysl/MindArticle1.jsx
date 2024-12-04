@@ -7,6 +7,7 @@ import MediumText from "../../../components/MediumText";
 import ArticleTitle from "../../../components/ArticleTitle";
 import ForwardingButton from "../../../components/ForwardingButton";
 import DropDown from "../../../components/DropDown";
+import DropDownCarousel from "../../../components/DropDownCarousel";
 import { mindArticleTexts } from "./MindArticleText";
 
 const styles = StyleSheet.create({
@@ -35,14 +36,20 @@ const MindArticle1 = ({ navigation }) => {
         <ArticleTitle text={article.ArticleTitle} />
           <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />
+        <DropDownCarousel
+          titleText={article.DropDownTitle[1]}
+          smallText={article.DropDownSmallText[1]}
+          hasTopBorder={true}
+          boldText1={article.CarouselBoldText[0]}
+          boldText2={article.CarouselBoldText[1]}
+          boldText3={article.CarouselBoldText[2]}
+          carouselText1={article.CarouselText[0]}
+          carouselText2={article.CarouselText[1]}
+          carouselText3={article.CarouselText[2]}
+        />
         <DropDown
           titleText={article.DropDownTitle[0]}
           smallText={article.DropDownSmallText[0]}
-          hasTopBorder={true}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
           hasTopBorder={false}
         />
         <DropDown
