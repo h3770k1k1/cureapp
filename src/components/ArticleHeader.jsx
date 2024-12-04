@@ -32,111 +32,56 @@ const styles = StyleSheet.create({
 const ArticleHeader = ({ dotCount, filledDotIndex }) => {
   const navigation = useNavigation();
 
-  const handleArrowClick = () => {
-    const currentRoute =
-      navigation.getState().routes[navigation.getState().index].name;
+ const handleArrowClick = () => {
+   const currentRoute = navigation.getState().routes[navigation.getState().index].name;
 
-    switch (currentRoute) {
-     case "MindArticle1":
-            navigation.navigate("Mental", {
-              activeColor: "#FFE2CC",
-              activeArea: "UMYSŁ",
-            });
-            break;
-            case "MindArticle2":
-                    navigation.navigate("MindArticle1");
-                    break;
-                     case "MindArticle3":
-                                        navigation.navigate("MindArticle2");
-                                        break;
-                                         case "MindArticle4":
-                                                                                navigation.navigate("MindArticle3");
-                                                                                break;
-      case "DevelopmentArticle1":
-        navigation.navigate("Mental", {
-          activeColor: "#FFF7CC",
-          activeArea: "ROZWÓJ",
-        });
-        break;
-      case "DevelopmentArticle2":
-        navigation.navigate("DevelopmentArticle1");
-        break;
-      case "DevelopmentArticle3":
-        navigation.navigate("DevelopmentArticle2");
-        break;
-      case "DevelopmentArticle4":
-        navigation.navigate("DevelopmentArticle3");
-        break;
-          case "DevelopmentArticle5":
-                navigation.navigate("DevelopmentArticle4");
-                break;
-                 case "DevelopmentArticle6":
-                                navigation.navigate("DevelopmentArticle5");
-                                break;
-      case "EmotionsArticle1":
-        navigation.navigate("Mental", {
-          activeColor: "#D3F2D7",
-          activeArea: "EMOCJE",
-        });
-        break;
-      case "EmotionsArticle2":
-        navigation.navigate("EmotionsArticle1");
-        break;
-      case "EmotionsArticle3":
-        navigation.navigate("EmotionsArticle2");
-        break;
-      case "EmotionsArticle4":
-        navigation.navigate("EmotionsArticle3");
-        break;
-      case "SoulArticle1":
-        navigation.navigate("Mental", {
-          activeColor: "#CDF6FF",
-          activeArea: "DUSZA",
-        });
-        break;
-      case "SoulArticle2":
-        navigation.navigate("SoulArticle1");
-        break;
-      case "SoulArticle3":
-        navigation.navigate("SoulArticle2");
-        break;
-      case "SoulArticle4":
-        navigation.navigate("SoulArticle3");
-        break;
-      case "SoulArticle5":
-        navigation.navigate("SoulArticle4");
-        break;
-      case "SoulArticle6":
-        navigation.navigate("SoulArticle5");
-        break;
-      case "Article6":
-        navigation.navigate("Article5");
-        break;
-      case "Article5":
-        navigation.navigate("Article4");
-        break;
-      case "Article4":
-        navigation.navigate("Article3");
-        break;
-      case "Article3":
-        navigation.navigate("Article2");
-        break;
-      case "Article2":
-        navigation.navigate("Article1");
-        break;
-      case "Article1":
-        navigation.navigate("Mental", {
-          activeColor: "#FFD3FA",
-          activeArea: "",
-        });
-        break;
-      default:
-        navigation.navigate("Mental", {
-          activeColor: "#FFD3FA",
-          activeArea: "",
-        });
-    }
-  };
+
+   const routeMap = {
+     MindArticle1: { target: "Mental", params: { activeColor: "#FFE2CC", activeArea: "UMYSŁ" } },
+     MindArticle2: "MindArticle1",
+     MindArticle3: "MindArticle2",
+     MindArticle4: "MindArticle3",
+
+     DevelopmentArticle1: { target: "Mental", params: { activeColor: "#FFF7CC", activeArea: "ROZWÓJ" } },
+     DevelopmentArticle2: "DevelopmentArticle1",
+     DevelopmentArticle3: "DevelopmentArticle2",
+     DevelopmentArticle4: "DevelopmentArticle3",
+     DevelopmentArticle5: "DevelopmentArticle4",
+     DevelopmentArticle6: "DevelopmentArticle5",
+
+     EmotionsArticle1: { target: "Mental", params: { activeColor: "#D3F2D7", activeArea: "EMOCJE" } },
+     EmotionsArticle2: "EmotionsArticle1",
+     EmotionsArticle3: "EmotionsArticle2",
+     EmotionsArticle4: "EmotionsArticle3",
+
+     SoulArticle1: { target: "Mental", params: { activeColor: "#CDF6FF", activeArea: "DUSZA" } },
+     SoulArticle2: "SoulArticle1",
+     SoulArticle3: "SoulArticle2",
+     SoulArticle4: "SoulArticle3",
+     SoulArticle5: "SoulArticle4",
+     SoulArticle6: "SoulArticle5",
+
+     Article6: "Article5",
+     Article5: "Article4",
+     Article4: "Article3",
+     Article3: "Article2",
+     Article2: "Article1",
+     Article1: { target: "Mental", params: { activeColor: "#FFD3FA", activeArea: "" } },
+   };
+
+
+   const route = routeMap[currentRoute];
+
+   if (typeof route === "string") {
+     navigation.navigate(route);
+   } else if (route && typeof route === "object") {
+     navigation.navigate(route.target, route.params);
+   } else {
+     // Domyślna nawigacja
+     navigation.navigate("Mental", { activeColor: "#FFD3FA", activeArea: "" });
+   }
+ };
+
 
   const dots = Array(dotCount).fill(0);
 

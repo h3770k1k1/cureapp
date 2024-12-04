@@ -4,6 +4,39 @@ import { useNavigation } from "@react-navigation/native";
 import SmallSection from "./SmallSection";
 import { MentalTexts } from "../Views/MentalTexts";
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+  scrollContainer: {
+    paddingLeft: 16,
+    paddingRight: 16,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    paddingTop: 5,
+  },
+  section: {
+    backgroundColor: "white",
+    padding: 16,
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 8,
+  },
+  text: {
+    fontSize: 16,
+    color: "#333",
+    lineHeight: 24,
+  },
+  smallSectionsContainer: {
+    padding: 16,
+    height: 250,
+  },
+});
+
 const Section = ({ header, text }) => (
   <View style={styles.section}>
     <Text style={styles.header}>{header}</Text>
@@ -54,37 +87,5 @@ const AreaSubpage = ({ activeColor }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-  },
-  scrollContainer: {
-    paddingLeft: 16,
-    paddingRight: 16,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    paddingTop: 5,
-  },
-  section: {
-    backgroundColor: "white",
-    padding: 16,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 8,
-  },
-  text: {
-    fontSize: 16,
-    color: "#333",
-    lineHeight: 24,
-  },
-  smallSectionsContainer: {
-    padding: 16,
-    height: 250,
-  },
-});
 
 export default AreaSubpage;
