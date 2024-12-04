@@ -11,6 +11,39 @@ import SmallText from "./SmallText";
 import BoldText from "./BoldText";
 import Carousel from "./Carousel";
 
+const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+  },
+  dropdownContainer: {
+    marginTop: 15,
+    flexDirection: "column",
+    borderBottomWidth: 1,
+    borderColor: "#535353",
+    padding: 10,
+  },
+  title: {
+    fontSize: 19,
+    fontWeight: "bold",
+    width: 200,
+    lineHeight: 28.5,
+  },
+  iconContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dropdownContent: {
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  dropdownHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+});
+
 const DropdownCarousel = ({
   titleText,
   smallText,
@@ -84,37 +117,5 @@ const DropdownCarousel = ({
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-  },
-  dropdownContainer: {
-    marginTop: 15,
-    flexDirection: "column",
-    borderBottomWidth: 1,
-    borderColor: "#535353",
-    padding: 10,
-  },
-  title: {
-    fontSize: 19,
-    fontWeight: "bold",
-    width: 200,
-    lineHeight: 28.5,
-  },
-  iconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  dropdownContent: {
-    marginBottom: 10,
-    borderRadius: 5,
-  },
-  dropdownHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%",
-  },
-});
 
 export default DropdownCarousel;

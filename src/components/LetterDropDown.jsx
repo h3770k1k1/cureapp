@@ -3,6 +3,49 @@ import { View, Text, StyleSheet, Animated } from "react-native";
 import LinkButton from "./LinkButton";
 import SmallText from "./SmallText";
 
+const styles = StyleSheet.create({
+  smallTextContainer: {
+    marginTop: 5,
+    marginLeft: 25,
+    marginRight: 20,
+    textAlign: "justify",
+  },
+  container: {
+    width: "100%",
+  },
+  headerTextContainer: {
+    marginTop: 15,
+    flexDirection: "row",
+    width: "100%",
+  },
+
+  title: {
+    fontSize: 14,
+    lineHeight: 28.5,
+  },
+  iconContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dropdownContent: {
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  dropdownHeader: {
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+  },
+  sideLetter: {
+    fontSize: 25,
+    fontWeight: "bold",
+    width: 30,
+  },
+  link: {
+    alignSelf: "flex-end",
+    flexDirection: "row",
+  },
+});
 const LetterDropdown = ({
   titleText,
   smallText,
@@ -60,49 +103,5 @@ const LetterDropdown = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  smallTextContainer: {
-    marginTop: 5,
-    marginLeft: 25,
-    marginRight: 20,
-    textAlign: "justify",
-  },
-  container: {
-    width: "100%",
-  },
-  headerTextContainer: {
-    marginTop: 15,
-    flexDirection: "row",
-    width: "100%",
-  },
-
-  title: {
-    fontSize: 14,
-    lineHeight: 28.5,
-  },
-  iconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  dropdownContent: {
-    marginBottom: 10,
-    borderRadius: 5,
-  },
-  dropdownHeader: {
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100%",
-  },
-  sideLetter: {
-    fontSize: 25,
-    fontWeight: "bold",
-    width: 30,
-  },
-  link: {
-    alignSelf: "flex-end",
-    flexDirection: "row",
-  },
-});
 
 export default LetterDropdown;

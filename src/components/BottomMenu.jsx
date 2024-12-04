@@ -5,18 +5,6 @@ import MentalIcon from "./Mental";
 import GrowIcon from "./Grow";
 import SettingsIcon from "./Settings";
 
-const ButtonColors = {
-  White: "#fff",
-  Grey: "#8E8E8E",
-};
-
-const Views = {
-  Home: "Home",
-  Mental: "Mental",
-  Grow: "Grow",
-  Settings: "Settings",
-};
-
 const styles = StyleSheet.create({
   BottomMenuContainer: {
     display: "flex",
@@ -55,6 +43,18 @@ const styles = StyleSheet.create({
     width: "90%",
   },
 });
+const ButtonColors = {
+  White: "#fff",
+  Grey: "#8E8E8E",
+};
+
+const Views = {
+  Home: "Home",
+  Mental: "Mental",
+  Grow: "Grow",
+  Settings: "Settings",
+};
+
 
 const BottomMenu = ({ selectedView, navigation }) => {
   const MenuButton = ({ icon, isSelected, view, onPress }) => (

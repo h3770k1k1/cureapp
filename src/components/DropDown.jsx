@@ -10,6 +10,38 @@ import DropDownArrow from "./DropDownArrow.svg";
 import LinkButton from "./LinkButton";
 import SmallText from "./SmallText";
 
+const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+  },
+  dropdownContainer: {
+    marginTop: 15,
+    flexDirection: "column",
+    borderBottomWidth: 1,
+    borderColor: "#535353",
+    padding: 10,
+  },
+  title: {
+    fontSize: 19,
+    fontWeight: "bold",
+    width: 200,
+    lineHeight: 28.5,
+  },
+  iconContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dropdownContent: {
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  dropdownHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+});
 const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
   const [isOpen, setIsOpen] = useState(false);
   const rotateAnimation = useRef(new Animated.Value(0)).current;
@@ -61,38 +93,5 @@ const Dropdown = ({ titleText, smallText, linkText, hasTopBorder }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-  },
-  dropdownContainer: {
-    marginTop: 15,
-    flexDirection: "column",
-    borderBottomWidth: 1,
-    borderColor: "#535353",
-    padding: 10,
-  },
-  title: {
-    fontSize: 19,
-    fontWeight: "bold",
-    width: 200,
-    lineHeight: 28.5,
-  },
-  iconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  dropdownContent: {
-    marginBottom: 10,
-    borderRadius: 5,
-  },
-  dropdownHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%",
-  },
-});
 
 export default Dropdown;

@@ -9,6 +9,61 @@ import {
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
+
+const styles = StyleSheet.create({
+  navbarContainer: {
+    display: "flex",
+    alignItems: "center",
+    backgroundColor: "white",
+  },
+  navbar: {
+    height: 120,
+    width: "100%",
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "300",
+    color: "#535353",
+  },
+  highlight: {
+    fontSize: 25,
+    fontWeight: "600",
+    color: "#535353",
+    letterSpacing: 3,
+  },
+  areaHeading: {
+    marginLeft: 25,
+  },
+  circleContainer: {
+    display: "flex",
+    justifyContent: "space-around",
+    flexDirection: "row",
+    width: "95%",
+    marginTop: -25,
+  },
+  circle: {
+    width: 45,
+    height: 43,
+    borderRadius: 100,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  circleText: {
+    fontSize: 19,
+    fontWeight: "300",
+    color: "#000",
+  },
+  activeCircle: {
+    borderWidth: 3,
+    borderColor: "#fff",
+  },
+  activeCircleText: {
+    fontWeight: "bold",
+  },
+});
+
 const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const route = useRoute(); // Nasłuchujemy zmiany w route
@@ -70,59 +125,5 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  navbarContainer: {
-    display: "flex",
-    alignItems: "center",
-    backgroundColor: "white",
-  },
-  navbar: {
-    height: 120,
-    width: "100%",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: "300",
-    color: "#535353",
-  },
-  highlight: {
-    fontSize: 25,
-    fontWeight: "600",
-    color: "#535353",
-    letterSpacing: 3,
-  },
-  areaHeading: {
-    marginLeft: 25,
-  },
-  circleContainer: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexDirection: "row",
-    width: "95%",
-    marginTop: -25,
-  },
-  circle: {
-    width: 45,
-    height: 43,
-    borderRadius: 100,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  circleText: {
-    fontSize: 19,
-    fontWeight: "300",
-    color: "#000",
-  },
-  activeCircle: {
-    borderWidth: 3,
-    borderColor: "#fff",
-  },
-  activeCircleText: {
-    fontWeight: "bold",
-  },
-});
 
 export default Navbar;
