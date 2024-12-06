@@ -10,7 +10,7 @@ import DropDown from "../../../Components/DropDown";
 import { mindArticleTexts } from "./MindArticleText";
 
 const styles = StyleSheet.create({
-  mainContainer: {
+  mainContainer: {//
     flex: 1,
     backgroundColor: "#FFE2CC",
   },
