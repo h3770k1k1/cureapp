@@ -1,4 +1,4 @@
-export const developmentArticleTexts = [
+export const relationshipsArticleTexts = [
   {
     ArticleIndex: 0,
     ArticleTitle: "Inwestuj w relacje",

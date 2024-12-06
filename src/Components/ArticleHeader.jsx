@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import ArticleArrow from "./ArticleArrow";
+import ArticleArrow from "./Icons/ArticleArrow";
 
 const styles = StyleSheet.create({
   topContainer: {
@@ -42,12 +42,12 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
      MindArticle3: "MindArticle2",
      MindArticle4: "MindArticle3",
 
-     DevelopmentArticle1: { target: "Mental", params: { activeColor: "#FFF7CC", activeArea: "ROZWÓJ" } },
-     DevelopmentArticle2: "DevelopmentArticle1",
-     DevelopmentArticle3: "DevelopmentArticle2",
-     DevelopmentArticle4: "DevelopmentArticle3",
-     DevelopmentArticle5: "DevelopmentArticle4",
-     DevelopmentArticle6: "DevelopmentArticle5",
+     RelationshipsArticle1: { target: "Mental", params: { activeColor: "#FFF7CC", activeArea: "RELACJE" } },
+     RelationshipsArticle2: "RelationshipsArticle1",
+     RelationshipsArticle3: "RelationshipsArticle2",
+     RelationshipsArticle4: "RelationshipsArticle3",
+     RelationshipsArticle5: "RelationshipsArticle4",
+     RelationshipsArticle6: "RelationshipsArticle5",
 
      EmotionsArticle1: { target: "Mental", params: { activeColor: "#D3F2D7", activeArea: "EMOCJE" } },
      EmotionsArticle2: "EmotionsArticle1",
@@ -77,7 +77,7 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
    } else if (route && typeof route === "object") {
      navigation.navigate(route.target, route.params);
    } else {
-     // Domyślna nawigacja
+     
      navigation.navigate("Mental", { activeColor: "#FFD3FA", activeArea: "" });
    }
  };

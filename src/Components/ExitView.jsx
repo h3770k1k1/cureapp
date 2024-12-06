@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import ExitDots from "./ExitDots";
+import ExitDots from "./Icons/ExitDots";
 import Option from "./MenuOption";
 
 const styles = StyleSheet.create({

@@ -1,14 +1,14 @@
 import React from "react";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
-import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from "../../../components/SmallText";
-import BoldText from "../../../components/BoldText";
-import DotLineHeader from "../../../components/DotLineHeader";
-import ArticleTitle from "../../../components/ArticleTitle";
-import ForwardingButton from "../../../components/ForwardingButton";
-import MediumText from "../../../components/MediumText";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import SmallText from "../../../Components/SmallText";
+import BoldText from "../../../Components/BoldText";
+import DotLineHeader from "../../../Components/DotLineHeader";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import ForwardingButton from "../../../Components/ForwardingButton";
+import MediumText from "../../../Components/MediumText";
 import { bodyArticleTexts } from "./BodyArticleText";
-import DropDown from "../../../components/DropDown";
+import DropDown from "../../../Components/DropDown";
 
 const styles = StyleSheet.create({
   mainContainer: {

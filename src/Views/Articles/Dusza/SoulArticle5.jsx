@@ -1,14 +1,14 @@
-import ForwardingButton from "../../../components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton";
 import React from "react";
 import { soulArticleTexts } from "./SoulArticleText";
-import ArticleHeader from "../../../components/ArticleHeader";
-import ArticleTitle from "../../../components/ArticleTitle";
-import SmallText from "../../../components/SmallText";
-import DropDown from "../../../components/DropDown";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import SmallText from "../../../Components/SmallText";
+import DropDown from "../../../Components/DropDown";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
-import LinkButton from "../../../components/LinkButton";
-import LetterDropDown from "../../../components/LetterDropDown";
-import BoldText from "../../../components/BoldText";
+import LinkButton from "../../../Components/LinkButton";
+import LetterDropDown from "../../../Components/LetterDropDown";
+import BoldText from "../../../Components/BoldText";
 
 const styles = StyleSheet.create({
   mainContainer: {

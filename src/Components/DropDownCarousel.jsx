@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Animated,
 } from "react-native";
-import DropDownArrow from "./DropDownArrow.svg";
+import DropDownArrow from "./Icons/DropDownArrow.svg";
 import SmallText from "./SmallText";
 import BoldText from "./BoldText";
 import Carousel from "./Carousel";

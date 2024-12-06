@@ -1,12 +1,12 @@
-import ForwardingButton from "../../../components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton";
 import React from "react";
 import { soulArticleTexts } from "./SoulArticleText";
-import ArticleHeader from "../../../components/ArticleHeader";
-import ArticleTitle from "../../../components/ArticleTitle";
-import SmallText from "../../../components/SmallText";
-import BoldText from "../../../components/BoldText";
-import MediumText from "../../../components/MediumText";
-import DropDown from "../../../components/DropDown";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import SmallText from "../../../Components/SmallText";
+import BoldText from "../../../Components/BoldText";
+import MediumText from "../../../Components/MediumText";
+import DropDown from "../../../Components/DropDown";
 import { ScrollView, View, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { ScrollView, View, StyleSheet } from "react-native";
-import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from "../../../components/SmallText";
-import MediumText from "../../../components/MediumText";
-import DotLineHeader from "../../../components/DotLineHeader";
-import ArticleTitle from "../../../components/ArticleTitle";
-import ForwardingButton from "../../../components/ForwardingButton";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import SmallText from "../../../Components/SmallText";
+import MediumText from "../../../Components/MediumText";
+import DotLineHeader from "../../../Components/DotLineHeader";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import ForwardingButton from "../../../Components/ForwardingButton";
 import { bodyArticleTexts } from "./BodyArticleText";
 
 const styles = StyleSheet.create({

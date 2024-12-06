@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
-import ArrowOption from "./ArrowOption";
+import ArrowOption from "./Icons/ArrowOption";
 import { useNavigation } from "@react-navigation/native";
 import { MentalTexts } from "../Views/MentalTexts";
 

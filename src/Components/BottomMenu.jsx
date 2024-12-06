@@ -1,9 +1,9 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
-import HomeIcon from "./Home";
-import MentalIcon from "./Mental";
-import GrowIcon from "./Grow";
-import SettingsIcon from "./Settings";
+import HomeIcon from "./Icons/Home";
+import MentalIcon from "./Icons/Mental";
+import GrowIcon from "./Icons/Grow";
+import SettingsIcon from "./Icons/Settings";
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {

@@ -1,13 +1,13 @@
 import React from "react";
 import { ScrollView, View, StyleSheet } from "react-native";
-import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from "../../../components/SmallText";
-import BoldText from "../../../components/BoldText";
-import MediumText from "../../../components/MediumText";
-import ArticleTitle from "../../../components/ArticleTitle";
-import ForwardingButton from "../../../components/ForwardingButton";
-import { developmentArticleTexts } from "./DevelopmentArticleText";
-import DropDown from "../../../components/DropDown";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import SmallText from "../../../Components/SmallText";
+import BoldText from "../../../Components/BoldText";
+import MediumText from "../../../Components/MediumText";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import ForwardingButton from "../../../Components/ForwardingButton";
+import { relationshipsArticleTexts } from "./RelationshipsArticleText";
+import DropDown from "../../../Components/DropDown";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const DevelopmentArticle6 = ({ navigation }) => {
-  const article = developmentArticleTexts[5];
+const RelationshipsArticle6 = ({ navigation }) => {
+  const article = relationshipsArticleTexts[5];
 
   const handleForward = () => {
     navigation.navigate("EmotionsArticle1");
@@ -52,4 +52,4 @@ const DevelopmentArticle6 = ({ navigation }) => {
   );
 };
 
-export default DevelopmentArticle6;
+export default RelationshipsArticle6;

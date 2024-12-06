@@ -1,11 +1,11 @@
 import React from "react";
 import { ScrollView, View, StyleSheet } from "react-native";
-import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from "../../../components/SmallText";
-import BoldText from "../../../components/BoldText";
-import ArticleTitle from "../../../components/ArticleTitle";
-import ForwardingButton from "../../../components/ForwardingButton";
-import { developmentArticleTexts } from "./DevelopmentArticleText";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import SmallText from "../../../Components/SmallText";
+import BoldText from "../../../Components/BoldText";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import ForwardingButton from "../../../Components/ForwardingButton";
+import { relationshipsArticleTexts } from "./RelationshipsArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const DevelopmentArticle2 = ({ navigation }) => {
-  const article = developmentArticleTexts[1];
+const RelationshipsArticle2 = ({ navigation }) => {
+  const article = relationshipsArticleTexts[1];
 
   const handleForward = () => {
-    navigation.navigate("DevelopmentArticle3");
+    navigation.navigate("RelationshipsArticle3");
   };
 
   return (
@@ -43,4 +43,4 @@ const DevelopmentArticle2 = ({ navigation }) => {
   );
 };
 
-export default DevelopmentArticle2;
+export default RelationshipsArticle2;

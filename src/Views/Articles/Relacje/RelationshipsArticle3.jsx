@@ -1,12 +1,12 @@
 import React from "react";
 import { ScrollView, View, StyleSheet } from "react-native";
-import ArticleHeader from "../../../components/ArticleHeader";
-import SmallText from "../../../components/SmallText";
-import BoldText from "../../../components/BoldText";
-import ArticleTitle from "../../../components/ArticleTitle";
-import ForwardingButton from "../../../components/ForwardingButton";
-import { developmentArticleTexts } from "./DevelopmentArticleText";
-import DropDown from "../../../components/DropDown";
+import ArticleHeader from "../../../Components/ArticleHeader";
+import SmallText from "../../../Components/SmallText";
+import BoldText from "../../../Components/BoldText";
+import ArticleTitle from "../../../Components/ArticleTitle";
+import ForwardingButton from "../../../Components/ForwardingButton";
+import { relationshipsArticleTexts } from "./RelationshipsArticleText";
+import DropDown from "../../../Components/DropDown";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const DevelopmentArticle3 = ({ navigation }) => {
-  const article = developmentArticleTexts[2]; // Ensure index [2] is valid
+const RelationshipsArticle3 = ({ navigation }) => {
+  const article = relationshipsArticleTexts[2]; // Ensure index [2] is valid
 
   const handleForward = () => {
-    navigation.navigate("DevelopmentArticle4");
+    navigation.navigate("RelationshipsArticle4");
   };
 
   return (
@@ -58,4 +58,4 @@ const DevelopmentArticle3 = ({ navigation }) => {
   );
 };
 
-export default DevelopmentArticle3;
+export default RelationshipsArticle3;

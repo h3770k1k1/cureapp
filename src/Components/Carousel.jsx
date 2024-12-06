@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import CarouselArrow from "./CarouselArrow";
+import CarouselArrow from "./Icons/CarouselArrow";
 
 const Carousel = ({ text = [], name = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

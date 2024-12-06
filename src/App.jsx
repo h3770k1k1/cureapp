@@ -19,12 +19,12 @@ import EmotionsArticle1 from "./Views/Articles/Emocje/EmotionsArticle1";
 import EmotionsArticle2 from "./Views/Articles/Emocje/EmotionsArticle2";
 import EmotionsArticle3 from "./Views/Articles/Emocje/EmotionsArticle3";
 import EmotionsArticle4 from "./Views/Articles/Emocje/EmotionsArticle4";
-import DevelopmentArticle1 from "./Views/Articles/Rozwój/DevelopmentArticle1";
-import DevelopmentArticle2 from "./Views/Articles/Rozwój/DevelopmentArticle2";
-import DevelopmentArticle3 from "./Views/Articles/Rozwój/DevelopmentArticle3";
-import DevelopmentArticle4 from "./Views/Articles/Rozwój/DevelopmentArticle4";
-import DevelopmentArticle5 from "./Views/Articles/Rozwój/DevelopmentArticle5";
-import DevelopmentArticle6 from "./Views/Articles/Rozwój/DevelopmentArticle6";
+import RelationshipsArticle1 from "./Views/Articles/Relacje/RelationshipsArticle1";
+import RelationshipsArticle2 from "./Views/Articles/Relacje/RelationshipsArticle2";
+import RelationshipsArticle3 from "./Views/Articles/Relacje/RelationshipsArticle3";
+import RelationshipsArticle4 from "./Views/Articles/Relacje/RelationshipsArticle4";
+import RelationshipsArticle5 from "./Views/Articles/Relacje/RelationshipsArticle5";
+import RelationshipsArticle6 from "./Views/Articles/Relacje/RelationshipsArticle6";
 import MindArticle1 from "./Views/Articles/Umysl/MindArticle1";
 import MindArticle2 from "./Views/Articles/Umysl/MindArticle2";
 import MindArticle3 from "./Views/Articles/Umysl/MindArticle3";
@@ -61,28 +61,28 @@ const App = () => {
 
 
         <Stack.Screen
-          name="DevelopmentArticle1"
-          component={DevelopmentArticle1}
+          name="RelationshipsArticle1"
+          component={RelationshipsArticle1}
         />
         <Stack.Screen
-          name="DevelopmentArticle2"
-          component={DevelopmentArticle2}
+          name="RelationshipsArticle2"
+          component={RelationshipsArticle2}
         />
         <Stack.Screen
-          name="DevelopmentArticle3"
-          component={DevelopmentArticle3}
+          name="RelationshipsArticle3"
+          component={RelationshipsArticle3}
         />
         <Stack.Screen
-          name="DevelopmentArticle4"
-          component={DevelopmentArticle4}
+          name="RelationshipsArticle4"
+          component={RelationshipsArticle4}
         />
             <Stack.Screen
-                  name="DevelopmentArticle5"
-                  component={DevelopmentArticle5}
+                  name="RelationshipsArticle5"
+                  component={RelationshipsArticle5}
                 />
                   <Stack.Screen
-                                  name="DevelopmentArticle6"
-                                  component={DevelopmentArticle6}
+                                  name="RelationshipsArticle6"
+                                  component={RelationshipsArticle6}
                                 />
       </Stack.Navigator>
     </NavigationContainer>

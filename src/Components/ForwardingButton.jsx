@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
-import ForwardingButtonArrow from "./ForwardingButtonArrow";
+import ForwardingButtonArrow from "./Icons/ForwardingButtonArrow";
 
 const styles = StyleSheet.create({
   forwardingButton: {
