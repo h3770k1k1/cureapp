@@ -6,7 +6,7 @@ import BoldText from "../../../Components/BoldText";
 import MediumText from "../../../Components/MediumText";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
-import { relationshipsArticleTexts } from "./RelationshipsArticleText";
+import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 import DropDown from "../../../Components/DropDown";
 import Carousel from "../../../Components/Carousel"
 const styles = StyleSheet.create({

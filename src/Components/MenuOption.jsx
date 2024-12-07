@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import ArrowOption from "./Icons/ArrowOption";
 import { useNavigation } from "@react-navigation/native";
-import { MentalTexts } from "../Views/MentalTexts";
+import { MentalTexts } from "../Views/Texts/MentalTexts";
 
 const styles = StyleSheet.create({
   option: {

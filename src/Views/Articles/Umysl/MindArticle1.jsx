@@ -8,7 +8,7 @@ import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
 import DropDown from "../../../Components/DropDown";
 import DropDownCarousel from "../../../Components/DropDownCarousel";
-import { mindArticleTexts } from "./MindArticleText";
+import { mindArticleTexts } from "../../Texts/MindArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {

@@ -7,7 +7,7 @@ import DotLineHeader from "../../../Components/DotLineHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
 import LetterDropdown from "../../../Components/LetterDropDown";
-import { bodyArticleTexts } from "./BodyArticleText";
+import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {

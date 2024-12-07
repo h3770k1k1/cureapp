@@ -6,7 +6,7 @@ import MediumText from "../../../Components/MediumText";
 import DotLineHeader from "../../../Components/DotLineHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
-import { bodyArticleTexts } from "./BodyArticleText";
+import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {

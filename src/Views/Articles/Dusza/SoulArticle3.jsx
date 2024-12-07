@@ -1,6 +1,6 @@
 import ForwardingButton from "../../../Components/ForwardingButton";
 import React from "react";
-import { soulArticleTexts } from "./SoulArticleText";
+import { soulArticleTexts } from "../../Texts/SoulArticleText";
 import ArticleHeader from "../../../Components/ArticleHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import SmallText from "../../../Components/SmallText";

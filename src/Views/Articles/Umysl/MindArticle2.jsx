@@ -7,7 +7,7 @@ import MediumText from "../../../Components/MediumText";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
 import DropDown from "../../../Components/DropDown";
-import { mindArticleTexts } from "./MindArticleText";
+import { mindArticleTexts } from "../../Texts/MindArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {

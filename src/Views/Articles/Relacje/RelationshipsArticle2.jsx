@@ -5,7 +5,7 @@ import SmallText from "../../../Components/SmallText";
 import BoldText from "../../../Components/BoldText";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
-import { relationshipsArticleTexts } from "./RelationshipsArticleText";
+import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 
 const styles = StyleSheet.create({
   mainContainer: {
