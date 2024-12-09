@@ -22,10 +22,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article5 = ({ navigation }) => {
+const BodyArticle5 = ({ navigation }) => {
   const article = bodyArticleTexts[4];
   const handleForward = () => {
-    navigation.navigate("Article6");
+    navigation.navigate("BodyArticle6");
   };
   return (
     <View style={styles.mainContainer}>
@@ -52,4 +52,4 @@ const Article5 = ({ navigation }) => {
   );
 };
 
-export default Article5;
+export default BodyArticle5;

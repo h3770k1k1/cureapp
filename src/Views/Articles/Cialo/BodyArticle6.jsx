@@ -20,10 +20,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article6 = ({ navigation }) => {
+const BodyArticle6 = ({ navigation }) => {
   const article = bodyArticleTexts[5];
   const handleForward = () => {
-    navigation.navigate("Article6");
+    navigation.navigate("BodyArticle6");
   };
   return (
     <View style={styles.mainContainer}>
@@ -65,4 +65,4 @@ const Article6 = ({ navigation }) => {
   );
 };
 
-export default Article6;
+export default BodyArticle6;

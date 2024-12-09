@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article1 = ({ navigation }) => {
+const BodyArticle1 = ({ navigation }) => {
   const article = bodyArticleTexts[0];
 
   const handleForward = () => {
-    navigation.navigate("Article2");
+    navigation.navigate("BodyArticle2");
   };
 
   return (
@@ -51,4 +51,4 @@ const Article1 = ({ navigation }) => {
   );
 };
 
-export default Article1;
+export default BodyArticle1;

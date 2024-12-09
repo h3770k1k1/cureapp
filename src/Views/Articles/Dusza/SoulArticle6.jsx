@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 const SoulArticle6 = ({ navigation }) => {
   const article = soulArticleTexts[5];
   const handleForward = () => {
-    navigation.navigate("Article1");
+    navigation.navigate("BodyArticle1");
   };
   return (
     <View style={styles.mainContainer}>
