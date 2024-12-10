@@ -1,0 +1,7 @@
+{
+  "Body": ["BodyArticle1", "BodyArticle2", "BodyArticle3", "BodyArticle4", "BodyArticle5", "BodyArticle6"],
+  "Mind": ["MindArticle1", "MindArticle2", "MindArticle3", "MindArticle4"],
+  "Relationships": ["RelationshipsArticle1", "RelationshipsArticle2", "RelationshipsArticle3", "RelationshipsArticle4", "RelationshipsArticle5", "RelationshipsArticle6"],
+  "Emotions": ["EmotionsArticle1", "EmotionsArticle2", "EmotionsArticle3", "EmotionsArticle4"],
+  "Soul": ["SoulArticle1", "SoulArticle2", "SoulArticle3", "SoulArticle4", "SoulArticle5", "SoulArticle6"]
+}
