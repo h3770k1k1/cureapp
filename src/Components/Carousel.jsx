@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import CarouselArrow from "./Icons/CarouselArrow";
 
-const Carousel = ({ text = [], name = [] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
@@ -40,6 +38,9 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "180deg" }],
   },
 });
+
+const Carousel = ({ text = [], name = [] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const totalItems = text.length;
 
