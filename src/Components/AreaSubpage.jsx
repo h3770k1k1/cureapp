@@ -48,7 +48,7 @@ const AreaSubpage = ({ activeColor }) => {
   const navigation = useNavigation();
 
   const index = MentalTexts.findIndex((item) => item.Color === activeColor);
-  const text = index !== -1 ? MentalTexts[index] : null;
+  const text = index !== -1 ? MentalTexts[index] : '';
 
   return (
     <SafeAreaView style={styles.container}>
