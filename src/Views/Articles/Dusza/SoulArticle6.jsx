@@ -42,7 +42,7 @@ const SoulArticle6 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={soulArticleTexts.length} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />

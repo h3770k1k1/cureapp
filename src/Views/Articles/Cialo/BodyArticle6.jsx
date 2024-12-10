@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
 const BodyArticle6 = ({ navigation }) => {
   const article = bodyArticleTexts[5];
   const handleForward = () => {
-    navigation.navigate("BodyArticle6");
+    navigation.navigate("MindArticle1");
   };
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={bodyArticleTexts.length} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText[0]} />
         <BoldText text={article.BoldText} />

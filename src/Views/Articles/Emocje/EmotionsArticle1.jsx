@@ -30,7 +30,7 @@ const EmotionsArticle1 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={emotionsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText[0]} />
         <BoldText text={article.BoldText[0]} />

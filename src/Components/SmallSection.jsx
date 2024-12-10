@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "flex-end",
     position: "absolute",
-    bottom: 16, // Ustalamy przycisk na dole sekcji
+    bottom: 16,
     width: "100%",
   },
   moreButtonText: {
@@ -52,7 +52,7 @@ const SmallSection = ({
     );
 
     if (backgroundColor === "#FFD3FA") {
-      const articleName = `Article${articleIndex + 1}`;
+      const articleName = `BodyArticle${articleIndex + 1}`;
       navigation.navigate(articleName);
     }
     if (backgroundColor === "#CDF6FF") {

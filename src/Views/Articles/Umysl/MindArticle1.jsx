@@ -32,7 +32,7 @@ const MindArticle1 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={4} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={mindArticleTexts.length} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
           <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />

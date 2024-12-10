@@ -30,7 +30,7 @@ const RelationshipsArticle3 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={6} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader dotCount={relationshipsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText} />
         <DropDown
