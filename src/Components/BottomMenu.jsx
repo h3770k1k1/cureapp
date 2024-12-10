@@ -55,7 +55,6 @@ const Views = {
   Settings: "Settings",
 };
 
-
 const BottomMenu = ({ selectedView, navigation }) => {
   const MenuButton = ({ icon, isSelected, view, onPress }) => (
     <TouchableOpacity

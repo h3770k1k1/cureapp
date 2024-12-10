@@ -42,7 +42,10 @@ const SoulArticle4 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={soulArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={soulArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText[0]} />
         <DropDown
@@ -53,11 +56,12 @@ const SoulArticle4 = ({ navigation }) => {
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText[1]} />
       </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#CDF6FF"
-        onPress={handleForward}
-      />
+     <ForwardingButton
+                                   text={article.ForwardingButton}
+                                   backgroundColor="#CDF6FF"
+                                   currentArticle="SoulArticle4"
+                                   navigation={navigation}
+                                 />
     </View>
   );
 };

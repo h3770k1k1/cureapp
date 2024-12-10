@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
-
 const styles = StyleSheet.create({
   navbarContainer: {
     display: "flex",

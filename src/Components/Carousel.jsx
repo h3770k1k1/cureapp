@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "400",
     textAlign: "center",
-    justifyContent:"baseline",
+    justifyContent: "baseline",
     lineHeight: 30,
   },
   rotatedArrow: {

@@ -29,7 +29,10 @@ const BodyArticle3 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={bodyArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={bodyArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText[0]} />
         <BoldText text={article.BoldText} />
@@ -38,11 +41,12 @@ const BodyArticle3 = ({ navigation }) => {
           <DottedArrows style={{ transform: [{ scale: 1.1 }] }} />
         </Text>
       </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFD3FA"
-        onPress={handleForward}
-      />
+       <ForwardingButton
+                                                 text={article.ForwardingButton}
+                                                 backgroundColor="#FFD3FA"
+                                                 currentArticle="BodyArticle3"
+                                                 navigation={navigation}
+                                               />
     </View>
   );
 };

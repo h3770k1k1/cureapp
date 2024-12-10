@@ -32,9 +32,12 @@ const MindArticle1 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={mindArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={mindArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
-          <SmallText text={article.SmallText} />
+        <SmallText text={article.SmallText} />
         <BoldText text={article.BoldText} />
         <DropDownCarousel
           titleText={article.DropDownTitle[1]}
@@ -59,10 +62,11 @@ const MindArticle1 = ({ navigation }) => {
         />
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFE2CC"
-        onPress={handleForward}
-      />
+             text={article.ForwardingButton}
+             backgroundColor="#FFE2CC"
+             currentArticle="MindArticle1"
+             navigation={navigation}
+           />
     </View>
   );
 };

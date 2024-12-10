@@ -30,7 +30,10 @@ const RelationshipsArticle3 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={relationshipsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={relationshipsArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText} />
         <DropDown
@@ -50,10 +53,11 @@ const RelationshipsArticle3 = ({ navigation }) => {
         />
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFF7CC"
-        onPress={handleForward}
-      />
+                    text={article.ForwardingButton}
+                    backgroundColor="#FFF7CC"
+                    currentArticle="RelationshipsArticle3"
+                    navigation={navigation}
+                  />
     </View>
   );
 };

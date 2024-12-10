@@ -8,7 +8,7 @@ import ArticleTitle from "../../../Components/ArticleTitle";
 import ForwardingButton from "../../../Components/ForwardingButton";
 import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 import DropDown from "../../../Components/DropDown";
-import Carousel from "../../../Components/Carousel"
+import Carousel from "../../../Components/Carousel";
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -31,7 +31,10 @@ const RelationshipsArticle4 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={relationshipsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={relationshipsArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <BoldText text={article.BoldText[0]} />
         <SmallText text={article.SmallText[0]} />
@@ -40,16 +43,14 @@ const RelationshipsArticle4 = ({ navigation }) => {
         <MediumText text={article.MediumText[1]} />
         <SmallText text={article.SmallText[2]} />
         <BoldText text={article.BoldText[1]} />
-       <Carousel
-         text={article.CarouselText}
-         name={article.CarouselName}
-       />
+        <Carousel text={article.CarouselText} name={article.CarouselName} />
       </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFF7CC"
-        onPress={handleForward}
-      />
+     <ForwardingButton
+                   text={article.ForwardingButton}
+                   backgroundColor="#FFF7CC"
+                   currentArticle="RelationshipsArticle4"
+                   navigation={navigation}
+                 />
     </View>
   );
 };

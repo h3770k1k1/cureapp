@@ -104,11 +104,11 @@ const DropdownCarousel = ({
             </View>
             <View style={styles.section}>
               <BoldText text={boldText2} />
-              <Carousel text={carouselText2}  />
+              <Carousel text={carouselText2} />
             </View>
             <View style={styles.section}>
               <BoldText text={boldText3} />
-              <Carousel text={carouselText3}  />
+              <Carousel text={carouselText3} />
             </View>
           </View>
         )}
@@ -116,6 +116,5 @@ const DropdownCarousel = ({
     </View>
   );
 };
-
 
 export default DropdownCarousel;

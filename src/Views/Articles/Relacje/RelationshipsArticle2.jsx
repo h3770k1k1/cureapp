@@ -29,15 +29,19 @@ const RelationshipsArticle2 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={relationshipsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={relationshipsArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText} />
-        <ForwardingButton
-          text={article.ForwardingButton}
-          backgroundColor="#FFF7CC"
-          onPress={handleForward}
-        />
+       <ForwardingButton
+                     text={article.ForwardingButton}
+                     backgroundColor="#FFF7CC"
+                     currentArticle="RelationshipsArticle2"
+                     navigation={navigation}
+                   />
       </ScrollView>
     </View>
   );

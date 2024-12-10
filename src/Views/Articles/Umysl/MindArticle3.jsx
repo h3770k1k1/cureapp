@@ -31,20 +31,24 @@ const MindArticle3 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={mindArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={mindArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <BoldText text={article.BoldText[0]} />
-         <SmallText text={article.SmallText[0]} />
-         <MediumText text={article.MediumText}/>
-         <SmallText text={article.SmallText[1]}/>
-          <BoldText text={article.BoldText[1]} />
- <SmallText text={article.SmallText[2]}/>
+        <SmallText text={article.SmallText[0]} />
+        <MediumText text={article.MediumText} />
+        <SmallText text={article.SmallText[1]} />
+        <BoldText text={article.BoldText[1]} />
+        <SmallText text={article.SmallText[2]} />
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFE2CC"
-        onPress={handleForward}
-      />
+             text={article.ForwardingButton}
+             backgroundColor="#FFE2CC"
+             currentArticle="MindArticle3"
+             navigation={navigation}
+           />
     </View>
   );
 };

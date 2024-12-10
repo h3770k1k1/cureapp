@@ -31,7 +31,10 @@ const EmotionsArticle4 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={emotionsArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={emotionsArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText} />
@@ -51,11 +54,13 @@ const EmotionsArticle4 = ({ navigation }) => {
           hasTopBorder={false}
         />
       </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#CDF6FF"
-        onPress={handleForward}
-      />
+
+<ForwardingButton
+                          text={article.ForwardingButton}
+                          backgroundColor="#CDF6FF"
+                          currentArticle="EmotionsArticle4"
+                          navigation={navigation}
+                        />
     </View>
   );
 };

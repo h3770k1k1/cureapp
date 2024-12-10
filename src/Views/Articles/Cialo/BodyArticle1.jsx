@@ -30,7 +30,10 @@ const BodyArticle1 = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader dotCount={bodyArticleTexts.length} filledDotIndex={article.ArticleIndex} />
+        <ArticleHeader
+          dotCount={bodyArticleTexts.length}
+          filledDotIndex={article.ArticleIndex}
+        />
         <ArticleTitle text={article.ArticleTitle} />
         <SmallText text={article.SmallText} />
         <MediumText text={article.MediumText[0]} />
@@ -42,11 +45,13 @@ const BodyArticle1 = ({ navigation }) => {
         <MediumText text={article.MediumText[3]} />
         <DotLineHeader text={article.DotLineHeader[3]} />
       </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        backgroundColor="#FFD3FA"
-        onPress={handleForward}
-      />
+
+        <ForwardingButton
+                                           text={article.ForwardingButton}
+                                           backgroundColor="#FFD3FA"
+                                           currentArticle="BodyArticle1"
+                                           navigation={navigation}
+                                         />
     </View>
   );
 };
