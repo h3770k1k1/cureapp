@@ -66,18 +66,17 @@ const styles = StyleSheet.create({
 
 const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const route = useRoute(); // Nasłuchujemy zmiany w route
+  const route = useRoute();
   const navigation = useNavigation();
 
   const colors = ["#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF"];
 
   useEffect(() => {
-    // Zaktualizuj kolor i obszar na podstawie parametrów w route
     if (route.params?.activeColor) {
       const color = route.params.activeColor;
-      const area = route.params.activeArea || "CIAŁO"; // Domyślny obszar, jeśli nie jest przekazany
-      onColorChange(color); // Zaktualizuj kolor
-      setActiveIndex(colors.indexOf(color)); // Zaktualizuj indeks aktywnego koloru
+      const area = route.params.activeArea || "CIAŁO";
+      onColorChange(color);
+      setActiveIndex(colors.indexOf(color));
     }
   }, [route.params]);
 
