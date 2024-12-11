@@ -29,41 +29,44 @@ import SoulArticle4 from "./Dusza/SoulArticle4";
 import SoulArticle5 from "./Dusza/SoulArticle5";
 import SoulArticle6 from "./Dusza/SoulArticle6";
 
-const ArticlesImport = {
-  BodyArticle1,
-  BodyArticle2,
-  BodyArticle3,
-  BodyArticle4,
-  BodyArticle5,
-  BodyArticle6,
-  MindArticle1,
-  MindArticle2,
-  MindArticle3,
-  MindArticle4,
-  RelationshipsArticle1,
-  RelationshipsArticle2,
-  RelationshipsArticle3,
-  RelationshipsArticle4,
-  RelationshipsArticle5,
-  RelationshipsArticle6,
-  EmotionsArticle1,
-  EmotionsArticle2,
-  EmotionsArticle3,
-  EmotionsArticle4,
-  SoulArticle1,
-  SoulArticle2,
-  SoulArticle3,
-  SoulArticle4,
-  SoulArticle5,
-  SoulArticle6,
+export const Articles = {
+  Body: {
+    BodyArticle1: require("./Cialo/BodyArticle1").default,
+    BodyArticle2: require("./Cialo/BodyArticle2").default,
+    BodyArticle3: require("./Cialo/BodyArticle3").default,
+    BodyArticle4: require("./Cialo/BodyArticle4").default,
+    BodyArticle5: require("./Cialo/BodyArticle5").default,
+    BodyArticle6: require("./Cialo/BodyArticle6").default,
+  },
+  Mind: {
+    MindArticle1: require("./Umysl/MindArticle1").default,
+    MindArticle2: require("./Umysl/MindArticle2").default,
+    MindArticle3: require("./Umysl/MindArticle3").default,
+    MindArticle4: require("./Umysl/MindArticle4").default,
+  },
+  Relationships: {
+    RelationshipsArticle1: require("./Relacje/RelationshipsArticle1").default,
+    RelationshipsArticle2: require("./Relacje/RelationshipsArticle2").default,
+    RelationshipsArticle3: require("./Relacje/RelationshipsArticle3").default,
+    RelationshipsArticle4: require("./Relacje/RelationshipsArticle4").default,
+    RelationshipsArticle5: require("./Relacje/RelationshipsArticle5").default,
+    RelationshipsArticle6: require("./Relacje/RelationshipsArticle6").default,
+  },
+  Emotions: {
+    EmotionsArticle1: require("./Emocje/EmotionsArticle1").default,
+    EmotionsArticle2: require("./Emocje/EmotionsArticle2").default,
+    EmotionsArticle3: require("./Emocje/EmotionsArticle3").default,
+    EmotionsArticle4: require("./Emocje/EmotionsArticle4").default,
+  },
+  Soul: {
+    SoulArticle1: require("./Dusza/SoulArticle1").default,
+    SoulArticle2: require("./Dusza/SoulArticle2").default,
+    SoulArticle3: require("./Dusza/SoulArticle3").default,
+    SoulArticle4: require("./Dusza/SoulArticle4").default,
+    SoulArticle5: require("./Dusza/SoulArticle5").default,
+    SoulArticle6: require("./Dusza/SoulArticle6").default,
+  },
 };
 
-export const articles = {
-  Body: ["BodyArticle1", "BodyArticle2", "BodyArticle3", "BodyArticle4", "BodyArticle5", "BodyArticle6"],
-  Mind: ["MindArticle1", "MindArticle2", "MindArticle3", "MindArticle4"],
-  Relationships: ["RelationshipsArticle1", "RelationshipsArticle2", "RelationshipsArticle3", "RelationshipsArticle4", "RelationshipsArticle5", "RelationshipsArticle6"],
-  Emotions: ["EmotionsArticle1", "EmotionsArticle2", "EmotionsArticle3", "EmotionsArticle4"],
-  Soul: ["SoulArticle1", "SoulArticle2", "SoulArticle3", "SoulArticle4", "SoulArticle5", "SoulArticle6"],
-};
 
-export default ArticlesImport;
+export default Articles;

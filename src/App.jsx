@@ -3,17 +3,17 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from './Views/Home';
 import Mental from './Views/Mental';
-import ArticlesImport, { articles } from "./Views/Articles/Articles";
+import Articles from "./Views/Articles/Articles";
 
 const Stack = createStackNavigator();
 
 const generateArticleScreens = () => {
-  return Object.entries(articles).flatMap(([category, articleNames]) =>
-    articleNames.map((articleName) => (
+  return Object.entries(Articles).flatMap(([category, articles]) =>
+    Object.entries(articles).map(([articleName, ArticleComponent]) => (
       <Stack.Screen
         key={articleName}
         name={articleName}
-        component={ArticlesImport[articleName]}
+        component={ArticleComponent}
       />
     ))
   );
