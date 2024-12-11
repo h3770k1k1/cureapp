@@ -3,8 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from './Views/Home';
 import Mental from './Views/Mental';
-import Articles from "./Views/Articles/Articles";
-import articles from './articles.json';
+import ArticlesImport, { articles } from "./Views/Articles/Articles";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +13,7 @@ const generateArticleScreens = () => {
       <Stack.Screen
         key={articleName}
         name={articleName}
-        component={Articles[articleName]}
+        component={ArticlesImport[articleName]}
       />
     ))
   );
