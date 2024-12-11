@@ -56,7 +56,6 @@ const MindArticle2 = ({ navigation }) => {
       </ScrollView>
        <ForwardingButton
               text={article.ForwardingButton}
-              backgroundColor="#FFE2CC"
               currentArticle="MindArticle2"
               navigation={navigation}
             />

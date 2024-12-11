@@ -57,7 +57,6 @@ const EmotionsArticle4 = ({ navigation }) => {
 
 <ForwardingButton
                           text={article.ForwardingButton}
-                          backgroundColor="#CDF6FF"
                           currentArticle="EmotionsArticle4"
                           navigation={navigation}
                         />

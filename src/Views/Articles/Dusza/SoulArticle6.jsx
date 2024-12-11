@@ -63,7 +63,6 @@ const SoulArticle6 = ({ navigation }) => {
 
        <ForwardingButton
                                      text={article.ForwardingButton}
-                                     backgroundColor="#FFD3FA"
                                      currentArticle="SoulArticle6"
                                      navigation={navigation}
                                    />

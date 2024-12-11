@@ -46,12 +46,11 @@ const BodyArticle1 = ({ navigation }) => {
         <DotLineHeader text={article.DotLineHeader[3]} />
       </ScrollView>
 
-        <ForwardingButton
-                                           text={article.ForwardingButton}
-                                           backgroundColor="#FFD3FA"
-                                           currentArticle="BodyArticle1"
-                                           navigation={navigation}
-                                         />
+         <ForwardingButton
+                text={article.ForwardingButton}
+                currentArticle="BodyArticle1"
+                navigation={navigation}
+              />
     </View>
   );
 };

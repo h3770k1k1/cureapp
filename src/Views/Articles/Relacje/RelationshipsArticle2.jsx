@@ -38,7 +38,6 @@ const RelationshipsArticle2 = ({ navigation }) => {
         <SmallText text={article.SmallText} />
        <ForwardingButton
                      text={article.ForwardingButton}
-                     backgroundColor="#FFF7CC"
                      currentArticle="RelationshipsArticle2"
                      navigation={navigation}
                    />

@@ -43,7 +43,6 @@ const BodyArticle3 = ({ navigation }) => {
       </ScrollView>
        <ForwardingButton
                                                  text={article.ForwardingButton}
-                                                 backgroundColor="#FFD3FA"
                                                  currentArticle="BodyArticle3"
                                                  navigation={navigation}
                                                />
