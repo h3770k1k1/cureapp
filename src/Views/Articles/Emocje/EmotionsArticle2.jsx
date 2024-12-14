@@ -5,7 +5,7 @@ import SmallText from "../../../Components/SmallText";
 import BoldText from "../../../Components/BoldText";
 import MediumText from "../../../Components/MediumText";
 import ArticleTitle from "../../../Components/ArticleTitle";
-import ForwardingButton from "../../../Components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton/ForwardingButton";
 import DropDown from "../../../Components/DropDown";
 import { emotionsArticleTexts } from "../../Texts/EmotionsArticleText";
 

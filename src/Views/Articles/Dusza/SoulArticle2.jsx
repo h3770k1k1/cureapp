@@ -1,4 +1,4 @@
-import ForwardingButton from "../../../Components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton/ForwardingButton";
 import React from "react";
 import { soulArticleTexts } from "../../Texts/SoulArticleText";
 import ArticleHeader from "../../../Components/ArticleHeader";

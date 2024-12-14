@@ -4,7 +4,7 @@ import ArticleHeader from "../../../Components/ArticleHeader";
 import SmallText from "../../../Components/SmallText";
 import MediumText from "../../../Components/MediumText";
 import ArticleTitle from "../../../Components/ArticleTitle";
-import ForwardingButton from "../../../Components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton/ForwardingButton";
 import DropDown from "../../../Components/DropDown";
 import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 import SeparatingDots from "../../../Components/Icons/SeparatingDots";

@@ -5,7 +5,7 @@ import SmallText from "../../../Components/SmallText";
 import BoldText from "../../../Components/BoldText";
 import DotLineHeader from "../../../Components/DotLineHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
-import ForwardingButton from "../../../Components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton/ForwardingButton";
 import DottedArrows from "../../../Components/Icons/DottedArrows";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 

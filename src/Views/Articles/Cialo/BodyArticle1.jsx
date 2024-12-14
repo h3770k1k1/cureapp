@@ -5,7 +5,7 @@ import SmallText from "../../../Components/SmallText";
 import MediumText from "../../../Components/MediumText";
 import DotLineHeader from "../../../Components/DotLineHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
-import ForwardingButton from "../../../Components/ForwardingButton";
+import ForwardingButton from "../../../Components/ForwardingButton/ForwardingButton";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
 const styles = StyleSheet.create({

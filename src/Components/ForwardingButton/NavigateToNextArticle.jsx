@@ -1,5 +1,5 @@
-import { Articles } from "../Views/Articles/Articles";
-import colors from "../colors.json";
+import { Articles } from "../../Views/Articles/Articles";
+import colors from "../../colors.json";
 
 export const navigateToNextArticle = (currentArticle) => {
   const articlesSequence = Object.entries(Articles).flatMap(([category, articleObjects]) =>
