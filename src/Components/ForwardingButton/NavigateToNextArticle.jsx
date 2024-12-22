@@ -1,5 +1,5 @@
 import { Articles } from "../../Views/Articles/Articles";
-import colors from "../../colors.json";
+import sectionMapping from "../SectionMapping";
 
 export const navigateToNextArticle = (currentArticle) => {
   const articlesSequence = Object.entries(Articles).flatMap(([category, articleObjects]) =>
@@ -19,5 +19,8 @@ export const navigateToNextArticle = (currentArticle) => {
   const nextIndex = (currentIndex + 1) % articlesSequence.length;
   const nextArticle = articlesSequence[nextIndex];
 
-  return { name: nextArticle.name, color: colors[nextArticle.category] };
+  const nextColor =
+    sectionMapping[nextArticle.category]?.activeColor || sectionMapping.default.params.activeColor;
+
+  return { name: nextArticle.name, color: nextColor };
 };
