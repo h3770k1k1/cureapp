@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import SmallSectionNavigation from './SmallSectionNavigation'; // import the new navigation component
 
 const styles = StyleSheet.create({
   smallSection: {
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
 });
+
 const truncateText = (text, maxLength) => {
   if (text.length > maxLength) {
     return text.substring(0, maxLength - 3) + "...";
@@ -46,42 +48,21 @@ const SmallSection = ({
   navigation,
   articleIndex,
 }) => {
-  const handlePress = () => {
-    console.log(
-      `Kliknięto SmallSection: Header="${header}", Index=${articleIndex}`
-    );
-
-    if (backgroundColor === "#FFD3FA") {
-      const articleName = `BodyArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#CDF6FF") {
-      const articleName = `SoulArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#FFE2CC") {
-      const articleName = `MindArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#D3F2D7") {
-      const articleName = `EmotionsArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#FFF7CC") {
-      const articleName = `RelationshipsArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-  };
-
   return (
     <View style={[styles.smallSection, { backgroundColor }]}>
       <Text style={styles.smallHeader}>{header}</Text>
       <Text style={styles.smallDescription}>
         {truncateText(description, 80)}
       </Text>
-      <TouchableOpacity style={styles.moreButton} onPress={handlePress}>
+      <TouchableOpacity style={styles.moreButton}>
         <Text style={styles.moreButtonText}>Więcej</Text>
       </TouchableOpacity>
+
+      <SmallSectionNavigation
+        backgroundColor={backgroundColor}
+        articleIndex={articleIndex}
+        navigation={navigation}
+      />
     </View>
   );
 };
