@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { navigateToArticle } from "./SmallSectionNavigation"; // Import the navigation logic
 
 const styles = StyleSheet.create({
   smallSection: {
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
 });
+
 const truncateText = (text, maxLength) => {
   if (text.length > maxLength) {
     return text.substring(0, maxLength - 3) + "...";
@@ -51,26 +53,7 @@ const SmallSection = ({
       `Kliknięto SmallSection: Header="${header}", Index=${articleIndex}`
     );
 
-    if (backgroundColor === "#FFD3FA") {
-      const articleName = `BodyArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#CDF6FF") {
-      const articleName = `SoulArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#FFE2CC") {
-      const articleName = `MindArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#D3F2D7") {
-      const articleName = `EmotionsArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
-    if (backgroundColor === "#FFF7CC") {
-      const articleName = `RelationshipsArticle${articleIndex + 1}`;
-      navigation.navigate(articleName);
-    }
+    navigateToArticle(navigation, backgroundColor, articleIndex);
   };
 
   return (
