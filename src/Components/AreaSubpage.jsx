@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import SmallSection from "./SmallSection";
+import SmallSection from "./SmallSection/SmallSection";
 import { MentalTexts } from "../Views/Texts/MentalTexts";
 
 const styles = StyleSheet.create({

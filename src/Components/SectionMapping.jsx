@@ -1,7 +1,7 @@
 const sectionMapping = {
   default: {
     target: "Mental",
-    params: { activeColor: "#FFD3FA", activeArea: "" },
+    params: { activeColor: "#FFD3FA", activeArea: "CIAŁO" },
   },
   Mind: { activeColor: "#FFE2CC", activeArea: "UMYSŁ" },
   Relationships: { activeColor: "#FFF7CC", activeArea: "RELACJE" },
