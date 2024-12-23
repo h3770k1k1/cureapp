@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
-import Articles from "../Views/Articles/Articles";
-import sectionMapping from "./SectionMapping";
+import Articles from "../Navigation/Articles";
+import sectionMapping from "../Navigation/SectionMapping";
 
 const useGoBackNavigation = () => {
   const navigation = useNavigation();

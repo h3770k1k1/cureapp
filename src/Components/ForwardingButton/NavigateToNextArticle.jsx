@@ -1,5 +1,5 @@
-import { Articles } from "../../Views/Articles/Articles";
-import sectionMapping from "../SectionMapping";
+import { Articles } from "../../Navigation/Articles";
+import sectionMapping from "../../Navigation/SectionMapping";
 
 export const navigateToNextArticle = (currentArticle) => {
   const articlesSequence = Object.entries(Articles).flatMap(([category, articleObjects]) =>

@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from './Views/Home';
 import Mental from './Views/Mental';
-import Articles from "./Views/Articles/Articles";
+import Articles from "./Navigation/Articles";
 
 const Stack = createStackNavigator();
 

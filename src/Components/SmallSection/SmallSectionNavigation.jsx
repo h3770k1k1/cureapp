@@ -1,4 +1,4 @@
-import sectionMapping from '../SectionMapping';
+import sectionMapping from '../../Navigation/SectionMapping';
 
 export const SmallSectionNavigation = (navigation, backgroundColor, articleIndex) => {
          const section = Object.entries(sectionMapping).find(
