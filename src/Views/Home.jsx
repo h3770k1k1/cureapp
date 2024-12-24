@@ -1,6 +1,7 @@
 import React from "react";
 import ExitView from "../Components/ExitView";
-import { Views, BottomMenu } from "../Components/BottomMenu";
+import  {BottomMenu}  from "../Components/BottomMenu";
+import Views from "../Navigation/Views"
 import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {

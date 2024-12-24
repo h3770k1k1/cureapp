@@ -4,6 +4,7 @@ import HomeIcon from "./Icons/Home";
 import MentalIcon from "./Icons/Mental";
 import GrowIcon from "./Icons/Grow";
 import SettingsIcon from "./Icons/Settings";
+import Views from "../Navigation/Views";
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
@@ -46,13 +47,6 @@ const styles = StyleSheet.create({
 const ButtonColors = {
   White: "#fff",
   Grey: "#8E8E8E",
-};
-
-const Views = {
-  Home: "Home",
-  Mental: "Mental",
-  Grow: "Grow",
-  Settings: "Settings",
 };
 
 const BottomMenu = ({ selectedView, navigation }) => {
@@ -143,4 +137,4 @@ const BottomMenu = ({ selectedView, navigation }) => {
   );
 };
 
-export { Views, BottomMenu };
+export { BottomMenu };

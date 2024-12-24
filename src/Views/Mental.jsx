@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import AreaSubpage from "../Components/AreaSubpage";
-import { BottomMenu, Views } from "../Components/BottomMenu";
+import {BottomMenu}  from "../Components/BottomMenu";
+import Views from "../Navigation/Views";
 import { MentalTexts } from "../Views/Texts/MentalTexts";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
