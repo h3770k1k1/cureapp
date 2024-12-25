@@ -74,6 +74,9 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   );
 
   const colors = sections.map((section) => sectionMapping[section].activeColor);
+  const letters = sections.map((section) =>
+    sectionMapping[section].activeArea[0].toLowerCase()
+  );
 
   useEffect(() => {
     if (route.params?.activeColor) {
@@ -122,7 +125,7 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
                   activeIndex === index && styles.activeCircleText,
                 ]}
               >
-                {["c", "u", "r", "e", "d"][index]}
+                {letters[index]}
               </Text>
             </View>
           </TouchableOpacity>
