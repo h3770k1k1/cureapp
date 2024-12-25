@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import sectionMapping from "../Navigation/SectionMapping";
 
 const styles = StyleSheet.create({
   navbarContainer: {
@@ -68,7 +69,11 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const colors = ["#FFD3FA", "#FFE2CC", "#FFF7CC", "#D3F2D7", "#CDF6FF"];
+  const sections = Object.keys(sectionMapping).filter(
+    (key) => key !== "default"
+  );
+
+  const colors = sections.map((section) => sectionMapping[section].activeColor);
 
   useEffect(() => {
     if (route.params?.activeColor) {
@@ -80,8 +85,11 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
   }, [route.params]);
 
   const handleCirclePress = (index) => {
+    const selectedSection = sections[index];
+    const { activeColor, activeArea } = sectionMapping[selectedSection];
     setActiveIndex(index);
-    onColorChange(colors[index]);
+    onColorChange(activeColor);
+    navigation.setParams({ activeColor, activeArea });
   };
 
   return (
@@ -96,7 +104,7 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
         </Text>
       </View>
       <View style={styles.circleContainer}>
-        {colors.map((color, index) => (
+        {sections.map((section, index) => (
           <TouchableOpacity
             key={index}
             onPress={() => handleCirclePress(index)}
@@ -104,7 +112,7 @@ const Navbar = ({ onColorChange, activeArea, activeColor }) => {
             <View
               style={[
                 styles.circle,
-                { backgroundColor: color },
+                { backgroundColor: colors[index] },
                 activeIndex === index && styles.activeCircle,
               ]}
             >
