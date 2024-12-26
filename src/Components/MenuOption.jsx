@@ -1,9 +1,8 @@
 import React from "react";
-import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import ArrowOption from "./Icons/ArrowOption";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { MentalTexts } from "../Views/Texts/MentalTexts";
+import ArrowOption from "./Icons/ArrowOption";
+import sectionMapping from "../Navigation/SectionMapping";
 
 const styles = StyleSheet.create({
   option: {
@@ -29,27 +28,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
   },
-  gradientText: {
-    paddingHorizontal: 4,
-    borderRadius: 4,
-  },
-  gradientWord: {
-    fontSize: 18,
-    fontWeight: "500",
-  },
   inactive: {
     opacity: 0.5,
   },
 });
-
-const colors = [
-  "#FFD3FA",
-  "#FFE2CC",
-  "#FFF7CC",
-  "#D3F2D7",
-  "#CDF6FF",
-  "#FFFFFF",
-];
 
 const Option = ({ text, index }) => {
   const navigation = useNavigation();
@@ -57,27 +39,31 @@ const Option = ({ text, index }) => {
   const lastWord = words.pop();
   const remainingText = words.join(" ") + " ";
 
-  const lastWordStyle =
-    index < colors.length ? { backgroundColor: colors[index] } : {};
+  const sections = Object.keys(sectionMapping).filter((key) => key !== "default");
+  const currentSection = sections[index];
+  const backgroundColor = currentSection
+    ? sectionMapping[currentSection].activeColor
+    : "#FFFFFF";
 
   const handlePress = () => {
-    if (index === colors.length - 1) {
-      return;
-    }
-    const color = MentalTexts[index]?.Color || "#FFFFFF";
-    const area = MentalTexts[index]?.Area || "";
-    navigation.navigate("Mental", { activeColor: color, activeArea: area });
+    if (!currentSection) return;
+    const { activeColor, activeArea } = sectionMapping[currentSection];
+    navigation.navigate("Mental", { activeColor, activeArea });
   };
 
   return (
     <TouchableOpacity
-      style={[styles.option, index === colors.length && styles.inactive]} // Dodajemy klasę 'inactive' dla ostatniego przycisku
+      style={[styles.option, index >= sections.length && styles.inactive]}
       onPress={handlePress}
-      disabled={index === colors.length}
+      disabled={index >= sections.length}
     >
       <Text style={styles.optionText}>
         {remainingText}
-        <Text style={[styles.lastWord, lastWordStyle]}>{lastWord}</Text>
+        <Text
+          style={[styles.lastWord, { backgroundColor }]}
+        >
+          {lastWord}
+        </Text>
       </Text>
       <ArrowOption />
     </TouchableOpacity>
