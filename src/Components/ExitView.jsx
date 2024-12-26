@@ -25,18 +25,24 @@ const styles = StyleSheet.create({
   },
 });
 const ExitView = () => {
+  const options = [
+    "zaopiekować się swoim ciałem",
+    "nauczyć się dbać o umysł",
+    "pogłębić swoje relacje",
+    "poznać bardziej swoje emocje",
+    "odkryć swoją duchowość",
+    "monitoruj swój rozwój",
+  ];
+
   return (
     <View style={styles.exitView}>
       <View style={styles.header}>
         <ExitDots />
       </View>
       <View style={styles.options}>
-        <Option text="zaopiekować się swoim ciałem" index={0} />
-        <Option text="nauczyć się dbać o umysł" index={1} />
-        <Option text="pogłębić swoje relacje" index={2} />
-        <Option text="poznać bardziej swoje emocje" index={3} />
-        <Option text="odkryć swoją duchowość" index={4} />
-        <Option text="monitoruj swój rozwój" index={5} />
+        {options.map((text, index) => (
+          <Option key={index} text={text} index={index} />
+        ))}
       </View>
     </View>
   );
