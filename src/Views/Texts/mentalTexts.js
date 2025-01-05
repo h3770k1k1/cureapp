@@ -1,5 +1,5 @@
-export const MentalTexts = [
-  {
+export const mentalTexts = {
+  body: {
     Area: "CIAŁO",
     Color: "#FFD3FA",
     Header: [
@@ -30,7 +30,7 @@ export const MentalTexts = [
       "Gdy oddychasz, to tak jakbyś wprowadzał_ na nowo życie do swojego ciała. Oddech pomaga...",
     ],
   },
-  {
+  mind: {
     Area: "UMYSŁ",
     Color: "#FFE2CC",
     Header: [
@@ -57,7 +57,7 @@ export const MentalTexts = [
       "To nie wydarzenia same w sobie, ale nasze ich interpretacje, myśli, wywołują emocje...",
     ],
   },
-  {
+  relationships: {
     Area: "RELACJE",
     Color: "#FFF7CC",
     Header: [
@@ -88,7 +88,7 @@ export const MentalTexts = [
       "Potrzeby są uniwersalne, ale strategie ich zaspokajania – już nie. I tu bierze się źródło...",
     ],
   },
-  {
+  emotions: {
     Area: "EMOCJE",
     Color: "#D3F2D7",
     Header: [
@@ -115,7 +115,7 @@ export const MentalTexts = [
       "Potrzeby są uniwersalne, ale strategie ich zaspokajania – już nie. I tu bierze się źródło...",
     ],
   },
-  {
+  soul: {
     Area: "DUCH",
     Color: "#CDF6FF",
     Header: [
@@ -145,5 +145,5 @@ export const MentalTexts = [
       "Wdzięczność to jeden z istotnych aspektów wpływających na dobrostan: uświadomienie...",
       "Nazwa logoterapia dosłownie odzwierciedla ideę leczenia przez pomoc w odnajdywaniu sensu...",
     ],
-  },
-];
+  }
+}

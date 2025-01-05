@@ -1,6 +1,6 @@
 const Views = {
   Home: "Home",
-  Mental: "Mental",
+  Categories: "Categories",
   Grow: "Grow",
   Settings: "Settings",
 };

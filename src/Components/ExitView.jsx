@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     width: "85%",
   },
 });
+
 const ExitView = () => {
   const options = [
     "zaopiekować się swoim ciałem",
@@ -34,6 +35,20 @@ const ExitView = () => {
     "monitoruj swój rozwój",
   ];
 
+  const categoryToColorMapping = {
+    body: "#FFD3FA",
+    mind: "#FFE2CC",
+    relationships: "#FFF7CC",
+    emotions: "#D3F2D7",
+    soul: "#CDF6FF",
+  };
+
+  // Generate colors dynamically from mapping
+  const colors = [
+    ...Object.values(categoryToColorMapping), // Extract colors
+    "#FFFFFF", // White for the last option
+  ];
+
   return (
     <View style={styles.exitView}>
       <View style={styles.header}>
@@ -41,7 +56,7 @@ const ExitView = () => {
       </View>
       <View style={styles.options}>
         {options.map((text, index) => (
-          <Option key={index} text={text} index={index} />
+          <Option key={index} text={text} index={index} color={colors[index]} />
         ))}
       </View>
     </View>

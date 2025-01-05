@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import sectionMapping from "../Navigation/SectionMapping";
+import { useCategory } from "../App";
 
 const styles = StyleSheet.create({
   navbarContainer: {
@@ -64,58 +65,72 @@ const styles = StyleSheet.create({
   },
 });
 
-const Navbar = ({ onColorChange, activeArea, activeColor }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const Navbar = () => {
+  const { currentCategory, currentColor, onCategoryChange } = useCategory();
+  const categoryNames = ['body', 'mind', 'relationships', 'emotions', 'soul'];
+
+  const [activeIndex, setActiveIndex] = useState(categoryNames.indexOf(currentCategory));
   const route = useRoute();
   const navigation = useNavigation();
 
-  const sections = Object.keys(sectionMapping).filter(
+  const categories = Object.keys(sectionMapping).filter(
     (key) => key !== "default"
   );
 
-  const colors = sections.map((section) => sectionMapping[section].activeColor);
-  const letters = sections.map((section) =>
-    sectionMapping[section].activeArea[0].toLowerCase()
+
+
+  const colors = categories.map((category) => sectionMapping[category].currentColor);
+   const categoryToColorMapping = {
+      body: "#FFD3FA",
+      mind: "#FFE2CC",
+      relationships: "#FFF7CC",
+      emotions: "#D3F2D7",
+      soul: "#CDF6FF",
+    };
+
+  const letters = categories.map((category) =>
+    sectionMapping[category].activeArea[0].toLowerCase()
   );
 
-  useEffect(() => {
-    if (route.params?.activeColor) {
-      const color = route.params.activeColor;
-      const area = route.params.activeArea || "CIAŁO";
-      onColorChange(color);
-      setActiveIndex(colors.indexOf(color));
-    }
-  }, [route.params]);
+  const categoryHumanName = sectionMapping[currentCategory].activeArea
 
-  const handleCirclePress = (index) => {
-    const selectedSection = sections[index];
-    const { activeColor, activeArea } = sectionMapping[selectedSection];
+//   useEffect(() => {
+//     if (route.params?.currentColor) {
+//       const color = route.params.currentColor;
+//       const area = route.params.activeArea || "CIAŁO";
+//       setActiveIndex(colors.indexOf(color));
+//     }
+//   }, [route.params]);
+
+  const handleCategoryChange = (index) => {
+    onCategoryChange(index);
+//     const selectedSection = sections[index];
+//     const { currentColor, activeArea } = sectionMapping[selectedSection];
     setActiveIndex(index);
-    onColorChange(activeColor);
-    navigation.setParams({ activeColor, activeArea });
+//     navigation.setParams({ currentColor, activeArea });
   };
 
   return (
     <SafeAreaView style={styles.navbarContainer}>
       <StatusBar barStyle="dark-content" />
       <View
-        style={[styles.navbar, activeColor && { backgroundColor: activeColor }]}
+        style={[styles.navbar, currentColor && { backgroundColor: currentColor }]}
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>
-          <Text style={styles.highlight}>{activeArea || "CIAŁO"}</Text>
+          <Text style={styles.highlight}>{categoryHumanName || "CIAŁO"}</Text>
         </Text>
       </View>
       <View style={styles.circleContainer}>
-        {sections.map((section, index) => (
+        {categoryNames.map((category, index) => (
           <TouchableOpacity
             key={index}
-            onPress={() => handleCirclePress(index)}
+            onPress={() => handleCategoryChange(index)}
           >
             <View
               style={[
                 styles.circle,
-                { backgroundColor: colors[index] },
+                { backgroundColor: categoryToColorMapping[category] },
                 activeIndex === index && styles.activeCircle,
               ]}
             >

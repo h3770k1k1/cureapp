@@ -2,7 +2,10 @@ import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import SmallSection from "./SmallSection/SmallSection";
-import { MentalTexts } from "../Views/Texts/MentalTexts";
+import { mentalTexts } from "../Views/Texts/mentalTexts";
+import { useCategory } from "../App";
+import { useArticles } from "../ContextProviders/ArticlesProvider";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -44,11 +47,13 @@ const Section = ({ header, text }) => (
   </View>
 );
 
-const AreaSubpage = ({ activeColor }) => {
+const Category = () => {
+  const { currentCategory, currentColor, onCategoryChange } = useCategory();
+  const { articles } = useArticles();
+
   const navigation = useNavigation();
 
-  const index = MentalTexts.findIndex((item) => item.Color === activeColor);
-  const text = index !== -1 ? MentalTexts[index] : "";
+  const categoryText = mentalTexts[currentCategory] || null;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -64,22 +69,24 @@ const AreaSubpage = ({ activeColor }) => {
             ))}
           </>
         ) : (
-          <Text style={styles.text}>Brak treści dla tego koloru.</Text>
+          <Text style={styles.text}>Brak treści dla tego identyfikatora.</Text>
         )}
 
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {text &&
-              text.SectionTitle.map((title, idx) => (
-                <SmallSection
-                  key={idx}
-                  header={title}
-                  description={text.SectionText[idx] || ""}
-                  backgroundColor={activeColor}
-                  navigation={navigation}
-                  articleIndex={idx}
-                />
-              ))}
+          {
+          articles[currentCategory].map((article, index)=>{
+           <SmallSection
+                key={idx}
+                header={categoryText.SectionTitle[index]}
+                description={categoryText.SectionText[index] || ""}
+                backgroundColor={currentColor}
+                navigation={navigation}
+                articleName={article['name']}
+            />
+          }
+          )
+          }
           </ScrollView>
         </View>
       </ScrollView>
@@ -87,4 +94,4 @@ const AreaSubpage = ({ activeColor }) => {
   );
 };
 
-export default AreaSubpage;
+export default Category;

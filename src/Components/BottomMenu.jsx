@@ -50,6 +50,7 @@ const ButtonColors = {
 };
 
 const BottomMenu = ({ selectedView, navigation }) => {
+console.log('TEST LOG')
   const MenuButton = ({ icon, isSelected, view, onPress }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
@@ -76,7 +77,7 @@ const BottomMenu = ({ selectedView, navigation }) => {
   };
 
   const MentalButton = () => {
-    const isSelected = selectedView === Views.Mental;
+    const isSelected = selectedView === Views.Categories;
     return (
       <MenuButton
         icon={
@@ -85,8 +86,10 @@ const BottomMenu = ({ selectedView, navigation }) => {
           />
         }
         isSelected={isSelected}
-        view={Views.Mental}
-        onPress={() => navigation.navigate(Views.Mental)}
+        view={Views.Categories}
+        onPress={() => {
+        console.log('NAVIGATING TO CATEGORIES')
+        }}
       />
     );
   };

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import {SmallSectionNavigation } from "./SmallSectionNavigation"; // Import the navigation logic
+import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   smallSection: {
@@ -45,15 +45,12 @@ const SmallSection = ({
   header,
   description,
   backgroundColor,
-  navigation,
-  articleIndex,
+  articleName
 }) => {
-  const handlePress = () => {
-    console.log(
-      `Kliknięto SmallSection: Header="${header}", Index=${articleIndex}`
-    );
+  const navigation = useNavigation();
 
-    SmallSectionNavigation(navigation, backgroundColor, articleIndex);
+  const handlePress = () => {
+    navigation.navigate(articleName);
   };
 
   return (

@@ -11,6 +11,6 @@ export const SmallSectionNavigation = (navigation, backgroundColor, articleIndex
            console.log("Navigating to:", articleName);
            navigation.navigate(articleName);
          } else {
-           console.warn("Nie znaleziono sekcji dla koloru:", backgroundColor);
+           console.warn("Nie znaleziono sekcji dla tego koloru:", backgroundColor);
          }
        };

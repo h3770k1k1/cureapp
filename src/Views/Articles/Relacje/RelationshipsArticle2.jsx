@@ -38,7 +38,7 @@ const RelationshipsArticle2 = ({ navigation }) => {
         <SmallText text={article.SmallText} />
        <ForwardingButton
                      text={article.ForwardingButton}
-                     currentArticle="RelationshipsArticle2"
+                     currentArticle="relationshipsArticle2"
                      navigation={navigation}
                    />
       </ScrollView>

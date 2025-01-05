@@ -19,7 +19,7 @@ const useGoBackNavigation = () => {
         if (currentIndex > 0) {
           navigation.navigate(articleNames[currentIndex - 1]);
         } else {
-          navigation.navigate("Mental", sectionMapping[section]);
+          navigation.navigate("Categories", sectionMapping[section]);
         }
         return;
       }

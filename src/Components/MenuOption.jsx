@@ -3,6 +3,7 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import ArrowOption from "./Icons/ArrowOption";
 import sectionMapping from "../Navigation/SectionMapping";
+import { useCategory } from "../App";
 
 const styles = StyleSheet.create({
   option: {
@@ -33,7 +34,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const Option = ({ text, index }) => {
+const Option = ({ text, index, color }) => {
+  const { currentCategory, currentColor, onCategoryChange } = useCategory();
+
   const navigation = useNavigation();
   const words = text.split(" ");
   const lastWord = words.pop();
@@ -41,14 +44,14 @@ const Option = ({ text, index }) => {
 
   const sections = Object.keys(sectionMapping).filter((key) => key !== "default");
   const currentSection = sections[index];
-  const backgroundColor = currentSection
-    ? sectionMapping[currentSection].activeColor
-    : "#FFFFFF";
+
+  const backgroundColor = color;
 
   const handlePress = () => {
-    if (!currentSection) return;
-    const { activeColor, activeArea } = sectionMapping[currentSection];
-    navigation.navigate("Mental", { activeColor, activeArea });
+
+    console.log(`Option ${index} pressed with color: ${backgroundColor}`);
+    onCategoryChange(index)
+    navigation.navigate("Categories");
   };
 
   return (
