@@ -11,7 +11,7 @@ import { bodyArticleTexts } from "./Texts/BodyArticleText";
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-//     backgroundColor: "#FFD3FA",
+    //     backgroundColor: "#FFD3FA",
   },
   scrollView: {
     flexGrow: 1,
@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
 });
 
 const Article = (navigation, articleContent) => {
-//   const article = bodyArticleTexts[1];
+  //   const article = bodyArticleTexts[1];
   const handleForward = () => {
-//     navigation.navigate("BodyArticle3");
+    //     navigation.navigate("BodyArticle3");
   };
   return (
     <View style={styles.mainContainer}>
@@ -32,11 +32,11 @@ const Article = (navigation, articleContent) => {
           dotCount={bodyArticleTexts.length}
           filledDotIndex={article.ArticleIndex}
         />
-           {articleContent}
+        {articleContent}
       </ScrollView>
       <ForwardingButton
         text={article.ForwardingButton}
-//         currentArticle="BodyArticle2"
+        //         currentArticle="BodyArticle2"
         navigation={navigation}
       />
     </View>

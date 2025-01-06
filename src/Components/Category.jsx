@@ -6,7 +6,6 @@ import { mentalTexts } from "../Views/Texts/mentalTexts";
 import { useCategory } from "../App";
 import { useArticles } from "../ContextProviders/ArticlesProvider";
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -50,6 +49,8 @@ const Section = ({ header, text }) => (
 const Category = () => {
   const { currentCategory, currentColor, onCategoryChange } = useCategory();
   const { articles } = useArticles();
+  console.log("ARTICLES are ");
+  console.log(articles);
 
   const navigation = useNavigation();
 
@@ -58,13 +59,13 @@ const Category = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {text ? (
+        {categoryText ? (
           <>
-            {text.Header.map((header, idx) => (
+            {categoryText.Header.map((header, idx) => (
               <Section
                 key={idx}
                 header={header || "Default Header"}
-                text={text.Text[idx] || "Default Text"}
+                text={categoryText.Text[idx] || "Default Text"}
               />
             ))}
           </>
@@ -74,19 +75,16 @@ const Category = () => {
 
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {
-          articles[currentCategory].map((article, index)=>{
-           <SmallSection
+            {articles[currentCategory].map((article, index) => {
+              <SmallSection
                 key={idx}
                 header={categoryText.SectionTitle[index]}
                 description={categoryText.SectionText[index] || ""}
                 backgroundColor={currentColor}
                 navigation={navigation}
-                articleName={article['name']}
-            />
-          }
-          )
-          }
+                articleName={article["name"]}
+              />;
+            })}
           </ScrollView>
         </View>
       </ScrollView>

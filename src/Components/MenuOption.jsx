@@ -42,15 +42,16 @@ const Option = ({ text, index, color }) => {
   const lastWord = words.pop();
   const remainingText = words.join(" ") + " ";
 
-  const sections = Object.keys(sectionMapping).filter((key) => key !== "default");
+  const sections = Object.keys(sectionMapping).filter(
+    (key) => key !== "default"
+  );
   const currentSection = sections[index];
 
   const backgroundColor = color;
 
   const handlePress = () => {
-
     console.log(`Option ${index} pressed with color: ${backgroundColor}`);
-    onCategoryChange(index)
+    onCategoryChange(index);
     navigation.navigate("Categories");
   };
 
@@ -62,11 +63,7 @@ const Option = ({ text, index, color }) => {
     >
       <Text style={styles.optionText}>
         {remainingText}
-        <Text
-          style={[styles.lastWord, { backgroundColor }]}
-        >
-          {lastWord}
-        </Text>
+        <Text style={[styles.lastWord, { backgroundColor }]}>{lastWord}</Text>
       </Text>
       <ArrowOption />
     </TouchableOpacity>

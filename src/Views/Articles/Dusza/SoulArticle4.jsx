@@ -56,11 +56,11 @@ const SoulArticle4 = ({ navigation }) => {
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText[1]} />
       </ScrollView>
-     <ForwardingButton
-                                   text={article.ForwardingButton}
-                                   currentArticle="SoulArticle4"
-                                   navigation={navigation}
-                                 />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="SoulArticle4"
+        navigation={navigation}
+      />
     </View>
   );
 };

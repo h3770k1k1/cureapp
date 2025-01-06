@@ -45,11 +45,11 @@ const RelationshipsArticle4 = ({ navigation }) => {
         <BoldText text={article.BoldText[1]} />
         <Carousel text={article.CarouselText} name={article.CarouselName} />
       </ScrollView>
-     <ForwardingButton
-                   text={article.ForwardingButton}
-                   currentArticle="RelationshipsArticle4"
-                   navigation={navigation}
-                 />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="RelationshipsArticle4"
+        navigation={navigation}
+      />
     </View>
   );
 };

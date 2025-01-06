@@ -62,10 +62,10 @@ const MindArticle1 = ({ navigation }) => {
         />
       </ScrollView>
       <ForwardingButton
-             text={article.ForwardingButton}
-             currentArticle="MindArticle1"
-             navigation={navigation}
-           />
+        text={article.ForwardingButton}
+        currentArticle="MindArticle1"
+        navigation={navigation}
+      />
     </View>
   );
 };

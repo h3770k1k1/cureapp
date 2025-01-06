@@ -45,7 +45,7 @@ const SmallSection = ({
   header,
   description,
   backgroundColor,
-  articleName
+  articleName,
 }) => {
   const navigation = useNavigation();
 

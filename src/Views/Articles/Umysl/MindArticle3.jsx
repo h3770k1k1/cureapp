@@ -44,10 +44,10 @@ const MindArticle3 = ({ navigation }) => {
         <SmallText text={article.SmallText[2]} />
       </ScrollView>
       <ForwardingButton
-             text={article.ForwardingButton}
-             currentArticle="MindArticle3"
-             navigation={navigation}
-           />
+        text={article.ForwardingButton}
+        currentArticle="MindArticle3"
+        navigation={navigation}
+      />
     </View>
   );
 };

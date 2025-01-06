@@ -41,11 +41,11 @@ const BodyArticle3 = ({ navigation }) => {
           <DottedArrows style={{ transform: [{ scale: 1.1 }] }} />
         </Text>
       </ScrollView>
-       <ForwardingButton
-                                                 text={article.ForwardingButton}
-                                                 currentArticle="BodyArticle3"
-                                                 navigation={navigation}
-                                               />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="BodyArticle3"
+        navigation={navigation}
+      />
     </View>
   );
 };

@@ -55,11 +55,11 @@ const BodyArticle4 = ({ navigation }) => {
           sideLetter={article.SideLetter[2]}
         />
       </ScrollView>
-       <ForwardingButton
-                                                 text={article.ForwardingButton}
-                                                 currentArticle="BodyArticle4"
-                                                 navigation={navigation}
-                                               />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="BodyArticle4"
+        navigation={navigation}
+      />
     </View>
   );
 };

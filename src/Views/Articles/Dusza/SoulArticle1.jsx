@@ -52,11 +52,10 @@ const SoulArticle1 = ({ navigation }) => {
         <SmallText text={article.SmallText[1]} />
       </ScrollView>
       <ForwardingButton
-                               text={article.ForwardingButton}
-                               currentArticle="SoulArticle1"
-                               navigation={navigation}
-                             />
-
+        text={article.ForwardingButton}
+        currentArticle="SoulArticle1"
+        navigation={navigation}
+      />
     </View>
   );
 };

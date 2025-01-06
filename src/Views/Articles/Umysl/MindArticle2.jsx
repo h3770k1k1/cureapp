@@ -54,11 +54,11 @@ const MindArticle2 = ({ navigation }) => {
           hasTopBorder={false}
         />
       </ScrollView>
-       <ForwardingButton
-              text={article.ForwardingButton}
-              currentArticle="MindArticle2"
-              navigation={navigation}
-            />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="MindArticle2"
+        navigation={navigation}
+      />
     </View>
   );
 };

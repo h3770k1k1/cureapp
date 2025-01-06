@@ -61,10 +61,10 @@ const SoulArticle3 = ({ navigation }) => {
         />
       </ScrollView>
       <ForwardingButton
-                                    text={article.ForwardingButton}
-                                    currentArticle="SoulArticle3"
-                                    navigation={navigation}
-                                  />
+        text={article.ForwardingButton}
+        currentArticle="SoulArticle3"
+        navigation={navigation}
+      />
     </View>
   );
 };

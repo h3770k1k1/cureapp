@@ -64,11 +64,11 @@ const SoulArticle2 = ({ navigation }) => {
           <LinkButton text={article.LinkButton[1]} />
         </View>
       </ScrollView>
-       <ForwardingButton
-                                     text={article.ForwardingButton}
-                                     currentArticle="SoulArticle2"
-                                     navigation={navigation}
-                                   />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="SoulArticle2"
+        navigation={navigation}
+      />
     </View>
   );
 };

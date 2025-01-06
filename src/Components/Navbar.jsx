@@ -67,9 +67,11 @@ const styles = StyleSheet.create({
 
 const Navbar = () => {
   const { currentCategory, currentColor, onCategoryChange } = useCategory();
-  const categoryNames = ['body', 'mind', 'relationships', 'emotions', 'soul'];
+  const categoryNames = ["body", "mind", "relationships", "emotions", "soul"];
 
-  const [activeIndex, setActiveIndex] = useState(categoryNames.indexOf(currentCategory));
+  const [activeIndex, setActiveIndex] = useState(
+    categoryNames.indexOf(currentCategory)
+  );
   const route = useRoute();
   const navigation = useNavigation();
 
@@ -77,44 +79,47 @@ const Navbar = () => {
     (key) => key !== "default"
   );
 
-
-
-  const colors = categories.map((category) => sectionMapping[category].currentColor);
-   const categoryToColorMapping = {
-      body: "#FFD3FA",
-      mind: "#FFE2CC",
-      relationships: "#FFF7CC",
-      emotions: "#D3F2D7",
-      soul: "#CDF6FF",
-    };
+  const colors = categories.map(
+    (category) => sectionMapping[category].currentColor
+  );
+  const categoryToColorMapping = {
+    body: "#FFD3FA",
+    mind: "#FFE2CC",
+    relationships: "#FFF7CC",
+    emotions: "#D3F2D7",
+    soul: "#CDF6FF",
+  };
 
   const letters = categories.map((category) =>
     sectionMapping[category].activeArea[0].toLowerCase()
   );
 
-  const categoryHumanName = sectionMapping[currentCategory].activeArea
+  const categoryHumanName = sectionMapping[currentCategory].activeArea;
 
-//   useEffect(() => {
-//     if (route.params?.currentColor) {
-//       const color = route.params.currentColor;
-//       const area = route.params.activeArea || "CIAŁO";
-//       setActiveIndex(colors.indexOf(color));
-//     }
-//   }, [route.params]);
+  //   useEffect(() => {
+  //     if (route.params?.currentColor) {
+  //       const color = route.params.currentColor;
+  //       const area = route.params.activeArea || "CIAŁO";
+  //       setActiveIndex(colors.indexOf(color));
+  //     }
+  //   }, [route.params]);
 
   const handleCategoryChange = (index) => {
     onCategoryChange(index);
-//     const selectedSection = sections[index];
-//     const { currentColor, activeArea } = sectionMapping[selectedSection];
+    //     const selectedSection = sections[index];
+    //     const { currentColor, activeArea } = sectionMapping[selectedSection];
     setActiveIndex(index);
-//     navigation.setParams({ currentColor, activeArea });
+    //     navigation.setParams({ currentColor, activeArea });
   };
 
   return (
     <SafeAreaView style={styles.navbarContainer}>
       <StatusBar barStyle="dark-content" />
       <View
-        style={[styles.navbar, currentColor && { backgroundColor: currentColor }]}
+        style={[
+          styles.navbar,
+          currentColor && { backgroundColor: currentColor },
+        ]}
       >
         <Text style={styles.areaHeading}>
           <Text style={styles.text}>obszar: </Text>

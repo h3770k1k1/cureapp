@@ -36,11 +36,11 @@ const RelationshipsArticle2 = ({ navigation }) => {
         <ArticleTitle text={article.ArticleTitle} />
         <BoldText text={article.BoldText} />
         <SmallText text={article.SmallText} />
-       <ForwardingButton
-                     text={article.ForwardingButton}
-                     currentArticle="relationshipsArticle2"
-                     navigation={navigation}
-                   />
+        <ForwardingButton
+          text={article.ForwardingButton}
+          currentArticle="relationshipsArticle2"
+          navigation={navigation}
+        />
       </ScrollView>
     </View>
   );

@@ -60,11 +60,11 @@ const EmotionsArticle2 = ({ navigation }) => {
           hasTopBorder={false}
         />
       </ScrollView>
-     <ForwardingButton
-                         text={article.ForwardingButton}
-                         currentArticle="EmotionsArticle2"
-                         navigation={navigation}
-                       />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="EmotionsArticle2"
+        navigation={navigation}
+      />
     </View>
   );
 };

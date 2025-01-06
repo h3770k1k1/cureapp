@@ -52,10 +52,10 @@ const RelationshipsArticle5 = ({ navigation }) => {
         <SmallText text={article.SmallText[6]} />
       </ScrollView>
       <ForwardingButton
-                    text={article.ForwardingButton}
-                    currentArticle="RelationshipsArticle5"
-                    navigation={navigation}
-                  />
+        text={article.ForwardingButton}
+        currentArticle="RelationshipsArticle5"
+        navigation={navigation}
+      />
     </View>
   );
 };

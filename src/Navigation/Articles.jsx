@@ -8,10 +8,12 @@ const Article = () => {
   const { articles } = useArticles();
 
   // Create the articlesPerCategory variable
-  const articlesPerCategory = Object.entries(articles).map(([category, articleList]) => ({
-    category,
-    articles: articleList
-  }));
+  const articlesPerCategory = Object.entries(articles).map(
+    ([category, articleList]) => ({
+      category,
+      articles: articleList,
+    })
+  );
 
   return (
     <>
@@ -19,7 +21,7 @@ const Article = () => {
         articles.map((article, index) => (
           <Stack.Screen
             key={index}
-            name={article.name}   // Use article's name as the screen name
+            name={article.name} // Use article's name as the screen name
             component={article.component} // Use article's component for the screen component
           />
         ))

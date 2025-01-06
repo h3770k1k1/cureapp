@@ -55,11 +55,11 @@ const EmotionsArticle4 = ({ navigation }) => {
         />
       </ScrollView>
 
-<ForwardingButton
-                          text={article.ForwardingButton}
-                          currentArticle="EmotionsArticle4"
-                          navigation={navigation}
-                        />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="EmotionsArticle4"
+        navigation={navigation}
+      />
     </View>
   );
 };

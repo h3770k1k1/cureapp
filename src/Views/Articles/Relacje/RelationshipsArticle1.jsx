@@ -43,11 +43,11 @@ const RelationshipsArticle1 = ({ navigation }) => {
           </React.Fragment>
         ))}
       </ScrollView>
-       <ForwardingButton
-              text={article.ForwardingButton}
-              currentArticle="RelationshipsArticle1"
-              navigation={navigation}
-            />
+      <ForwardingButton
+        text={article.ForwardingButton}
+        currentArticle="RelationshipsArticle1"
+        navigation={navigation}
+      />
     </View>
   );
 };
