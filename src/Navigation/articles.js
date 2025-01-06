@@ -31,7 +31,7 @@ import SoulArticle6 from "../Views/Articles/Dusza/SoulArticle6";
 
 export const articles = {
   body: [
-    { name: 'BodyArticle1', component: BodyArticle1 },
+    { name: 'BodyArticle1', component: <BodyArticle1/> },
     { name: 'BodyArticle2', component: BodyArticle2 },
     { name: 'BodyArticle3', component: BodyArticle3 },
     { name: 'BodyArticle4', component: BodyArticle4 },

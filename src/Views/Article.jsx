@@ -1,12 +1,10 @@
 import React from "react";
-import { ScrollView, View, StyleSheet } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 import ArticleHeader from "../Components/ArticleHeader";
-import SmallText from "../Components/SmallText";
-import MediumText from "../Components/MediumText";
-import DotLineHeader from "../Components/DotLineHeader";
-import ArticleTitle from "../Components/ArticleTitle";
 import ForwardingButton from "../Components/ForwardingButton/ForwardingButton";
-import { bodyArticleTexts } from "./Texts/BodyArticleText";
+import { useCategory } from "../App";
+import { useArticles } from "../ContextProviders/ArticlesProvider";
+import { useRoute } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -20,27 +18,26 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article = (name, customContent, nextArticleTitle) => {
-articles
-currentCategory
-  //   const article = bodyArticleTexts[1];
-  const handleForward = () => {
-    //     navigation.navigate("BodyArticle3");
-  };
+const Article = () => {
+  const route = useRoute();
+  const { index, customContent, nextArticleTitle } = route.params;
+
+  const { currentCategory } = useCategory();
+  const { articles } = useArticles();
+
+  const nextArticleName = articles[currentCategory][index + 1]['name'];
+
   return (
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader
           dotCount={articles[currentCategory].length}
-          dotCount={articlesCount}
-          filledDotIndex={article.ArticleIndex}
+          filledDotIndex={index}
         />
-        {articleContent}
       </ScrollView>
       <ForwardingButton
         nextArticleTitle={nextArticleTitle}
-        articleName={article.name}
-        navigation={navigation}
+        nextArticleName={nextArticleName}
       />
     </View>
   );

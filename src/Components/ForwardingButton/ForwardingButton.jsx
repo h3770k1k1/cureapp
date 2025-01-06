@@ -25,21 +25,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const ForwardingButton = ({ nextArticleTitle, articleName }) => {
+const ForwardingButton = ({ nextArticleTitle, nextArticleName }) => {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    //     const nextArticleData = navigateToNextArticle(articleName);
-    if (nextArticleData) {
-      navigation.navigate(articleName);
-    } else {
-      console.warn("Brak następnego artykułu");
-    }
+    navigation.navigate(nextArticleName);
   };
 
-  //   const nextArticleData = navigateToNextArticle(articleName);
   //   const backgroundColor = nextArticleData ? nextArticleData.color : "#FFFFFF";
   const backgroundColor = "#FFFFFF";
+
   return (
     <TouchableOpacity
       style={[styles.forwardingButton, { backgroundColor }]}

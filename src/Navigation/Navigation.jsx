@@ -6,6 +6,7 @@ import { useArticles } from "../ContextProviders/ArticlesProvider"; // Import co
 import Home from "../Views/Home";
 import Categories from "../Views/Categories";
 import Article from "../Views/Article"; // Article screen component (optional, if you have a separate screen for Article)
+import articlesTexts from "../Views/Texts/articlesTexts";
 
 const Stack = createStackNavigator();
 
@@ -22,8 +23,13 @@ const Navigation = () => {
             <Stack.Screen
               key={index}
               name={article.name} // Use article's name as screen name
-              component={article.component} // Use article's component for the screen
-              initialParams={index}
+              component={Article} // Use article's component for the screen
+              initialParams={{
+                index: index,
+                articleName: article.name,
+                // customContent: article["component"],
+                nextArticleTitle: articlesTexts[category][article.name],
+              }}
             />
           ))
         )}

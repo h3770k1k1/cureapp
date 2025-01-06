@@ -1,6 +1,5 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import SmallSection from "./SmallSection/SmallSection";
 import { mentalTexts } from "../Views/Texts/mentalTexts";
 import { useCategory } from "../App";
@@ -52,8 +51,6 @@ const Category = () => {
   console.log("ARTICLES are ");
   console.log(articles[currentCategory]);
 
-  const navigation = useNavigation();
-
   const categoryText = mentalTexts[currentCategory] || null;
 
   return (
@@ -82,7 +79,6 @@ const Category = () => {
                   header={categoryText.SectionTitle[index]}
                   description={categoryText.SectionText[index] || ""}
                   backgroundColor={currentColor}
-                  navigation={navigation}
                   articleName={article["name"]}
                 />
               );

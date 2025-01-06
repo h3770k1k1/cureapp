@@ -20,38 +20,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const BodyArticle1 = ({ navigation }) => {
+const BodyArticle1 = () => {
   const article = bodyArticleTexts[0];
 
-  const handleForward = () => {
-    navigation.navigate("BodyArticle2");
-  };
-
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={bodyArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText} />
-        <MediumText text={article.MediumText[0]} />
-        <DotLineHeader text={article.DotLineHeader[0]} />
-        <MediumText text={article.MediumText[1]} />
-        <DotLineHeader text={article.DotLineHeader[1]} />
-        <MediumText text={article.MediumText[2]} />
-        <DotLineHeader text={article.DotLineHeader[2]} />
-        <MediumText text={article.MediumText[3]} />
-        <DotLineHeader text={article.DotLineHeader[3]} />
-      </ScrollView>
-
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="BodyArticle1"
-        navigation={navigation}
-      />
-    </View>
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText} />
+      <MediumText text={article.MediumText[0]} />
+      <DotLineHeader text={article.DotLineHeader[0]} />
+      <MediumText text={article.MediumText[1]} />
+      <DotLineHeader text={article.DotLineHeader[1]} />
+      <MediumText text={article.MediumText[2]} />
+      <DotLineHeader text={article.DotLineHeader[2]} />
+      <MediumText text={article.MediumText[3]} />
+      <DotLineHeader text={article.DotLineHeader[3]} />
+    </>
   );
 };
 
