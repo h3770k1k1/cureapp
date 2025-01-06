@@ -23,6 +23,7 @@ const Navigation = () => {
               key={index}
               name={article.name} // Use article's name as screen name
               component={article.component} // Use article's component for the screen
+              initialParams={index}
             />
           ))
         )}

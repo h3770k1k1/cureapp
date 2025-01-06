@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const EmotionsArticle2 = ({ navigation }) => {
+const EmotionsArticle2 = (index) => {
   const article = emotionsArticleTexts[1];
 
   const handleForward = () => {
@@ -61,9 +61,8 @@ const EmotionsArticle2 = ({ navigation }) => {
         />
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="EmotionsArticle2"
-        navigation={navigation}
+        nextArticleTitle={article.ForwardingButton}
+        articleName="EmotionsArticle2"
       />
     </View>
   );

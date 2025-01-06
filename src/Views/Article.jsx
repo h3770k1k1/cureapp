@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const Article = (navigation, articleContent) => {
+const Article = (name, customContent, nextArticleTitle) => {
+articles
+currentCategory
   //   const article = bodyArticleTexts[1];
   const handleForward = () => {
     //     navigation.navigate("BodyArticle3");
@@ -29,14 +31,15 @@ const Article = (navigation, articleContent) => {
     <View style={styles.mainContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader
-          dotCount={bodyArticleTexts.length}
+          dotCount={articles[currentCategory].length}
+          dotCount={articlesCount}
           filledDotIndex={article.ArticleIndex}
         />
         {articleContent}
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        //         currentArticle="BodyArticle2"
+        nextArticleTitle={nextArticleTitle}
+        articleName={article.name}
         navigation={navigation}
       />
     </View>

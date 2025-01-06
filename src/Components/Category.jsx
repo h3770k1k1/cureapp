@@ -50,7 +50,7 @@ const Category = () => {
   const { currentCategory, currentColor, onCategoryChange } = useCategory();
   const { articles } = useArticles();
   console.log("ARTICLES are ");
-  console.log(articles);
+  console.log(articles[currentCategory]);
 
   const navigation = useNavigation();
 
@@ -76,14 +76,16 @@ const Category = () => {
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {articles[currentCategory].map((article, index) => {
-              <SmallSection
-                key={idx}
-                header={categoryText.SectionTitle[index]}
-                description={categoryText.SectionText[index] || ""}
-                backgroundColor={currentColor}
-                navigation={navigation}
-                articleName={article["name"]}
-              />;
+              return (
+                <SmallSection
+                  key={index}
+                  header={categoryText.SectionTitle[index]}
+                  description={categoryText.SectionText[index] || ""}
+                  backgroundColor={currentColor}
+                  navigation={navigation}
+                  articleName={article["name"]}
+                />
+              );
             })}
           </ScrollView>
         </View>

@@ -52,9 +52,8 @@ const EmotionsArticle1 = ({ navigation }) => {
         <SmallText text={article.SmallText[2]} />
       </ScrollView>
       <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="EmotionsArticle1"
-        navigation={navigation}
+        nextArticleTitle={article.ForwardingButton}
+        articleName="EmotionsArticle1"
       />
     </View>
   );
