@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useAppNavigation } from "../../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   smallSection: {
@@ -47,11 +47,7 @@ const SmallSection = ({
   backgroundColor,
   articleName,
 }) => {
-  const navigation = useNavigation();
-
-  const handlePress = () => {
-    navigation.navigate(articleName);
-  };
+  const { navigateToArticle } = useAppNavigation();
 
   return (
     <View style={[styles.smallSection, { backgroundColor }]}>
@@ -59,7 +55,10 @@ const SmallSection = ({
       <Text style={styles.smallDescription}>
         {truncateText(description, 80)}
       </Text>
-      <TouchableOpacity style={styles.moreButton} onPress={handlePress}>
+      <TouchableOpacity
+        style={styles.moreButton}
+        onPress={() => navigateToArticle(articleName)}
+      >
         <Text style={styles.moreButtonText}>Więcej</Text>
       </TouchableOpacity>
     </View>

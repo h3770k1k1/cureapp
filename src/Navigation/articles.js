@@ -29,44 +29,34 @@ import SoulArticle4 from "../Views/Articles/Dusza/SoulArticle4";
 import SoulArticle5 from "../Views/Articles/Dusza/SoulArticle5";
 import SoulArticle6 from "../Views/Articles/Dusza/SoulArticle6";
 
-export const articles = {
-  body: [
-    { name: 'BodyArticle1', component: <BodyArticle1/> },
-    { name: 'BodyArticle2', component: BodyArticle2 },
-    { name: 'BodyArticle3', component: BodyArticle3 },
-    { name: 'BodyArticle4', component: BodyArticle4 },
-    { name: 'BodyArticle5', component: BodyArticle5 },
-    { name: 'BodyArticle6', component: BodyArticle6 },
-  ],
-  mind: [
-    { name: 'MindArticle1', component: MindArticle1 },
-    { name: 'MindArticle2', component: MindArticle2 },
-    { name: 'MindArticle3', component: MindArticle3 },
-    { name: 'MindArticle4', component: MindArticle4 },
-  ],
-  relationships: [
-    { name: 'RelationshipsArticle1', component: RelationshipsArticle1 },
-    { name: 'RelationshipsArticle2', component: RelationshipsArticle2 },
-    { name: 'RelationshipsArticle3', component: RelationshipsArticle3 },
-    { name: 'RelationshipsArticle4', component: RelationshipsArticle4 },
-    { name: 'RelationshipsArticle5', component: RelationshipsArticle5 },
-    { name: 'RelationshipsArticle6', component: RelationshipsArticle6 },
-  ],
-  emotions: [
-    { name: 'EmotionsArticle1', component: EmotionsArticle1 },
-    { name: 'EmotionsArticle2', component: EmotionsArticle2 },
-    { name: 'EmotionsArticle3', component: EmotionsArticle3 },
-    { name: 'EmotionsArticle4', component: EmotionsArticle4 },
-  ],
-  soul: [
-    { name: 'SoulArticle1', component: SoulArticle1 },
-    { name: 'SoulArticle2', component: SoulArticle2 },
-    { name: 'SoulArticle3', component: SoulArticle3 },
-    { name: 'SoulArticle4', component: SoulArticle4 },
-    { name: 'SoulArticle5', component: SoulArticle5 },
-    { name: 'SoulArticle6', component: SoulArticle6 },
-  ],
-};
+export const articles = [
+  { name: 'BodyArticle1', component: BodyArticle1, category: 'body' },
+  { name: 'BodyArticle2', component: BodyArticle2, category: 'body' },
+  { name: 'BodyArticle3', component: BodyArticle3, category: 'body' },
+  { name: 'BodyArticle4', component: BodyArticle4, category: 'body' },
+  { name: 'BodyArticle5', component: BodyArticle5, category: 'body' },
+  { name: 'BodyArticle6', component: BodyArticle6, category: 'body' },
+  { name: 'MindArticle1', component: MindArticle1, category: 'mind' },
+  { name: 'MindArticle2', component: MindArticle2, category: 'mind' },
+  { name: 'MindArticle3', component: MindArticle3, category: 'mind' },
+  { name: 'MindArticle4', component: MindArticle4, category: 'mind' },
+  { name: 'RelationshipsArticle1', component: RelationshipsArticle1, category: 'relationships' },
+  { name: 'RelationshipsArticle2', component: RelationshipsArticle2, category: 'relationships' },
+  { name: 'RelationshipsArticle3', component: RelationshipsArticle3, category: 'relationships' },
+  { name: 'RelationshipsArticle4', component: RelationshipsArticle4, category: 'relationships' },
+  { name: 'RelationshipsArticle5', component: RelationshipsArticle5, category: 'relationships' },
+  { name: 'RelationshipsArticle6', component: RelationshipsArticle6, category: 'relationships' },
+  { name: 'EmotionsArticle1', component: EmotionsArticle1, category: 'emotions' },
+  { name: 'EmotionsArticle2', component: EmotionsArticle2, category: 'emotions' },
+  { name: 'EmotionsArticle3', component: EmotionsArticle3, category: 'emotions' },
+  { name: 'EmotionsArticle4', component: EmotionsArticle4, category: 'emotions' },
+  { name: 'SoulArticle1', component: SoulArticle1, category: 'soul' },
+  { name: 'SoulArticle2', component: SoulArticle2, category: 'soul' },
+  { name: 'SoulArticle3', component: SoulArticle3, category: 'soul' },
+  { name: 'SoulArticle4', component: SoulArticle4, category: 'soul' },
+  { name: 'SoulArticle5', component: SoulArticle5, category: 'soul' },
+  { name: 'SoulArticle6', component: SoulArticle6, category: 'soul' },
+];
 
 export default articles;
 

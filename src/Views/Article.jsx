@@ -2,14 +2,12 @@ import React from "react";
 import { ScrollView, View, Text, StyleSheet } from "react-native";
 import ArticleHeader from "../Components/ArticleHeader";
 import ForwardingButton from "../Components/ForwardingButton/ForwardingButton";
-import { useCategory } from "../App";
-import { useArticles } from "../ContextProviders/ArticlesProvider";
 import { useRoute } from "@react-navigation/native";
-
+import articlesTexts from "../Views/Texts/articlesTexts";
+import categories from "../Navigation/categories";
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    //     backgroundColor: "#FFD3FA",
   },
   scrollView: {
     flexGrow: 1,
@@ -20,25 +18,23 @@ const styles = StyleSheet.create({
 
 const Article = () => {
   const route = useRoute();
-  const { index, customContent, nextArticleTitle } = route.params;
+  const { article } = route.params;
 
-  const { currentCategory } = useCategory();
-  const { articles } = useArticles();
-
-  const nextArticleName = articles[currentCategory][index + 1]['name'];
+  const nextArticleTitle =
+    articlesTexts[article.category][article.name]["ForwardingButton"];
 
   return (
-    <View style={styles.mainContainer}>
+    <View
+      style={[
+        styles.mainContainer,
+        { backgroundColor: categories[article.category].color },
+      ]}
+    >
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={articles[currentCategory].length}
-          filledDotIndex={index}
-        />
+        <ArticleHeader />
+        {React.createElement(article.component)}
       </ScrollView>
-      <ForwardingButton
-        nextArticleTitle={nextArticleTitle}
-        nextArticleName={nextArticleName}
-      />
+      <ForwardingButton nextArticleTitle={nextArticleTitle} />
     </View>
   );
 };

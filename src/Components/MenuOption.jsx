@@ -1,9 +1,8 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import ArrowOption from "./Icons/ArrowOption";
-import sectionMapping from "../Navigation/SectionMapping";
-import { useCategory } from "../App";
+import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
+import categories from "../Navigation/categories";
 
 const styles = StyleSheet.create({
   option: {
@@ -34,32 +33,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const Option = ({ text, index, color }) => {
-  const { currentCategory, currentColor, onCategoryChange } = useCategory();
+const Option = ({ categoryName }) => {
+  const { navigateToCategory } = useAppNavigation();
+  const category = categories[categoryName];
 
-  const navigation = useNavigation();
-  const words = text.split(" ");
+  const words = category["description"].split(" ");
   const lastWord = words.pop();
   const remainingText = words.join(" ") + " ";
 
-  const sections = Object.keys(sectionMapping).filter(
-    (key) => key !== "default"
-  );
-  const currentSection = sections[index];
-
-  const backgroundColor = color;
-
-  const handlePress = () => {
-    console.log(`Option ${index} pressed with color: ${backgroundColor}`);
-    onCategoryChange(index);
-    navigation.navigate("Categories");
-  };
+  const backgroundColor = categories[categoryName]["color"];
 
   return (
     <TouchableOpacity
-      style={[styles.option, index >= sections.length && styles.inactive]}
-      onPress={handlePress}
-      disabled={index >= sections.length}
+      style={[styles.option]}
+      onPress={() => {
+        navigateToCategory(categoryName);
+      }}
     >
       <Text style={styles.optionText}>
         {remainingText}

@@ -22,49 +22,36 @@ const styles = StyleSheet.create({
 
 const BodyArticle6 = ({ navigation }) => {
   const article = bodyArticleTexts[5];
-  const handleForward = () => {
-    navigation.navigate("MindArticle1");
-  };
+
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={bodyArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <BoldText text={article.BoldText} />
-        <SmallText text={article.SmallText[1]} />
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText[0]} />
+      <BoldText text={article.BoldText} />
+      <SmallText text={article.SmallText[1]} />
 
-        {/* First Dropdown with borderTopWidth */}
-        <DropDown
-          titleText={article.DropDownTitle[0]}
-          smallText={article.DropDownSmallText[0]}
-          linkText={article.DropDownLink[0]}
-          hasTopBorder={true}
-        />
-
-        {/* Other Dropdowns without borderTopWidth */}
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          linkText={article.DropDownLink[1]}
-          hasTopBorder={false}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[2]}
-          smallText={article.DropDownSmallText[2]}
-          linkText={article.DropDownLink[2]}
-          hasTopBorder={false}
-        />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="BodyArticle6"
-        navigation={navigation}
+      {/* First Dropdown with borderTopWidth */}
+      <DropDown
+        titleText={article.DropDownTitle[0]}
+        smallText={article.DropDownSmallText[0]}
+        linkText={article.DropDownLink[0]}
+        hasTopBorder={true}
       />
-    </View>
+
+      {/* Other Dropdowns without borderTopWidth */}
+      <DropDown
+        titleText={article.DropDownTitle[1]}
+        smallText={article.DropDownSmallText[1]}
+        linkText={article.DropDownLink[1]}
+        hasTopBorder={false}
+      />
+      <DropDown
+        titleText={article.DropDownTitle[2]}
+        smallText={article.DropDownSmallText[2]}
+        linkText={article.DropDownLink[2]}
+        hasTopBorder={false}
+      />
+    </>
   );
 };
 

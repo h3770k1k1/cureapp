@@ -24,33 +24,18 @@ const styles = StyleSheet.create({
 const RelationshipsArticle4 = ({ navigation }) => {
   const article = relationshipsArticleTexts[3];
 
-  const handleForward = () => {
-    navigation.navigate("RelationshipsArticle5");
-  };
-
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={relationshipsArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <BoldText text={article.BoldText[0]} />
-        <SmallText text={article.SmallText[0]} />
-        <MediumText text={article.MediumText[0]} />
-        <SmallText text={article.SmallText[1]} />
-        <MediumText text={article.MediumText[1]} />
-        <SmallText text={article.SmallText[2]} />
-        <BoldText text={article.BoldText[1]} />
-        <Carousel text={article.CarouselText} name={article.CarouselName} />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="RelationshipsArticle4"
-        navigation={navigation}
-      />
-    </View>
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <BoldText text={article.BoldText[0]} />
+      <SmallText text={article.SmallText[0]} />
+      <MediumText text={article.MediumText[0]} />
+      <SmallText text={article.SmallText[1]} />
+      <MediumText text={article.MediumText[1]} />
+      <SmallText text={article.SmallText[2]} />
+      <BoldText text={article.BoldText[1]} />
+      <Carousel text={article.CarouselText} name={article.CarouselName} />
+    </>
   );
 };
 

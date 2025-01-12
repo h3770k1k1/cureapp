@@ -12,7 +12,6 @@ export const SmallSectionNavigation = (
   if (section) {
     const [key] = section;
     const articleName = `${key}Article${articleIndex + 1}`;
-    console.log("Navigating to:", articleName);
     navigation.navigate(articleName);
   } else {
     console.warn("Nie znaleziono sekcji dla tego koloru:", backgroundColor);

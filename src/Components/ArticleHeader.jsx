@@ -1,7 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import useGoBackNavigation from "./GoBackNavigation";
 import ArticleArrow from "./Icons/ArticleArrow";
+import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
+import { useArticles } from "../ContextProviders/ArticlesProvider";
 
 const styles = StyleSheet.create({
   topContainer: {
@@ -29,14 +30,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const ArticleHeader = ({ dotCount, filledDotIndex }) => {
-  const goBackNavigation = useGoBackNavigation();
+const ArticleHeader = () => {
+  const { back, article, getCategoryIndex } = useAppNavigation();
+  const { articles } = useArticles();
+  const articlesWithinCategoryCount = articles.filter(
+    (currentArticle) => currentArticle.category === article.category
+  ).length;
 
-  const dots = Array(dotCount).fill(0);
+  const dots = Array(articlesWithinCategoryCount).fill(0);
 
   return (
     <View style={styles.topContainer}>
-      <Text onPress={goBackNavigation}>
+      <Text onPress={back}>
         <ArticleArrow />
       </Text>
       <View style={styles.dotsContainer}>
@@ -45,7 +50,7 @@ const ArticleHeader = ({ dotCount, filledDotIndex }) => {
             key={index}
             style={[
               styles.dot,
-              index === filledDotIndex ? styles.filledDot : null,
+              index === getCategoryIndex() ? styles.filledDot : null,
             ]}
           ></View>
         ))}

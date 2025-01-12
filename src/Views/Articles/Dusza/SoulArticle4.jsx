@@ -36,32 +36,19 @@ const styles = StyleSheet.create({
 
 const SoulArticle4 = ({ navigation }) => {
   const article = soulArticleTexts[3];
-  const handleForward = () => {
-    navigation.navigate("SoulArticle5");
-  };
+
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={soulArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <DropDown
-          titleText={article.DropDownTitle}
-          smallText={article.DropDownSmallText}
-          hasTopBorder={true}
-        />
-        <BoldText text={article.BoldText} />
-        <SmallText text={article.SmallText[1]} />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="SoulArticle4"
-        navigation={navigation}
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText[0]} />
+      <DropDown
+        titleText={article.DropDownTitle}
+        smallText={article.DropDownSmallText}
+        hasTopBorder={true}
       />
-    </View>
+      <BoldText text={article.BoldText} />
+      <SmallText text={article.SmallText[1]} />
+    </>
   );
 };
 

@@ -23,41 +23,26 @@ const styles = StyleSheet.create({
 const RelationshipsArticle3 = ({ navigation }) => {
   const article = relationshipsArticleTexts[2]; // Ensure index [2] is valid
 
-  const handleForward = () => {
-    navigation.navigate("RelationshipsArticle4");
-  };
-
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={relationshipsArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText} />
-        <DropDown
-          titleText={article.DropDownTitle[0]}
-          smallText={article.DropDownSmallText[0]}
-          hasTopBorder={true}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[1]}
-          smallText={article.DropDownSmallText[1]}
-          hasTopBorder={false}
-        />
-        <DropDown
-          titleText={article.DropDownTitle[2]}
-          smallText={article.DropDownSmallText[2]}
-          hasTopBorder={false}
-        />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="RelationshipsArticle3"
-        navigation={navigation}
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText} />
+      <DropDown
+        titleText={article.DropDownTitle[0]}
+        smallText={article.DropDownSmallText[0]}
+        hasTopBorder={true}
       />
-    </View>
+      <DropDown
+        titleText={article.DropDownTitle[1]}
+        smallText={article.DropDownSmallText[1]}
+        hasTopBorder={false}
+      />
+      <DropDown
+        titleText={article.DropDownTitle[2]}
+        smallText={article.DropDownSmallText[2]}
+        hasTopBorder={false}
+      />
+    </>
   );
 };
 

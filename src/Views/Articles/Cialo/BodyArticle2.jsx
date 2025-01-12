@@ -22,27 +22,14 @@ const styles = StyleSheet.create({
 
 const BodyArticle2 = ({ navigation }) => {
   const article = bodyArticleTexts[1];
-  const handleForward = () => {
-    navigation.navigate("BodyArticle3");
-  };
+
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={bodyArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText} />
-        <MediumText text={article.MediumText} />
-        <DotLineHeader text={article.DotLineHeader} />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="BodyArticle2"
-        navigation={navigation}
-      />
-    </View>
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText} />
+      <MediumText text={article.MediumText} />
+      <DotLineHeader text={article.DotLineHeader} />
+    </>
   );
 };
 

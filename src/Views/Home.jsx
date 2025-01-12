@@ -5,12 +5,10 @@ import Views from "../Navigation/Views";
 import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
-  const navigation = useNavigation();
-
   return (
     <>
       <ExitView />
-      <BottomMenu selectedView={Views.Home} navigation={navigation} />
+      <BottomMenu selectedView={Views.Home} />
     </>
   );
 };

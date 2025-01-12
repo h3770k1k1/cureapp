@@ -23,32 +23,17 @@ const styles = StyleSheet.create({
 const RelationshipsArticle1 = ({ navigation }) => {
   const article = relationshipsArticleTexts[0];
 
-  const handleForward = () => {
-    navigation.navigate("RelationshipsArticle2");
-  };
-
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={relationshipsArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText} />
-        {Array.from({ length: 13 }, (_, index) => (
-          <React.Fragment key={index}>
-            <MediumText text={article.MediumText[index]} />
-            <SeparatingDots />
-          </React.Fragment>
-        ))}
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="RelationshipsArticle1"
-        navigation={navigation}
-      />
-    </View>
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText} />
+      {Array.from({ length: 13 }, (_, index) => (
+        <React.Fragment key={index}>
+          <MediumText text={article.MediumText[index]} />
+          <SeparatingDots />
+        </React.Fragment>
+      ))}
+    </>
   );
 };
 

@@ -24,31 +24,16 @@ const styles = StyleSheet.create({
 const MindArticle3 = ({ navigation }) => {
   const article = mindArticleTexts[2];
 
-  const handleForward = () => {
-    navigation.navigate("MindArticle4");
-  };
-
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={mindArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <BoldText text={article.BoldText[0]} />
-        <SmallText text={article.SmallText[0]} />
-        <MediumText text={article.MediumText} />
-        <SmallText text={article.SmallText[1]} />
-        <BoldText text={article.BoldText[1]} />
-        <SmallText text={article.SmallText[2]} />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="MindArticle3"
-        navigation={navigation}
-      />
-    </View>
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <BoldText text={article.BoldText[0]} />
+      <SmallText text={article.SmallText[0]} />
+      <MediumText text={article.MediumText} />
+      <SmallText text={article.SmallText[1]} />
+      <BoldText text={article.BoldText[1]} />
+      <SmallText text={article.SmallText[2]} />
+    </>
   );
 };
 

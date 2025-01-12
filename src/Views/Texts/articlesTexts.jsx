@@ -107,7 +107,7 @@ export const articlesTexts = {
         "Mózg potrzebuje odpowiedniej stymulacji. Poprzez pobudzanie jego różnych obszarów, powstają połączenia między neuronami, co ulepsza istniejące i rozwija nowe funkcje poznawcze, a w określonych sytuacjach pozwala przywrócić te utracone, np. przez chorobę. Zadbaj o jego dobrostan stosując regularnie wybrane propozycje ćwiczeń:",
         "Jedz, Pij, Śpij, Ruszaj się – te 4 czynniki wpływają na stan Twojego ciała i mózgu:\n\nRegularnie spożywaj kwasy tłuszczowe omega 3 (odpowiedzialne za pracę mózgu), np. jedz ryby, orzechy włoskie, olej lniany lub siemie lniane\n\nZadbaj również o picie wody (1,5–3l), która stanowi 80% budulca mózgu\n\nWysypiaj się i przebywaj na świeżym powietrzu (od tego zależy regeneracja)\n\nRegularna aktywność fizyczna może przyczynić się do zapewnienia ochrony przed pogorszeniem funkcji poznawczych w miarę upływu lat.",
       ],
-      forwardingButton: "Karm umysł tym, co Ci służy",
+      ForwardingButton: "Karm umysł tym, co Ci służy",
       carouselTexts: [
         [
           "Idąc do sklepu, zapamiętaj kilka pozycji z listy zakupów",
@@ -159,7 +159,7 @@ export const articlesTexts = {
         "1. Czy na pewno dobrze na mnie wpływają słowa muzyki, której słucham? Chcę, by to one krążyły w mojej głowie, budowały moje przekonania i mój świat wewnętrzny?\n\n2. Jak się czuję, patrząc na kadry i treści w filmach, zdjęciach, które oglądam? Czy tym chcę karmić moje zmysły?\n\n3. Oceniające wypowiedzi, katastroficzne wiadomości – tymi słowami m.in. karmi się głos Twojego wewnętrznego krytyka.\n\nSprawdzaj, jak na Ciebie wpływają powyższe treści i świadomie odetnij się od źródeł, które Ci nie służą.",
         "“Tam, gdzie patrzysz, tam będziesz”. Jak patrzysz w rzeczy dobre, piękne, szlachetne – stajesz się dobr_, piękn_ i szlachetn_. Idziesz w tym kierunku i tam właśnie dotrzesz. Jak się koncentrujesz na tym, co złe, niszczące, niebezpieczne – do tego się zbliżasz. Ta zasada dotyczy zarówno tego, na co kierujemy nasz zewnętrzny wzrok, ale i ten wewnętrzny – ten, który wpływa na całą naszą istotę.",
       ],
-      forwardingButton: "Detox ekranowy",
+      ForwardingButton: "Detox ekranowy",
     },
     MindArticle3: {
       articleIndex: 2,
@@ -177,7 +177,7 @@ export const articlesTexts = {
         "Offline’owe aktywności, takie jak czytanie książek, spacerowanie, czy kreatywne zajęcia manualne, pozwalają odetchnąć Twojemu mózgowi. Wybierz coś, co sprawia Ci przyjemność i daje odpoczynek od ekranów.",
         "1. Ustal stałą godzinę kładzenia się spać.\n\n2. Unikaj niebieskiego światła przynajmniej na godzinę przed snem – włącz tryb nocny w urządzeniach.\n\n3. Czytaj przed snem książki papierowe, a nie na ekranie.",
       ],
-      forwardingButton: "Odpocznij od cyfrowego świata",
+      ForwardingButton: "Odpocznij od cyfrowego świata",
     },
     MindArticle4: {
       articleIndex: 3,
@@ -195,7 +195,7 @@ export const articlesTexts = {
         "Mindfulness, czyli uważność, pomaga zatrzymać się w chwili obecnej i zrozumieć, co dzieje się w Twoim wnętrzu. Regularna praktyka uważności może obniżyć poziom stresu i zwiększyć świadomość swoich potrzeb.",
         "Stres może mieć negatywny wpływ na Twój umysł i ciało. Wypróbuj różne metody jego redukcji, takie jak medytacja, joga, głębokie oddychanie czy po prostu rozmowa z kimś bliskim.",
       ],
-      forwardingButton: "Zacznij zarządzać swoimi emocjami",
+      ForwardingButton: "Zacznij zarządzać swoimi emocjami",
     },
     MindArticle5: {
       articleIndex: 4,
@@ -213,11 +213,11 @@ export const articlesTexts = {
         "Pracując zdalnie, stwórz przestrzeń wyłącznie do pracy. Po godzinach pracy odłącz się od służbowych wiadomości i urządzeń.",
         "Wybierz aktywności, które pozwalają Ci się zrelaksować – może to być spacer, malowanie, słuchanie muzyki czy spotkania z przyjaciółmi. Znajdź coś, co przynosi Ci radość i odprężenie.",
       ],
-      forwardingButton: "Znajdź swój rytm",
+      ForwardingButton: "Znajdź swój rytm",
     },
   },
   relationships: {
-    RelationshipArticle1: {
+    RelationshipsArticle1: {
       ArticleIndex: 0,
       ArticleTitle: "Inwestuj w relacje",
       ForwardingButton: "Schowaj telefon",
@@ -239,7 +239,7 @@ export const articlesTexts = {
         "Jakiej formy wsparcia potrzebujesz w trudnych chwilach?",
       ],
     },
-    RelationshipArticle2: {
+    RelationshipsArticle2: {
       ArticleIndex: 1,
       ArticleTitle: "Schowaj telefon",
       BoldText: "Chcesz, by Twoi rozmówcy czuli się dla Ciebie ważni? ",
@@ -247,7 +247,7 @@ export const articlesTexts = {
         "Jest jedna bardzo prosta do zastosowania, ale i bardzo skuteczna rzecz, którą możesz zrobić: gdy z kimś rozmawiasz – schowaj telefon. Badania wykazują, że sama obecność telefonu w widocznym miejscu (nawet gdy na niego nie patrzysz lub gdy masz odwróconego ekranem ku dołowi), daje rozmówcom podświadomy komunikat, że nie dajesz im swojej uwagi i że nie są dla Ciebie ważni.",
       ForwardingButton: "Praktykuj NVC",
     },
-    RelationshipArticle3: {
+    RelationshipsArticle3: {
       ArticleIndex: 2,
       ArticleTitle: "Praktykuj empatyczną komunikację (NVC)",
       SmallText:
@@ -264,7 +264,7 @@ export const articlesTexts = {
         "Prawdziwym powodem konfliktów są rozbieżne sposoby realizacji potrzeb, a nie sprzeczne potrzeby (więcej przeczytaj w zakładce EMOCJE). Warto spróbować być otwartym na znalezienie nowego, wspólnego działania, które zaspokoi Twoją potrzebę i Twojego rozmówcy. Kurczowe trzymanie się swoich schematów skutkuje poczuciem braku zrozumienia którejś ze stron, a tym samym zaburza bliskość.",
       ],
     },
-    RelationshipArticle4: {
+    RelationshipsArticle4: {
       ArticleIndex: 3,
       ArticleTitle: "Rozwiń swoją empatię i aktywne słuchanie",
       ForwardingButton: "Pytaj o preferowane wsparcie",
@@ -305,7 +305,7 @@ export const articlesTexts = {
         "",
       ],
     },
-    RelationshipArticle5: {
+    RelationshipsArticle5: {
       ArticleIndex: 4,
       ArticleTitle: "Pytaj o preferowany rodzaj wsparcia",
       SmallText: [
@@ -326,9 +326,25 @@ export const articlesTexts = {
       ],
       ForwardingButton: "Poznaj swój język miłości",
     },
+     RelationshipsArticle6: {
+        ArticleIndex: 5,
+        ForwardingButton: "Poznaj swoje emocje",
+        ArticleTitle: "Poznaj swój język miłości",
+        BoldText: [
+          "Miłość jest działaniem nastawionym na dobro człowieka",
+          "*  Uwaga: Miłość jest kwestią wyboru",
+        ],
+        SmallText: [
+          "Każdy człowiek nosi potrzebę bycia kochanym i kochania, ale często nie wie, jak napełniać swój (i czyjś) “wewnętrzny zbiornik na miłość”. Według koncepcji Chapmana istnieje 5 sposobów, na jakie ludzie wyrażają i czują (subiektywnie) miłość, ale każdy zazwyczaj ma 1–2 dominujące, które najskuteczniej sprawiają, że “czuje się” kochany, ale i którymi najłatwiej mu miłość okazywać.\n\nPoznaj swój język miłości oraz naucz się rozpoznawać je u innych, a bardzo to wpłynie na rozwój Twoich relacji!",
+          "W miłość wpisana jest wolność, więc nie można jej wymusić (nie zrażaj się, gdy na Twoją próbę okazania miłości ktoś nie odpowiada, nie żądaj tego). Ale – miłość jest decyzją, którą zawsze możesz podjąć, i która zawsze rozwija Cię wewnętrznie, ilekroć ją wybierasz.",
+        ],
+        DropDownTitle: "5 języków miłości",
+        DropDownSmallText:
+          "Wyrażenia afirmatywne (język słów)\n– komplementy\n– słowa wdzięczności, podziękowania\n– słowa wsparcia\n– słowa uznania i pochwały \n– ale i: uprzejmy ton \nDobry czas (język wspólnych doświadczeń i wzajemnej uwagi) \n– robienie czegoś wspólnie z pełnym zaangażowaniem \n– rozmowa (nie dyskusja) pełna wzajemnego zasłuchania (bez przerywania) i ciekawości (zadawanie pytań) nt. emocji, myśli, pragnień \n– dawanie sobie pełnej uwagi \nPodarunki (język przyjmowania i dawania rzeczy materialnych) \n– częstowanie/dzielenie się jedzeniem \n– robienie drobnych prezentów \n– kupienie wymarzonego prezentu \n– prezent z obecności \nPrzysługi (język czynów) \n– wyręczanie kogoś \n– wykonywanie prac domowych \n– spełnianie konkretnych próśb \n– ważne jest używanie języka próśb, nie żądań \nDotyk (język ciała) \n– dotyk w towarzystwie innych (daje poczucie bycia zauważonym i ważnym) \n– dotyk w trudnej sytuacji \n– ważne: rodzaj preferowanego dotyku jest u każdej osoby inny \n– ale i: mowa ciała",
+      },
   },
   emotions: {
-    EmotionArticle1: {
+    EmotionsArticle1: {
       ArticleIndex: 0,
       ArticleTitle: "Poznaj świat emocji i uczuć",
       SmallText: [
@@ -350,7 +366,7 @@ export const articlesTexts = {
         "\n* UWAGA: Stres nie jest emocją!",
       ],
     },
-    EmotionArticle2: {
+    EmotionsArticle2: {
       ArticleIndex: 1,
       ArticleTitle: "Wysłuchaj swoich emocji",
       BoldText: "Każda emocja jest ważna\n– jest “po coś” i jest “o czymś",
@@ -380,7 +396,7 @@ export const articlesTexts = {
         "Samoregulacja emocji polega na umiejętnym zarządzaniu własnymi emocjami.\n\nSytuacja –> Uwaga –> Myśli –> Emocje\n\nMożesz regulować emocje poprzez skupienie uwagi na czymś innym: innej myśli, innym (dobrym) aspekcie sytuacji lub innym bodźcu. Jeśli czujesz kilka emocji lub uczuć – możesz skupić się na wybranej i do niej zastosować samoregulacje.\n\nMożesz również dostosowywać swoje działania do swoich celów:\nby wykorzystać stan aktualnie przeżywany – mam daną emocję –> dobieram zadanie, np. umiarkowany smutek sprzyja analitycznemu myśleniu, a radość twórczości\nby wzbudzić w sobie określoną emocję– mam zadanie –> dobieram emocje, np. potrzebuję skupienia, analitycznego myślenia, więc puszczam spokojoną czy nostalgiczną muzykę, by wzbudzić umiarkowanie smutny nastrój (słuchając muzyki można wywołać konkretny stan)",
       ],
     },
-    EmotionArticle3: {
+    EmotionsArticle3: {
       ArticleIndex: 2,
       ArticleTitle: "Zadbaj o swoje potrzeby",
       ForwardingButton: "Obierz dobrą strategię",
@@ -393,7 +409,7 @@ export const articlesTexts = {
       DropDownSmallText:
         "Poniżej kilka faktów o potrzebach wg NVC:\n\n1. **Potrzeby są uniwersalne**\nWszyscy ludzie mają te same potrzeby, ale zaspokajają je innymi “strategiami”.\n\n2. **Nie są stałe**\nZmieniają się w czasie.\n\n3. **Ludzie działają dla zaspokojenia swoich potrzeb**\nKażde działanie, każda wypowiedź, jest próbą zaspokojenia jakiejś potrzeby.\n\n4. **Gdy ktoś mówi “nie” – mówi “tak” swojej potrzebie**\nOdmowa nie wynika ze złych intencji, a z podjętej odpowiedzialności za swój komfort.",
     },
-    EmotionArticle4: {
+    EmotionsArticle4: {
       ArticleIndex: 3,
       ArticleTitle: "Obierz dobrą strategię działania",
       ForwardingButton: "Odkryj swoją duchowość",

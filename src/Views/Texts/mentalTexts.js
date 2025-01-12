@@ -126,7 +126,7 @@ export const mentalTexts = {
     Text: [
       "Potrzeba duchowej refleksji jest dla natury ludzkiej uniwersalna. Jest obecna w każdej kulturze i epoce historycznej. Oprócz materii – ciała, umysłu, należysz do świata ducha, a wyraża się to przede wszystkim przez zdolność do miłości i wrażliwość na piękno. Odkryj swoją głębię!",
       "Duchowość to nie religijność! Badacze definiują ją jako zawsze indywidualny proces poszukiwania sensu życia, będący skutkiem regularnej autoekspresji, refleksji i własnych doświadczeń (poznaj logoterapię!).",
-      "Dbanie o swojego ducha (regularny czas na refleksje nad swoimi wartościami, celami, sensem, medytacja czy modlitwa) to klucz dla utrzymania dobrostanu (ta sfera wpływa zarówno na zdrowie psychiczne i fizyczne).",
+      "Dbanie o swojego ducha (regularny czas na refleksje nad swoimi wartościami, celami, sensem, medytacja czy modlitwa) to klucz dla utrzymania dobrostanu (ta sfera wpływa zarówno na zdrowie psychiczne i fizyczne).",
     ],
     SectionCount: 6,
     SectionTitle: [

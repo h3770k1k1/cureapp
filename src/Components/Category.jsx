@@ -4,6 +4,7 @@ import SmallSection from "./SmallSection/SmallSection";
 import { mentalTexts } from "../Views/Texts/mentalTexts";
 import { useCategory } from "../App";
 import { useArticles } from "../ContextProviders/ArticlesProvider";
+import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   container: {
@@ -46,12 +47,14 @@ const Section = ({ header, text }) => (
 );
 
 const Category = () => {
-  const { currentCategory, currentColor, onCategoryChange } = useCategory();
-  const { articles } = useArticles();
-  console.log("ARTICLES are ");
-  console.log(articles[currentCategory]);
+  const { article, color, navigateToCategory } = useAppNavigation();
 
-  const categoryText = mentalTexts[currentCategory] || null;
+  const { articles } = useArticles();
+
+  const categoryText = mentalTexts[article.category] || null;
+  const articlesForCurrentCategory = articles.filter(
+    (currentArticle) => currentArticle.category === article.category
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -72,13 +75,13 @@ const Category = () => {
 
         <View style={styles.smallSectionsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {articles[currentCategory].map((article, index) => {
+            {articlesForCurrentCategory.map((article, index) => {
               return (
                 <SmallSection
                   key={index}
                   header={categoryText.SectionTitle[index]}
                   description={categoryText.SectionText[index] || ""}
-                  backgroundColor={currentColor}
+                  backgroundColor={color}
                   articleName={article["name"]}
                 />
               );

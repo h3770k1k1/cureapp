@@ -1,7 +1,7 @@
 import React from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
 import ForwardingButtonArrow from "../Icons/ForwardingButtonArrow";
-import { useNavigation } from "@react-navigation/native";
+import { useAppNavigation } from "../../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   forwardingButton: {
@@ -25,12 +25,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const ForwardingButton = ({ nextArticleTitle, nextArticleName }) => {
-  const navigation = useNavigation();
-
-  const handlePress = () => {
-    navigation.navigate(nextArticleName);
-  };
+const ForwardingButton = (props) => {
+  const { next } = useAppNavigation();
 
   //   const backgroundColor = nextArticleData ? nextArticleData.color : "#FFFFFF";
   const backgroundColor = "#FFFFFF";
@@ -38,9 +34,9 @@ const ForwardingButton = ({ nextArticleTitle, nextArticleName }) => {
   return (
     <TouchableOpacity
       style={[styles.forwardingButton, { backgroundColor }]}
-      onPress={handlePress}
+      onPress={next}
     >
-      <Text style={styles.buttonText}>{nextArticleTitle}</Text>
+      <Text style={styles.buttonText}>{props.nextArticleTitle}</Text>
       <Text>
         <ForwardingButtonArrow />
       </Text>

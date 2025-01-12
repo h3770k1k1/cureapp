@@ -24,29 +24,18 @@ const MindArticle4 = ({ navigation }) => {
   const article = mindArticleTexts[3];
 
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={mindArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <BoldText text={article.BoldText} />
-        <SmallText text={article.SmallText[1]} />
-        <DropDown
-          titleText={article.DropDownTitle}
-          smallText={article.DropDownSmallText}
-          hasTopBorder={true}
-        />
-        <SmallText text={article.SmallText[2]} />
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="MindArticle4"
-        navigation={navigation}
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText[0]} />
+      <BoldText text={article.BoldText} />
+      <SmallText text={article.SmallText[1]} />
+      <DropDown
+        titleText={article.DropDownTitle}
+        smallText={article.DropDownSmallText}
+        hasTopBorder={true}
       />
-    </View>
+      <SmallText text={article.SmallText[2]} />
+    </>
   );
 };
 

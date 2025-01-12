@@ -36,40 +36,27 @@ const styles = StyleSheet.create({
 
 const SoulArticle2 = ({ navigation }) => {
   const article = soulArticleTexts[1];
-  const handleForward = () => {
-    navigation.navigate("SoulArticle3");
-  };
+
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <ArticleHeader
-          dotCount={soulArticleTexts.length}
-          filledDotIndex={article.ArticleIndex}
-        />
-        <ArticleTitle text={article.ArticleTitle} />
-        <SmallText text={article.SmallText[0]} />
-        <BoldText text={article.BoldText}></BoldText>
-        <SmallText text={article.SmallText[1]} />
-        <DropDown
-          titleText={article.DropDownTitle[0]}
-          smallText={article.DropDownSmallText}
-          hasTopBorder={true}
-        />
-        <LetterDropDown
-          titleText={article.DropDownTitle[1]}
-          sideLetter={article.SideLetter}
-        />
-        <View style={styles.linkButtonsContainer}>
-          <LinkButton text={article.LinkButton[0]} />
-          <LinkButton text={article.LinkButton[1]} />
-        </View>
-      </ScrollView>
-      <ForwardingButton
-        text={article.ForwardingButton}
-        currentArticle="SoulArticle2"
-        navigation={navigation}
+    <>
+      <ArticleTitle text={article.ArticleTitle} />
+      <SmallText text={article.SmallText[0]} />
+      <BoldText text={article.BoldText}></BoldText>
+      <SmallText text={article.SmallText[1]} />
+      <DropDown
+        titleText={article.DropDownTitle[0]}
+        smallText={article.DropDownSmallText}
+        hasTopBorder={true}
       />
-    </View>
+      <LetterDropDown
+        titleText={article.DropDownTitle[1]}
+        sideLetter={article.SideLetter}
+      />
+      <View style={styles.linkButtonsContainer}>
+        <LinkButton text={article.LinkButton[0]} />
+        <LinkButton text={article.LinkButton[1]} />
+      </View>
+    </>
   );
 };
 
