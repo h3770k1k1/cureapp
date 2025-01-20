@@ -1,6 +1,6 @@
 // NavigatorContext.js
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import React, {createContext, useContext, useEffect, useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {useArticles} from "./ArticlesProvider";
 import categories from "../Navigation/categories";
 
@@ -27,7 +27,6 @@ export const AppNavigationProvider = ({ children }) => {
     const next = () => {
         const isLastGlobalIndex = globalIndex() === articles.length - 1;
         const nextIndex = isLastGlobalIndex ? 0 : globalIndex()+1;
-        // throw Error('DEBUG '+ nextIndex)
 
         const nextArticle = articles[nextIndex]
         const nextArticleName = nextArticle['name']
@@ -36,6 +35,14 @@ export const AppNavigationProvider = ({ children }) => {
 
         navigation.navigate(nextArticleName)
     };
+
+    const getNextCategory= ()=>{
+        const isLastGlobalIndex = globalIndex() === articles.length - 1;
+        const nextIndex = isLastGlobalIndex ? 0 : globalIndex()+1;
+        const nextArticle = articles[nextIndex]
+
+        return categories[nextArticle.category];
+    }
 
     const back = () => {
         const isFirstCategoryIndex = getCategoryIndex() === 0;
@@ -86,7 +93,7 @@ export const AppNavigationProvider = ({ children }) => {
     }
 
     return (
-        <AppNavigationContext.Provider value={{ next, back, article, color, globalIndex, getCategoryIndex, navigateToCategory, navigateToArticle }}>
+        <AppNavigationContext.Provider value={{ next, back, article, color, globalIndex, getCategoryIndex, navigateToCategory, navigateToArticle, getNextCategory }}>
             {children}
         </AppNavigationContext.Provider>
     );

@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
 });
 
 const ForwardingButton = (props) => {
-  const { next } = useAppNavigation();
+  const { next, getNextCategory } = useAppNavigation();
 
-  //   const backgroundColor = nextArticleData ? nextArticleData.color : "#FFFFFF";
-  const backgroundColor = "#FFFFFF";
+  const nextCategory = getNextCategory()
+  const backgroundColor = nextCategory.color;
 
   return (
     <TouchableOpacity
