@@ -5,6 +5,7 @@ import MentalIcon from "./Icons/Mental";
 import GrowIcon from "./Icons/Grow";
 import SettingsIcon from "./Icons/Settings";
 import Views from "../Navigation/Views";
+import {useAppNavigation} from "../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
@@ -50,6 +51,8 @@ const ButtonColors = {
 };
 
 const BottomMenu = ({ selectedView, navigation }) => {
+  const { home, mental } = useAppNavigation();
+
   const MenuButton = ({ icon, isSelected, view, onPress }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
@@ -70,7 +73,7 @@ const BottomMenu = ({ selectedView, navigation }) => {
         }
         isSelected={isSelected}
         view={Views.Home}
-        onPress={() => navigation.navigate(Views.Home)}
+        onPress={() => home()}
       />
     );
   };
@@ -87,7 +90,7 @@ const BottomMenu = ({ selectedView, navigation }) => {
         isSelected={isSelected}
         view={Views.Categories}
         onPress={() => {
-          console.log("NAVIGATING TO CATEGORIES");
+          mental()
         }}
       />
     );

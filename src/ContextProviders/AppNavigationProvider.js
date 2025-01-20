@@ -24,6 +24,14 @@ export const AppNavigationProvider = ({ children }) => {
 
     },[article])
 
+    const home = () => {
+        navigation.navigate('Home')
+    }
+
+    const mental = () => {
+        navigation.navigate('Categories')
+    }
+
     const next = () => {
         const isLastGlobalIndex = globalIndex() === articles.length - 1;
         const nextIndex = isLastGlobalIndex ? 0 : globalIndex()+1;
@@ -93,7 +101,7 @@ export const AppNavigationProvider = ({ children }) => {
     }
 
     return (
-        <AppNavigationContext.Provider value={{ next, back, article, color, globalIndex, getCategoryIndex, navigateToCategory, navigateToArticle, getNextCategory }}>
+        <AppNavigationContext.Provider value={{ next, back, article, color, globalIndex, getCategoryIndex, navigateToCategory, navigateToArticle, getNextCategory, home, mental }}>
             {children}
         </AppNavigationContext.Provider>
     );
