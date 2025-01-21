@@ -5,7 +5,7 @@ import MentalIcon from "./Icons/Mental";
 import GrowIcon from "./Icons/Grow";
 import SettingsIcon from "./Icons/Settings";
 import Views from "../Navigation/Views";
-import {useAppNavigation} from "../ContextProviders/AppNavigationProvider";
+import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
@@ -63,7 +63,7 @@ const BottomMenu = ({ selectedView, navigation }) => {
   );
 
   const HomeButton = () => {
-    const isSelected = selectedView === Views.Home;
+    const isSelected = selectedView === Views.home;
     return (
       <MenuButton
         icon={
@@ -72,14 +72,14 @@ const BottomMenu = ({ selectedView, navigation }) => {
           />
         }
         isSelected={isSelected}
-        view={Views.Home}
-        onPress={() => home()}
+        view={Views.home}
+        onPress={home}
       />
     );
   };
 
   const MentalButton = () => {
-    const isSelected = selectedView === Views.Categories;
+    const isSelected = selectedView === Views.categories;
     return (
       <MenuButton
         icon={
@@ -88,16 +88,14 @@ const BottomMenu = ({ selectedView, navigation }) => {
           />
         }
         isSelected={isSelected}
-        view={Views.Categories}
-        onPress={() => {
-          mental()
-        }}
+        view={Views.categories}
+        onPress={mental}
       />
     );
   };
 
   const GrowButton = () => {
-    const isSelected = selectedView === Views.Grow;
+    const isSelected = selectedView === Views.grow;
     return (
       <MenuButton
         icon={
@@ -106,14 +104,14 @@ const BottomMenu = ({ selectedView, navigation }) => {
           />
         }
         isSelected={isSelected}
-        view={Views.Grow}
-        onPress={() => navigation.navigate(Views.Grow)}
+        view={Views.grow}
+        onPress={() => navigation.navigate(Views.grow)}
       />
     );
   };
 
   const SettingsButton = () => {
-    const isSelected = selectedView === Views.Settings;
+    const isSelected = selectedView === Views.settings;
     return (
       <MenuButton
         icon={
@@ -122,8 +120,8 @@ const BottomMenu = ({ selectedView, navigation }) => {
           />
         }
         isSelected={isSelected}
-        view={Views.Settings}
-        onPress={() => navigation.navigate(Views.Settings)}
+        view={Views.settings}
+        onPress={() => navigation.navigate(Views.settings)}
       />
     );
   };

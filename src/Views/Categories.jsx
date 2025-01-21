@@ -9,7 +9,7 @@ const Categories = () => {
     <>
       <Navbar />
       <Category />
-      <BottomMenu selectedView={Views.Categories} />
+      <BottomMenu selectedView={Views.categories} />
     </>
   );
 };

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Option = ({ categoryName }) => {
+const CategoryOption = ({ categoryName }) => {
   const { navigateToCategory } = useAppNavigation();
   const category = categories[categoryName];
 
@@ -59,4 +59,4 @@ const Option = ({ categoryName }) => {
   );
 };
 
-export default Option;
+export default CategoryOption;

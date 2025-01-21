@@ -1,8 +1,8 @@
 const Views = {
-  Home: "Home",
-  Categories: "Categories",
-  Grow: "Grow",
-  Settings: "Settings",
+  home: "Home",
+  categories: "Categories",
+  grow: "Grow",
+  settings: "Settings",
 };
 
 export default Views;

@@ -1,14 +1,13 @@
 import React from "react";
-import ExitView from "../Components/ExitView";
+import HomeCategories from "../Components/HomeCategories";
 import { BottomMenu } from "../Components/BottomMenu";
 import Views from "../Navigation/Views";
-import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
   return (
     <>
-      <ExitView />
-      <BottomMenu selectedView={Views.Home} />
+      <HomeCategories />
+      <BottomMenu selectedView={Views.home} />
     </>
   );
 };

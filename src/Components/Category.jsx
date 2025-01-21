@@ -2,7 +2,6 @@ import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import SmallSection from "./SmallSection/SmallSection";
 import { mentalTexts } from "../Views/Texts/mentalTexts";
-import { useCategory } from "../App";
 import { useArticles } from "../ContextProviders/ArticlesProvider";
 import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
 

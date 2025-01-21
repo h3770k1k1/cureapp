@@ -23,14 +23,11 @@ const Article = () => {
   const nextArticleTitle =
     articlesTexts[article.category][article.name]["ForwardingButton"];
 
-  const currentArticleColor = categories[article.category].color
+  const currentArticleColor = categories[article.category].color;
 
   return (
     <View
-      style={[
-        styles.mainContainer,
-        { backgroundColor: currentArticleColor },
-      ]}
+      style={[styles.mainContainer, { backgroundColor: currentArticleColor }]}
     >
       <ScrollView contentContainerStyle={styles.scrollView}>
         <ArticleHeader />

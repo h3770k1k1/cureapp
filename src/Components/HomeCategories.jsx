@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import ExitDots from "./Icons/ExitDots";
-import Option from "./MenuOption";
+import CategoryOption from "./MenuOption";
 import categories from "../Navigation/categories";
 
 const styles = StyleSheet.create({
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ExitView = () => {
+const HomeCategories = () => {
   const categoriesNames = Object.keys(categories);
   return (
     <View style={styles.exitView}>
@@ -35,11 +35,11 @@ const ExitView = () => {
       </View>
       <View style={styles.options}>
         {categoriesNames.map((name, index) => (
-          <Option key={index} categoryName={name} />
+          <CategoryOption key={index} categoryName={name} />
         ))}
       </View>
     </View>
   );
 };
 
-export default ExitView;
+export default HomeCategories;

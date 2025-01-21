@@ -326,22 +326,22 @@ export const articlesTexts = {
       ],
       ForwardingButton: "Poznaj swój język miłości",
     },
-     RelationshipsArticle6: {
-        ArticleIndex: 5,
-        ForwardingButton: "Poznaj swoje emocje",
-        ArticleTitle: "Poznaj swój język miłości",
-        BoldText: [
-          "Miłość jest działaniem nastawionym na dobro człowieka",
-          "*  Uwaga: Miłość jest kwestią wyboru",
-        ],
-        SmallText: [
-          "Każdy człowiek nosi potrzebę bycia kochanym i kochania, ale często nie wie, jak napełniać swój (i czyjś) “wewnętrzny zbiornik na miłość”. Według koncepcji Chapmana istnieje 5 sposobów, na jakie ludzie wyrażają i czują (subiektywnie) miłość, ale każdy zazwyczaj ma 1–2 dominujące, które najskuteczniej sprawiają, że “czuje się” kochany, ale i którymi najłatwiej mu miłość okazywać.\n\nPoznaj swój język miłości oraz naucz się rozpoznawać je u innych, a bardzo to wpłynie na rozwój Twoich relacji!",
-          "W miłość wpisana jest wolność, więc nie można jej wymusić (nie zrażaj się, gdy na Twoją próbę okazania miłości ktoś nie odpowiada, nie żądaj tego). Ale – miłość jest decyzją, którą zawsze możesz podjąć, i która zawsze rozwija Cię wewnętrznie, ilekroć ją wybierasz.",
-        ],
-        DropDownTitle: "5 języków miłości",
-        DropDownSmallText:
-          "Wyraże nia afirmatywne (język słów)\n– komplementy\n– słowa wdzięczności, podziękowania\n– słowa wsparcia\n– słowa uznania i pochwały \n– ale i: uprzejmy ton \nDobry czas (język wspólnych doświadczeń i wzajemnej uwagi) \n– robienie czegoś wspólnie z pełnym zaangażowaniem \n– rozmowa (nie dyskusja) pełna wzajemnego zasłuchania (bez przerywania) i ciekawości (zadawanie pytań) nt. emocji, myśli, pragnień \n– dawanie sobie pełnej uwagi \nPodarunki (język przyjmowania i dawania rzeczy materialnych) \n– częstowanie/dzielenie się jedzeniem \n– robienie drobnych prezentów \n– kupienie wymarzonego prezentu \n– prezent z obecności \nPrzysługi (język czynów) \n– wyręczanie kogoś \n– wykonywanie prac domowych \n– spełnianie konkretnych próśb \n– ważne jest używanie języka próśb, nie żądań \nDotyk (język ciała) \n– dotyk w towarzystwie innych (daje poczucie bycia zauważonym i ważnym) \n– dotyk w trudnej sytuacji \n– ważne: rodzaj preferowanego dotyku jest u każdej osoby inny \n– ale i: mowa ciała",
-      }
+    RelationshipsArticle6: {
+      ArticleIndex: 5,
+      ForwardingButton: "Poznaj swoje emocje",
+      ArticleTitle: "Poznaj swój język miłości",
+      BoldText: [
+        "Miłość jest działaniem nastawionym na dobro człowieka",
+        "*  Uwaga: Miłość jest kwestią wyboru",
+      ],
+      SmallText: [
+        "Każdy człowiek nosi potrzebę bycia kochanym i kochania, ale często nie wie, jak napełniać swój (i czyjś) “wewnętrzny zbiornik na miłość”. Według koncepcji Chapmana istnieje 5 sposobów, na jakie ludzie wyrażają i czują (subiektywnie) miłość, ale każdy zazwyczaj ma 1–2 dominujące, które najskuteczniej sprawiają, że “czuje się” kochany, ale i którymi najłatwiej mu miłość okazywać.\n\nPoznaj swój język miłości oraz naucz się rozpoznawać je u innych, a bardzo to wpłynie na rozwój Twoich relacji!",
+        "W miłość wpisana jest wolność, więc nie można jej wymusić (nie zrażaj się, gdy na Twoją próbę okazania miłości ktoś nie odpowiada, nie żądaj tego). Ale – miłość jest decyzją, którą zawsze możesz podjąć, i która zawsze rozwija Cię wewnętrznie, ilekroć ją wybierasz.",
+      ],
+      DropDownTitle: "5 języków miłości",
+      DropDownSmallText:
+        "Wyraże nia afirmatywne (język słów)\n– komplementy\n– słowa wdzięczności, podziękowania\n– słowa wsparcia\n– słowa uznania i pochwały \n– ale i: uprzejmy ton \nDobry czas (język wspólnych doświadczeń i wzajemnej uwagi) \n– robienie czegoś wspólnie z pełnym zaangażowaniem \n– rozmowa (nie dyskusja) pełna wzajemnego zasłuchania (bez przerywania) i ciekawości (zadawanie pytań) nt. emocji, myśli, pragnień \n– dawanie sobie pełnej uwagi \nPodarunki (język przyjmowania i dawania rzeczy materialnych) \n– częstowanie/dzielenie się jedzeniem \n– robienie drobnych prezentów \n– kupienie wymarzonego prezentu \n– prezent z obecności \nPrzysługi (język czynów) \n– wyręczanie kogoś \n– wykonywanie prac domowych \n– spełnianie konkretnych próśb \n– ważne jest używanie języka próśb, nie żądań \nDotyk (język ciała) \n– dotyk w towarzystwie innych (daje poczucie bycia zauważonym i ważnym) \n– dotyk w trudnej sytuacji \n– ważne: rodzaj preferowanego dotyku jest u każdej osoby inny \n– ale i: mowa ciała",
+    },
   },
   emotions: {
     EmotionsArticle1: {

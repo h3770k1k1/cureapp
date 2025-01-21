@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import ForwardingButtonArrow from "../Icons/ForwardingButtonArrow";
 import { useAppNavigation } from "../../ContextProviders/AppNavigationProvider";
 
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 const ForwardingButton = (props) => {
   const { next, getNextCategory } = useAppNavigation();
 
-  const nextCategory = getNextCategory()
+  const nextCategory = getNextCategory();
   const backgroundColor = nextCategory.color;
 
   return (
