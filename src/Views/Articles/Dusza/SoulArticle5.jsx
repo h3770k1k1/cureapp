@@ -11,15 +11,6 @@ import LetterDropDown from "../../../Components/LetterDropDown";
 import BoldText from "../../../Components/BoldText";
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#CDF6FF",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
   quote: {
     paddingTop: 10,
     fontWeight: "bold",

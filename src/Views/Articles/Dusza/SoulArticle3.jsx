@@ -10,17 +10,6 @@ import DropDown from "../../../Components/DropDown";
 import { ScrollView, View, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#CDF6FF",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const SoulArticle3 = ({ navigation }) => {
   const article = soulArticleTexts[2];
