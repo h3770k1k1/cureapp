@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import BottomMenu from "./components/BottomMenu";
+import React from "react";
+import Navigation from "./Navigation/Navigation";
+import ArticlesProvider from "./ContextProviders/ArticlesProvider";
 
-function App(): React.JSX.Element {
+const App = () => {
   return (
-    <>
-      <BottomMenu />
-    </>
+    <ArticlesProvider>
+      <Navigation />
+    </ArticlesProvider>
   );
-}
+};
 
 export default App;

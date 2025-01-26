@@ -1,21 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
-import HomeIcon from "./Home";
-import MentalIcon from "./Mental";
-import GrowIcon from "./Grow";
-import SettingsIcon from "./Settings";
-
-const ButtonColors = Object.freeze({
-  White: "#fff",
-  Grey: "#8E8E8E",
-});
-
-const Views = Object.freeze({
-  Home: Symbol("Home"),
-  Mental: Symbol("Mental"),
-  Grow: Symbol("Grow"),
-  Settings: Symbol("Settings"),
-});
+import HomeIcon from "./Icons/Home";
+import MentalIcon from "./Icons/Mental";
+import GrowIcon from "./Icons/Grow";
+import SettingsIcon from "./Icons/Settings";
+import Views from "../Navigation/Views";
+import { useAppNavigation } from "../ContextProviders/AppNavigationProvider";
 
 const styles = StyleSheet.create({
   BottomMenuContainer: {
@@ -55,21 +45,25 @@ const styles = StyleSheet.create({
     width: "90%",
   },
 });
+const ButtonColors = {
+  White: "#fff",
+  Grey: "#8E8E8E",
+};
 
-const BottomMenu = () => {
-  const [selectedView, setSelectedView] = useState(Views.Home);
+const BottomMenu = ({ selectedView, navigation }) => {
+  const { home, mental } = useAppNavigation();
 
-  const MenuButton = ({ icon, isSelected, view }) => (
+  const MenuButton = ({ icon, isSelected, view, onPress }) => (
     <TouchableOpacity
       style={[styles.circleButton, isSelected && styles.selectedCircleButton]}
-      onPress={() => setSelectedView(view)}
+      onPress={onPress}
     >
       {icon}
     </TouchableOpacity>
   );
 
   const HomeButton = () => {
-    const isSelected = selectedView === Views.Home;
+    const isSelected = selectedView === Views.home;
     return (
       <MenuButton
         icon={
@@ -78,13 +72,14 @@ const BottomMenu = () => {
           />
         }
         isSelected={isSelected}
-        view={Views.Home}
+        view={Views.home}
+        onPress={home}
       />
     );
   };
 
   const MentalButton = () => {
-    const isSelected = selectedView === Views.Mental;
+    const isSelected = selectedView === Views.categories;
     return (
       <MenuButton
         icon={
@@ -93,13 +88,14 @@ const BottomMenu = () => {
           />
         }
         isSelected={isSelected}
-        view={Views.Mental}
+        view={Views.categories}
+        onPress={mental}
       />
     );
   };
 
   const GrowButton = () => {
-    const isSelected = selectedView === Views.Grow;
+    const isSelected = selectedView === Views.grow;
     return (
       <MenuButton
         icon={
@@ -108,13 +104,14 @@ const BottomMenu = () => {
           />
         }
         isSelected={isSelected}
-        view={Views.Grow}
+        view={Views.grow}
+        onPress={() => navigation.navigate(Views.grow)}
       />
     );
   };
 
   const SettingsButton = () => {
-    const isSelected = selectedView === Views.Settings;
+    const isSelected = selectedView === Views.settings;
     return (
       <MenuButton
         icon={
@@ -123,7 +120,8 @@ const BottomMenu = () => {
           />
         }
         isSelected={isSelected}
-        view={Views.Settings}
+        view={Views.settings}
+        onPress={() => navigation.navigate(Views.settings)}
       />
     );
   };
@@ -142,4 +140,4 @@ const BottomMenu = () => {
   );
 };
 
-export default BottomMenu;
+export { BottomMenu };
