@@ -8,18 +8,6 @@ import ForwardingButton from "../../../Components/ForwardingButton/ForwardingBut
 import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 import DropDown from "../../../Components/DropDown";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFF7CC",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
-
 const RelationshipsArticle3 = ({ navigation }) => {
   const article = relationshipsArticleTexts[2]; // Ensure index [2] is valid
 

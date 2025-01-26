@@ -8,17 +8,7 @@ import ForwardingButton from "../../../Components/ForwardingButton/ForwardingBut
 import DropDown from "../../../Components/DropDown";
 import { relationshipsArticleTexts } from "../../Texts/RelationshipsArticleText";
 import SeparatingDots from "../../../Components/Icons/SeparatingDots";
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFF7CC",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
+
 
 const RelationshipsArticle1 = ({ navigation }) => {
   const article = relationshipsArticleTexts[0];
