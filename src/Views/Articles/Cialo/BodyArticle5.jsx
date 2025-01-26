@@ -10,17 +10,6 @@ import MediumText from "../../../Components/MediumText";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 import DropDown from "../../../Components/DropDown";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFD3FA",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const BodyArticle5 = ({ navigation }) => {
   const article = bodyArticleTexts[4];

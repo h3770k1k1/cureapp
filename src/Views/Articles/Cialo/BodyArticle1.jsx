@@ -6,17 +6,6 @@ import DotLineHeader from "../../../Components/DotLineHeader";
 import ArticleTitle from "../../../Components/ArticleTitle";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFD3FA",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const BodyArticle1 = () => {
   const article = bodyArticleTexts[0];

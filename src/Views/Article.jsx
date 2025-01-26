@@ -5,6 +5,7 @@ import ForwardingButton from "../Components/ForwardingButton/ForwardingButton";
 import { useRoute } from "@react-navigation/native";
 import articlesTexts from "../Views/Texts/articlesTexts";
 import categories from "../Navigation/categories";
+
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,

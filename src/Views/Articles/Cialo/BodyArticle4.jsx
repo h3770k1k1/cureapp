@@ -9,18 +9,6 @@ import ForwardingButton from "../../../Components/ForwardingButton/ForwardingBut
 import LetterDropdown from "../../../Components/LetterDropDown";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFD3FA",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
-
 const BodyArticle4 = ({ navigation }) => {
   const article = bodyArticleTexts[3];
 

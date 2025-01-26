@@ -9,17 +9,6 @@ import ForwardingButton from "../../../Components/ForwardingButton/ForwardingBut
 import DottedArrows from "../../../Components/Icons/DottedArrows";
 import { bodyArticleTexts } from "../../Texts/BodyArticleText";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFD3FA",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const BodyArticle3 = ({ navigation }) => {
   const article = bodyArticleTexts[2];
