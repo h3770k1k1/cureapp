@@ -10,17 +10,6 @@ import DropDown from "../../../Components/DropDown";
 import DropDownCarousel from "../../../Components/DropDownCarousel";
 import { mindArticleTexts } from "../../Texts/MindArticleText";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFE2CC",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const MindArticle1 = ({ navigation }) => {
   const article = mindArticleTexts[0];

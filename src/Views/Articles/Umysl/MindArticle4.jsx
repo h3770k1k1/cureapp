@@ -8,17 +8,6 @@ import ForwardingButton from "../../../Components/ForwardingButton/ForwardingBut
 import DropDown from "../../../Components/DropDown";
 import { mindArticleTexts } from "../../Texts/MindArticleText";
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#FFE2CC",
-  },
-  scrollView: {
-    flexGrow: 1,
-    padding: 20,
-    paddingBottom: 100,
-  },
-});
 
 const MindArticle4 = ({ navigation }) => {
   const article = mindArticleTexts[3];
